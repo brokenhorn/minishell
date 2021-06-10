@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tjohnnie/Desktop/minishell/main.c
+minishell.h
+/Users/tjohnnie/Desktop/minishell/minishell.h
+
+/Users/tjohnnie/Desktop/minishell/minishell.h
+stdlib.h
+/Users/tjohnnie/Desktop/minishell/stdlib.h
+stdint.h
+/Users/tjohnnie/Desktop/minishell/stdint.h
+unistd.h
+/Users/tjohnnie/Desktop/minishell/unistd.h
+stdio.h
+/Users/tjohnnie/Desktop/minishell/stdio.h
+limits.h
+/Users/tjohnnie/Desktop/minishell/limits.h
+sys/wait.h
+/Users/tjohnnie/Desktop/minishell/sys/wait.h
+sys/stat.h
+/Users/tjohnnie/Desktop/minishell/sys/stat.h
+sys/types.h
+/Users/tjohnnie/Desktop/minishell/sys/types.h
+readline/readline.h
+/Users/tjohnnie/Desktop/minishell/readline/readline.h
+readline/history.h
+/Users/tjohnnie/Desktop/minishell/readline/history.h
+signal.h
+/Users/tjohnnie/Desktop/minishell/signal.h
+dirent.h
+/Users/tjohnnie/Desktop/minishell/dirent.h
+errno.h
+/Users/tjohnnie/Desktop/minishell/errno.h
+
