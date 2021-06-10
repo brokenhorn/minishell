@@ -13,21 +13,20 @@ t_command	*new_com()
 	return (com);
 }
 
-t_list	*new_list(t_command *com, t_list *lis)
+t_list	*new_list(t_command *com, t_history *lis)
 {
-	t_list	*list;
+	t_history	*list;
 
 	list = (t_list *)malloc(sizeof(t_list));
 	list->text = NULL;
 	list->next = NULL;
-	list->command = com;
 	list->prev = lis;
 	return (list);
 }
 
 int		main(int argc, char **argv, char **envp)
 {
-	t_list		*list;
+	t_history 	*list;
 	t_command	*com;
 	char		*str;
 
@@ -37,7 +36,7 @@ int		main(int argc, char **argv, char **envp)
 	while (1)
 	{
 		list->text = readline("BulochkaBao% ");
-		parse(list, envp);
+		parse(com, envp);
 	}
 	return (0);
 }

@@ -1,5 +1,8 @@
 #ifndef MINISHELL_H
 #define MINISHELL_H
+
+#include "libft/libft.h"
+
 #include "stdlib.h"
 #include "stdint.h"
 #include "unistd.h"
@@ -36,12 +39,11 @@ typedef struct	s_command
 	int			*file;
 }				t_command;
 
-typedef struct	s_list
+typedef struct	s_history
 {
-	char 				*text;
-	t_command			*command;
-	struct s_list		*prev;
-	struct s_list		*next;
-}				t_list;
+	char 			*text;
+	struct s_list	*prev;
+	struct s_list	*next;
+}				t_history;
 
 #endif
