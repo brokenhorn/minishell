@@ -169,6 +169,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.s
 .PHONY : main.c.s
 
+pwd.o: pwd.c.o
+
+.PHONY : pwd.o
+
+# target to build an object file
+pwd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.o
+.PHONY : pwd.c.o
+
+pwd.i: pwd.c.i
+
+.PHONY : pwd.i
+
+# target to preprocess a source file
+pwd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.i
+.PHONY : pwd.c.i
+
+pwd.s: pwd.c.s
+
+.PHONY : pwd.s
+
+# target to generate assembly for a file
+pwd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.s
+.PHONY : pwd.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -181,6 +208,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... pwd.o"
+	@echo "... pwd.i"
+	@echo "... pwd.s"
 .PHONY : help
 
 

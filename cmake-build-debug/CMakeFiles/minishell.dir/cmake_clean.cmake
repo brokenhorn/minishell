@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/main.c.o"
+  "CMakeFiles/minishell.dir/pwd.c.o"
   "minishell"
   "minishell.pdb"
 )
