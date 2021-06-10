@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/minishell.dir/cd.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strncmp.c.o"
   "CMakeFiles/minishell.dir/main.c.o"
   "CMakeFiles/minishell.dir/pwd.c.o"

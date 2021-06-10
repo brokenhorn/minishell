@@ -142,6 +142,33 @@ minishell/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
 .PHONY : minishell/fast
 
+cd.o: cd.c.o
+
+.PHONY : cd.o
+
+# target to build an object file
+cd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.o
+.PHONY : cd.c.o
+
+cd.i: cd.c.i
+
+.PHONY : cd.i
+
+# target to preprocess a source file
+cd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.i
+.PHONY : cd.c.i
+
+cd.s: cd.c.s
+
+.PHONY : cd.s
+
+# target to generate assembly for a file
+cd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.s
+.PHONY : cd.c.s
+
 libft/ft_strncmp.o: libft/ft_strncmp.c.o
 
 .PHONY : libft/ft_strncmp.o
@@ -232,6 +259,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... minishell"
+	@echo "... cd.o"
+	@echo "... cd.i"
+	@echo "... cd.s"
 	@echo "... libft/ft_strncmp.o"
 	@echo "... libft/ft_strncmp.i"
 	@echo "... libft/ft_strncmp.s"

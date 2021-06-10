@@ -12,10 +12,6 @@ stdlib.h
 unistd.h
 /Users/tjohnnie/Desktop/minishell/libft/unistd.h
 
-/Users/tjohnnie/Desktop/minishell/main.c
-minishell.h
-/Users/tjohnnie/Desktop/minishell/minishell.h
-
 /Users/tjohnnie/Desktop/minishell/minishell.h
 libft/libft.h
 /Users/tjohnnie/Desktop/minishell/libft/libft.h
@@ -45,4 +41,8 @@ dirent.h
 /Users/tjohnnie/Desktop/minishell/dirent.h
 errno.h
 /Users/tjohnnie/Desktop/minishell/errno.h
+
+/Users/tjohnnie/Desktop/minishell/pwd.c
+minishell.h
+/Users/tjohnnie/Desktop/minishell/minishell.h
 

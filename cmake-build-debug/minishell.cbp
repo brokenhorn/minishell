@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/cd.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strncmp.c">
 			<Option target="minishell"/>
 		</Unit>
