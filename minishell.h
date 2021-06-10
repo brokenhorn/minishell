@@ -46,4 +46,10 @@ typedef struct	s_history
 	struct s_list	*next;
 }				t_history;
 
+typedef struct s_info
+{
+	t_history *history;
+	t_command *command;
+} t_info;
+
 #endif

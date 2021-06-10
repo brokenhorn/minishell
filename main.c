@@ -28,15 +28,19 @@ int		main(int argc, char **argv, char **envp)
 {
 	t_history 	*list;
 	t_command	*com;
+	t_info		*info;
 	char		*str;
 
 	com = new_com();
 	list = NULL;
 	list = new_list(com, list);
+	info = (t_info *)malloc(sizeof(t_info));
+	info->command = com;
+	info->history = list;
 	while (1)
 	{
 		list->text = readline("BulochkaBao% ");
-		parse(com, envp);
+		parse(info, envp);
 	}
 	return (0);
 }
