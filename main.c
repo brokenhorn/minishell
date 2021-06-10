@@ -37,10 +37,10 @@ int		main(int argc, char **argv, char **envp)
 	info = (t_info *)malloc(sizeof(t_info));
 	info->command = com;
 	info->history = list;
-	while (1)
-	{
-		list->text = readline("BulochkaBao% ");
-		parse(info, envp);
-	}
+//	while (1)
+//	{
+//		list->text = readline("BulochkaBao% ");
+//		parse(info, envp);
+//	}
 	return (0);
 }

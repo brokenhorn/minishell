@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+/Users/tjohnnie/Desktop/minishell/libft/libft.h
+stdlib.h
+/Users/tjohnnie/Desktop/minishell/libft/stdlib.h
+unistd.h
+/Users/tjohnnie/Desktop/minishell/libft/unistd.h
+
 /Users/tjohnnie/Desktop/minishell/main.c
 minishell.h
 /Users/tjohnnie/Desktop/minishell/minishell.h
 
 /Users/tjohnnie/Desktop/minishell/minishell.h
+libft/libft.h
+/Users/tjohnnie/Desktop/minishell/libft/libft.h
 stdlib.h
 /Users/tjohnnie/Desktop/minishell/stdlib.h
 stdint.h
