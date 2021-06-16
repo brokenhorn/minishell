@@ -5,6 +5,7 @@
 
 #include "stdlib.h"
 #include "stdint.h"
+#include "string.h"
 #include "unistd.h"
 #include "stdio.h"
 #include "limits.h"
@@ -32,11 +33,10 @@
 
 typedef struct	s_command
 {
-	int			*command;
-	int 		*flag;
-	char		**text;
-	int			*redirect;
-	int			*file;
+	int			command;
+	int 		flag;
+	char		*text;
+	int			file;
 }				t_command;
 
 typedef struct	s_history
@@ -46,12 +46,22 @@ typedef struct	s_history
 	struct s_list	*next;
 }				t_history;
 
+typedef struct	s_parse
+{
+	int		opn;
+	int		qu;
+	int		rd_nbr;
+}				t_parse;
+
 typedef struct	s_info
 {
-	t_history *history;
-	t_command *command;
+	t_history	*history;
+	t_command	*command;
+	char		**envp;
 }				t_info;
 
+void	error(char *str);
 void	pwd(char **envp);
+void	cd(t_command *com, char **envp);
 
 #endif

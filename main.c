@@ -8,7 +8,6 @@ t_command	*new_com()
 	com->command = 0;
 	com->file = 0;
 	com->flag = 0;
-	com->redirect = 0;
 	com->text = NULL;
 	return (com);
 }
@@ -24,6 +23,14 @@ t_list	*new_list(t_command *com, t_history *lis)
 	return (list);
 }
 
+void	error(char *str)
+{
+	if (str == NULL)
+		str = strerror(errno);
+	printf("%s\n", str);
+	exit(errno);
+}
+
 int		main(int argc, char **argv, char **envp)
 {
 	t_history 	*list;
@@ -37,7 +44,12 @@ int		main(int argc, char **argv, char **envp)
 	info = (t_info *)malloc(sizeof(t_info));
 	info->command = com;
 	info->history = list;
+
+	com->text = ft_strdup("co");
+	cd(com, envp);
 	pwd(envp);
+	while (*envp)
+		printf("%s\n", *envp++);
 //	while (1)
 //	{
 //		list->text = readline("BulochkaBao% ");

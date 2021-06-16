@@ -81,6 +81,18 @@
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/cd.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strdup.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strjoin.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strlcpy.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strlen.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strncmp.c">
 			<Option target="minishell"/>
 		</Unit>

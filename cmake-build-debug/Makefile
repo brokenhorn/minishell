@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/3F7E6C1E-55AD-49FF-8A11-A6B80C55AF9E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/3F7E6C1E-55AD-49FF-8A11-A6B80C55AF9E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/tjohnnie/Desktop/minishell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/3F7E6C1E-55AD-49FF-8A11-A6B80C55AF9E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/3F7E6C1E-55AD-49FF-8A11-A6B80C55AF9E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -168,6 +168,114 @@ cd.s: cd.c.s
 cd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.s
 .PHONY : cd.c.s
+
+libft/ft_strdup.o: libft/ft_strdup.c.o
+
+.PHONY : libft/ft_strdup.o
+
+# target to build an object file
+libft/ft_strdup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strdup.c.o
+.PHONY : libft/ft_strdup.c.o
+
+libft/ft_strdup.i: libft/ft_strdup.c.i
+
+.PHONY : libft/ft_strdup.i
+
+# target to preprocess a source file
+libft/ft_strdup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strdup.c.i
+.PHONY : libft/ft_strdup.c.i
+
+libft/ft_strdup.s: libft/ft_strdup.c.s
+
+.PHONY : libft/ft_strdup.s
+
+# target to generate assembly for a file
+libft/ft_strdup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strdup.c.s
+.PHONY : libft/ft_strdup.c.s
+
+libft/ft_strjoin.o: libft/ft_strjoin.c.o
+
+.PHONY : libft/ft_strjoin.o
+
+# target to build an object file
+libft/ft_strjoin.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strjoin.c.o
+.PHONY : libft/ft_strjoin.c.o
+
+libft/ft_strjoin.i: libft/ft_strjoin.c.i
+
+.PHONY : libft/ft_strjoin.i
+
+# target to preprocess a source file
+libft/ft_strjoin.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strjoin.c.i
+.PHONY : libft/ft_strjoin.c.i
+
+libft/ft_strjoin.s: libft/ft_strjoin.c.s
+
+.PHONY : libft/ft_strjoin.s
+
+# target to generate assembly for a file
+libft/ft_strjoin.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strjoin.c.s
+.PHONY : libft/ft_strjoin.c.s
+
+libft/ft_strlcpy.o: libft/ft_strlcpy.c.o
+
+.PHONY : libft/ft_strlcpy.o
+
+# target to build an object file
+libft/ft_strlcpy.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strlcpy.c.o
+.PHONY : libft/ft_strlcpy.c.o
+
+libft/ft_strlcpy.i: libft/ft_strlcpy.c.i
+
+.PHONY : libft/ft_strlcpy.i
+
+# target to preprocess a source file
+libft/ft_strlcpy.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strlcpy.c.i
+.PHONY : libft/ft_strlcpy.c.i
+
+libft/ft_strlcpy.s: libft/ft_strlcpy.c.s
+
+.PHONY : libft/ft_strlcpy.s
+
+# target to generate assembly for a file
+libft/ft_strlcpy.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strlcpy.c.s
+.PHONY : libft/ft_strlcpy.c.s
+
+libft/ft_strlen.o: libft/ft_strlen.c.o
+
+.PHONY : libft/ft_strlen.o
+
+# target to build an object file
+libft/ft_strlen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strlen.c.o
+.PHONY : libft/ft_strlen.c.o
+
+libft/ft_strlen.i: libft/ft_strlen.c.i
+
+.PHONY : libft/ft_strlen.i
+
+# target to preprocess a source file
+libft/ft_strlen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strlen.c.i
+.PHONY : libft/ft_strlen.c.i
+
+libft/ft_strlen.s: libft/ft_strlen.c.s
+
+.PHONY : libft/ft_strlen.s
+
+# target to generate assembly for a file
+libft/ft_strlen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strlen.c.s
+.PHONY : libft/ft_strlen.c.s
 
 libft/ft_strncmp.o: libft/ft_strncmp.c.o
 
@@ -262,6 +370,18 @@ help:
 	@echo "... cd.o"
 	@echo "... cd.i"
 	@echo "... cd.s"
+	@echo "... libft/ft_strdup.o"
+	@echo "... libft/ft_strdup.i"
+	@echo "... libft/ft_strdup.s"
+	@echo "... libft/ft_strjoin.o"
+	@echo "... libft/ft_strjoin.i"
+	@echo "... libft/ft_strjoin.s"
+	@echo "... libft/ft_strlcpy.o"
+	@echo "... libft/ft_strlcpy.i"
+	@echo "... libft/ft_strlcpy.s"
+	@echo "... libft/ft_strlen.o"
+	@echo "... libft/ft_strlen.i"
+	@echo "... libft/ft_strlen.s"
 	@echo "... libft/ft_strncmp.o"
 	@echo "... libft/ft_strncmp.i"
 	@echo "... libft/ft_strncmp.s"

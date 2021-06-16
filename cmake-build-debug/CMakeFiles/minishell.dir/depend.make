@@ -5,6 +5,18 @@ CMakeFiles/minishell.dir/cd.c.o: ../cd.c
 CMakeFiles/minishell.dir/cd.c.o: ../libft/libft.h
 CMakeFiles/minishell.dir/cd.c.o: ../minishell.h
 
+CMakeFiles/minishell.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c
+CMakeFiles/minishell.dir/libft/ft_strdup.c.o: ../libft/libft.h
+
+CMakeFiles/minishell.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
+CMakeFiles/minishell.dir/libft/ft_strjoin.c.o: ../libft/libft.h
+
+CMakeFiles/minishell.dir/libft/ft_strlcpy.c.o: ../libft/ft_strlcpy.c
+CMakeFiles/minishell.dir/libft/ft_strlcpy.c.o: ../libft/libft.h
+
+CMakeFiles/minishell.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
+CMakeFiles/minishell.dir/libft/ft_strlen.c.o: ../libft/libft.h
+
 CMakeFiles/minishell.dir/libft/ft_strncmp.c.o: ../libft/ft_strncmp.c
 CMakeFiles/minishell.dir/libft/ft_strncmp.c.o: ../libft/libft.h
 
