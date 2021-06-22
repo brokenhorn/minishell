@@ -61,6 +61,7 @@ typedef struct	s_info
 }				t_info;
 
 void	error(char *str);
+char	*put_variable(char *str, char **envp);
 void	pwd(char **envp);
 void	cd(t_command *com, char **envp);
 

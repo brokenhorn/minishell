@@ -24,6 +24,10 @@ CMakeFiles/minishell.dir/main.c.o
  /Users/tjohnnie/Desktop/minishell/libft/libft.h
  /Users/tjohnnie/Desktop/minishell/main.c
  /Users/tjohnnie/Desktop/minishell/minishell.h
+CMakeFiles/minishell.dir/put_variable.c.o
+ /Users/tjohnnie/Desktop/minishell/libft/libft.h
+ /Users/tjohnnie/Desktop/minishell/minishell.h
+ /Users/tjohnnie/Desktop/minishell/put_variable.c
 CMakeFiles/minishell.dir/pwd.c.o
  /Users/tjohnnie/Desktop/minishell/libft/libft.h
  /Users/tjohnnie/Desktop/minishell/minishell.h

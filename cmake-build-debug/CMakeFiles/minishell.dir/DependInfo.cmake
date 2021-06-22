@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strlen.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strlen.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strncmp.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strncmp.c.o"
   "/Users/tjohnnie/Desktop/minishell/main.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o"
+  "/Users/tjohnnie/Desktop/minishell/put_variable.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/put_variable.c.o"
   "/Users/tjohnnie/Desktop/minishell/pwd.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/pwd.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

@@ -24,6 +24,10 @@ CMakeFiles/minishell.dir/main.c.o: ../libft/libft.h
 CMakeFiles/minishell.dir/main.c.o: ../main.c
 CMakeFiles/minishell.dir/main.c.o: ../minishell.h
 
+CMakeFiles/minishell.dir/put_variable.c.o: ../libft/libft.h
+CMakeFiles/minishell.dir/put_variable.c.o: ../minishell.h
+CMakeFiles/minishell.dir/put_variable.c.o: ../put_variable.c
+
 CMakeFiles/minishell.dir/pwd.c.o: ../libft/libft.h
 CMakeFiles/minishell.dir/pwd.c.o: ../minishell.h
 CMakeFiles/minishell.dir/pwd.c.o: ../pwd.c

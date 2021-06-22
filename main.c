@@ -46,10 +46,13 @@ int		main(int argc, char **argv, char **envp)
 	info->history = list;
 
 	com->text = ft_strdup("co");
-	cd(com, envp);
-	pwd(envp);
-	while (*envp)
-		printf("%s\n", *envp++);
+
+	char *ster = put_variable("$PWD haha $PATH", envp);
+	printf("%s\n", ster);
+//	char* const args[] = {"/bin/echo", "hello", NULL};
+//	execv("/bin/echo", args);
+//	char* const args1[] = {"/bin/pwd", NULL};
+//	execv("/bin/pwd", args1);
 //	while (1)
 //	{
 //		list->text = readline("BulochkaBao% ");

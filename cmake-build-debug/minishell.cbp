@@ -102,6 +102,9 @@
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/minishell.h">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/put_variable.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/pwd.c">
 			<Option target="minishell"/>
 		</Unit>

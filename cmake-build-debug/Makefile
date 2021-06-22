@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/950D2AD4-0760-449A-99E9-280BE4BCA039/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/950D2AD4-0760-449A-99E9-280BE4BCA039/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/tjohnnie/Desktop/minishell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/950D2AD4-0760-449A-99E9-280BE4BCA039/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/2E80ED8C-A653-458E-9B6B-424CB4BFA2A8/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/950D2AD4-0760-449A-99E9-280BE4BCA039/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -331,6 +331,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.s
 .PHONY : main.c.s
 
+put_variable.o: put_variable.c.o
+
+.PHONY : put_variable.o
+
+# target to build an object file
+put_variable.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/put_variable.c.o
+.PHONY : put_variable.c.o
+
+put_variable.i: put_variable.c.i
+
+.PHONY : put_variable.i
+
+# target to preprocess a source file
+put_variable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/put_variable.c.i
+.PHONY : put_variable.c.i
+
+put_variable.s: put_variable.c.s
+
+.PHONY : put_variable.s
+
+# target to generate assembly for a file
+put_variable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/put_variable.c.s
+.PHONY : put_variable.c.s
+
 pwd.o: pwd.c.o
 
 .PHONY : pwd.o
@@ -388,6 +415,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... put_variable.o"
+	@echo "... put_variable.i"
+	@echo "... put_variable.s"
 	@echo "... pwd.o"
 	@echo "... pwd.i"
 	@echo "... pwd.s"
