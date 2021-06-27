@@ -7,7 +7,7 @@ void	cd(t_command *com, char **envp)
 	char	*new;
 	int		err;
 
-	err = chdir(com->text);
+	//err = chdir(com->text);
 	if (err == -1)
 		error(NULL);
 	j = 0;

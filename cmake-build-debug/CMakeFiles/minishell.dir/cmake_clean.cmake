@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/cd.c.o"
+  "CMakeFiles/minishell.dir/libft/ft_isalpha.c.o"
+  "CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strdup.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strjoin.c.o"
+  "CMakeFiles/minishell.dir/libft/ft_strlcat.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strlcpy.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strlen.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strncmp.c.o"

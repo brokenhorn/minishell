@@ -5,8 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/tjohnnie/Desktop/minishell/cd.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/cd.c.o"
+  "/Users/tjohnnie/Desktop/minishell/libft/ft_isalpha.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_isalpha.c.o"
+  "/Users/tjohnnie/Desktop/minishell/libft/ft_min_bonus.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strdup.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strdup.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strjoin.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strjoin.c.o"
+  "/Users/tjohnnie/Desktop/minishell/libft/ft_strlcat.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strlcat.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strlcpy.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strlcpy.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strlen.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strlen.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strncmp.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strncmp.c.o"

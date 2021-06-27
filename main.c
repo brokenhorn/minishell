@@ -8,7 +8,6 @@ t_command	*new_com()
 	com->command = 0;
 	com->file = 0;
 	com->flag = 0;
-	com->text = NULL;
 	return (com);
 }
 
@@ -45,13 +44,20 @@ int		main(int argc, char **argv, char **envp)
 	info->command = com;
 	info->history = list;
 
-	com->text = ft_strdup("co");
 
-	char *ster = put_variable("$PWD haha $PATH", envp);
+	char *aaa;
+	aaa = malloc(50);
+	ft_strlcat(aaa, "echo -n \"'\"$PWD\"'\" haha \"$PATH\"", 50);
+	char *ster = put_variable(aaa, envp);
 	printf("%s\n", ster);
-//	char* const args[] = {"/bin/echo", "hello", NULL};
-//	execv("/bin/echo", args);
+	free(ster);
+
 //	char* const args1[] = {"/bin/pwd", NULL};
+//	execv("/bin/pwd", args1);
+//
+//	char* const args[] = {"/bin/cd", "Testing"};
+//	execv("/bin/cd", args);
+//	char* const args2[] = {"/bin/pwd", NULL};
 //	execv("/bin/pwd", args1);
 //	while (1)
 //	{

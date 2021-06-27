@@ -35,8 +35,8 @@ typedef struct	s_command
 {
 	int			command;
 	int 		flag;
-	char		*text;
-	int			file;
+	char		**argv;
+	char		*file;
 }				t_command;
 
 typedef struct	s_history

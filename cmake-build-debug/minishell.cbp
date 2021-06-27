@@ -81,10 +81,19 @@
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/cd.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_isalpha.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_min_bonus.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strdup.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strjoin.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strlcat.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strlcpy.c">

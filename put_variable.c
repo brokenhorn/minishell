@@ -1,25 +1,5 @@
 #include "minishell.h"
 
-static int	len_variable(char *str)
-{
-	int		len;
-	int		i;
-
-	len = 0;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == '$')
-		{
-			while (str[i] != ' ' && str[i++] != '\0')
-				len++;
-			break;
-		}
-		i++;
-	}
-	return(len - 2);
-}
-
 static char *search_variable(char *str, char **envp)
 {
 	int		i;
@@ -30,7 +10,7 @@ static char *search_variable(char *str, char **envp)
 	check = 0;
 	i = ft_strlen(str) + 1;
 	j = 0;
-	while (envp[j] != NULL)
+	while (envp[j] != NULL && !check)
 	{
 		if (!ft_strncmp(envp[j], str, i - 1))
 		{
@@ -40,6 +20,11 @@ static char *search_variable(char *str, char **envp)
 			str = (char *)malloc(sizeof(char) * (len + 1));
 			str[len] = '\0';
 			len = 0;
+			if (envp[j][i - 1] != '=')
+			{
+				check = 0;
+				break;
+			}
 			while (envp[j][i])
 				str[len++] = envp[j][i++];
 		}
@@ -48,33 +33,26 @@ static char *search_variable(char *str, char **envp)
 	if (!check)
 	{
 		free(str);
-		str = (char *) malloc(sizeof(char) * 1);
-		str[0] = '\0';
+		str = NULL;
 	}
 	return (str);
 }
 
-static char	*define_variable(char *str, char **envp)
+static char	*define_variable(char *ptr, char **envp)
 {
 	int		len;
-	int		i;
 	char	*variable;
 
-	len = len_variable(str);
+	len = 0;
+	while (ft_isalpha(ptr[len]))
+		len++;
 	variable = (char *)malloc(sizeof(char) * (len + 1));
 	variable[len] = '\0';
-	i = 0;
 	len = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i - 1] == '$')
-		{
-			while (str[i] != ' ' && str[i] != '\0')
-				variable[len++] = str[i++];
-			break;
-		}
-		i++;
-	}
+	while (ft_isalpha(*ptr))
+		variable[len++] = *ptr++;
+	if (!len)
+		return(NULL);
 	return (search_variable(variable, envp));
 }
 
@@ -89,7 +67,7 @@ static int len_str(char *str)
 	{
 		if (*str == '$' && check == 0)
 		{
-			while (*str != ' ' && *str != '\0')
+			while (ft_isalpha(*str))
 				str++;
 			check = 1;
 		}
@@ -99,51 +77,136 @@ static int len_str(char *str)
 	return(len);
 }
 
-char	*make_new_str(char *str, char *new_str, char *variable)
+char	*make_new_str(char *str, char *new_str, char *variable, char **ptr)
 {
-	int		check;
 	int		len;
 	int		i;
 
 	len = ft_strlen(variable) + len_str(str) + 1;
-	check = 0;
+	*ptr -= 1;
 	i = 0 ;
 	while (len > 0)
 	{
-		if (*str == '$' && check == 0)
+		if (str == *ptr)
 		{
 			str++;
-			while (*variable != '\0')
+			if (variable)
 			{
-				new_str[i++] = *variable++;
-				len--;
+				while (*variable != '\0')
+				{
+					new_str[i++] = *variable++;
+					len--;
+				}
 			}
-			while (*str != '\0' && *str != ' ')
+			*ptr = new_str + i;
+			while (ft_isalpha(*str))
 				str++;
-			check = 1;
 		}
 		else
+		{
 			new_str[i++] = *str++;
-		len--;
+			len--;
+		}
 	}
 	return(new_str);
 }
 
-char	*put_variable(char *str, char **envp)
+char	*variable_in_str(char *str, char **ptr, char **envp)
 {
 	char	*variable;
-	char	*new_str;
 	int		len;
+	char	*new_str;
 
-	new_str = str;
-	variable = define_variable(str, envp);
+	(*ptr)++;
+	variable = define_variable(*ptr, envp);
 	len = len_str(str);
-	new_str = (char *) malloc(sizeof(char) * (ft_strlen(variable) + len + 1));
+	new_str = (char *)malloc(sizeof(char) * (ft_strlen(variable) + len + 1));
 	new_str[ft_strlen(variable) + len] = '\0';
-	new_str = make_new_str(str, new_str, variable);
+	new_str = make_new_str(str, new_str, variable, ptr);
 	free(variable);
-//	if (str)
-//		free(str);
-	str = new_str;
-	return(new_str);
+	free(str);
+	return (new_str);
+}
+
+char	*delet_quot(char *str, char **ptr)
+{
+	int		len;
+	int		i;
+	char	*tmp;
+	char	*temp;
+
+	len = ft_strlen(str);
+	tmp = str;
+	temp = str;
+	str = (char *)malloc(sizeof(char) * len);
+	str[len] = '\0';
+	i = 0;
+	while (len)
+	{
+		if (*ptr != tmp)
+		{
+			str[i++] = *tmp;
+			len--;
+		}
+		else
+			*ptr = str + i;
+		tmp++;
+	}
+	free(temp);
+	return(str);
+}
+
+char	*no_quotes(char *str)
+{
+	char	qu;
+	char	*ptr;
+
+	qu = NULL;
+	ptr = str;
+	while (*ptr != '\0')
+	{
+		if (qu == NULL && (*ptr == '\'' || *ptr == '\"'))
+		{
+			if (*ptr == '\'')
+				qu = '\'';
+			else
+				qu = '\"';
+			str = delet_quot(str, &ptr);
+		}
+		else if (*ptr == qu)
+		{
+			qu = NULL;
+			str = delet_quot(str, &ptr);
+		}
+		else
+			ptr++;
+	}
+	return(str);
+}
+
+char	*put_variable(char *str, char **envp)
+{
+	char	*ptr;
+	char	qu;
+
+	qu = NULL;
+	ptr = str;
+	while (*ptr != '\0')
+	{
+		if (qu == NULL && (*ptr == '\'' || *ptr == '\"'))
+		{
+			if (*ptr == '\'')
+				qu = '\'';
+			else
+				qu = '\"';
+		}
+		else if (*ptr == qu)
+			qu = NULL;
+		if (*ptr == '$' && qu != '\'')
+			str = variable_in_str(str, &ptr, envp);
+		else
+			ptr++;
+	}
+	str = no_quotes(str);
+	return(str);
 }
