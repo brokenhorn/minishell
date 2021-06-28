@@ -1,0 +1,3 @@
+/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir

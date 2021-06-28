@@ -19,34 +19,53 @@ char *search_path(t_info *info)
 	return (path);
 }
 
+void join_path_com(char *path_dir, t_info *info)
+{
+	char *tmp;
+
+	tmp = ft_strjoin(path_dir, "/");
+	info->command->file = ft_strjoin(tmp, info->command->argv[0]);
+	free(tmp);
+}
+
+void search_readdir(DIR *dir_fd, t_info *info, char *path_dir)
+{
+	struct dirent *rd;
+
+	rd = readdir(dir_fd);
+	while(rd  != NULL)
+	{
+		if (ft_strncmp(rd->d_name, info->command->argv[0], ft_strlen(info->command->argv[0])) == 0)
+		{
+			join_path_com(path_dir, info); //исправить джоин
+			break;
+		}
+		rd = readdir(dir_fd);
+	}
+	closedir(dir_fd);
+}
+
 void search_bin(t_info *info)
 {
 	char *path;
 	char **path_dir;
 	int i;
 	DIR *dir_fd;
-	struct dirent *rd;
+	//struct dirent *rd;
 
-	i = 0;
+	i = 1;
 	path = search_path(info);
 	path_dir = ft_split(path, ':'); //malloc
 	while (path_dir[i] != NULL)
 	{
 		dir_fd = opendir(path_dir[i]);
-		while((rd = readdir(dir_fd)) != NULL)
-		{
-			if (rd->d_name == info->command->argv[0])
-			{
-				info->command->file = ft_strjoin(path_dir[i], info->command->argv[0]);
-				break;
-			}
-		}
+		if (dir_fd == NULL)
+			break;// обработать если NULL?
+		search_readdir(dir_fd, info, path_dir[i]);
 		if (info->command->file  != NULL)
-		{
-			closedir(dir_fd);
 			break;
-		}
 		i++;
-		closedir(dir_fd); //если не найдет файл ошибка
+		 //если не найдет файл ошибка
 	}
+	free_2arr(path_dir);//ОСВОБОДИТЬ PATH_DIR
 }
