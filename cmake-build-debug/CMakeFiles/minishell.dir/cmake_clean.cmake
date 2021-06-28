@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/minishell.dir/cd.c.o"
   "CMakeFiles/minishell.dir/libft/ft_isalpha.c.o"
   "CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strdup.c.o"
@@ -8,9 +7,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/libft/ft_strlcpy.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strlen.c.o"
   "CMakeFiles/minishell.dir/libft/ft_strncmp.c.o"
-  "CMakeFiles/minishell.dir/main.c.o"
-  "CMakeFiles/minishell.dir/put_variable.c.o"
-  "CMakeFiles/minishell.dir/pwd.c.o"
+  "CMakeFiles/minishell.dir/src/cd.c.o"
+  "CMakeFiles/minishell.dir/src/check_valid.c.o"
+  "CMakeFiles/minishell.dir/src/export.c.o"
+  "CMakeFiles/minishell.dir/src/main.c.o"
+  "CMakeFiles/minishell.dir/src/put_variable.c.o"
+  "CMakeFiles/minishell.dir/src/utils.c.o"
   "minishell"
   "minishell.pdb"
 )

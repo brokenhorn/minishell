@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/tjohnnie/Desktop/minishell/cd.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/cd.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_isalpha.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_isalpha.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_min_bonus.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strdup.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strdup.c.o"
@@ -13,9 +12,12 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strlcpy.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strlcpy.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strlen.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strlen.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strncmp.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strncmp.c.o"
-  "/Users/tjohnnie/Desktop/minishell/main.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o"
-  "/Users/tjohnnie/Desktop/minishell/put_variable.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/put_variable.c.o"
-  "/Users/tjohnnie/Desktop/minishell/pwd.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/pwd.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/cd.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/cd.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/check_valid.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/check_valid.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/export.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/export.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/main.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/main.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/put_variable.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/put_variable.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/utils.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

@@ -1,4 +1,4 @@
-#include "minishell.h"
+#include "../minishell.h"
 
 static char *search_variable(char *str, char **envp)
 {
@@ -161,11 +161,11 @@ char	*no_quotes(char *str)
 	char	qu;
 	char	*ptr;
 
-	qu = NULL;
+	qu = 0;
 	ptr = str;
 	while (*ptr != '\0')
 	{
-		if (qu == NULL && (*ptr == '\'' || *ptr == '\"'))
+		if (qu == 0 && (*ptr == '\'' || *ptr == '\"'))
 		{
 			if (*ptr == '\'')
 				qu = '\'';
@@ -175,7 +175,7 @@ char	*no_quotes(char *str)
 		}
 		else if (*ptr == qu)
 		{
-			qu = NULL;
+			qu = 0;
 			str = delet_quot(str, &ptr);
 		}
 		else
@@ -189,11 +189,13 @@ char	*put_variable(char *str, char **envp)
 	char	*ptr;
 	char	qu;
 
-	qu = NULL;
+	qu = 0;
 	ptr = str;
+	if (!str)
+		return(NULL);
 	while (*ptr != '\0')
 	{
-		if (qu == NULL && (*ptr == '\'' || *ptr == '\"'))
+		if (qu == 0 && (*ptr == '\'' || *ptr == '\"'))
 		{
 			if (*ptr == '\'')
 				qu = '\'';
@@ -201,7 +203,7 @@ char	*put_variable(char *str, char **envp)
 				qu = '\"';
 		}
 		else if (*ptr == qu)
-			qu = NULL;
+			qu = 0;
 		if (*ptr == '$' && qu != '\'')
 			str = variable_in_str(str, &ptr, envp);
 		else

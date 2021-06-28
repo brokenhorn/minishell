@@ -1,4 +1,4 @@
-#include "minishell.h"
+#include "../minishell.h"
 
 void find_envp(t_info *info, char **envp)
 {

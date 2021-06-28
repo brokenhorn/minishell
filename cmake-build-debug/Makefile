@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6B72048F-2949-440E-8720-619AA9D6EEE0/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6B72048F-2949-440E-8720-619AA9D6EEE0/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/tjohnnie/Desktop/minishell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6B72048F-2949-440E-8720-619AA9D6EEE0/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6B72048F-2949-440E-8720-619AA9D6EEE0/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -141,33 +141,6 @@ minishell: cmake_check_build_system
 minishell/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
 .PHONY : minishell/fast
-
-cd.o: cd.c.o
-
-.PHONY : cd.o
-
-# target to build an object file
-cd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.o
-.PHONY : cd.c.o
-
-cd.i: cd.c.i
-
-.PHONY : cd.i
-
-# target to preprocess a source file
-cd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.i
-.PHONY : cd.c.i
-
-cd.s: cd.c.s
-
-.PHONY : cd.s
-
-# target to generate assembly for a file
-cd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.s
-.PHONY : cd.c.s
 
 libft/ft_isalpha.o: libft/ft_isalpha.c.o
 
@@ -385,86 +358,167 @@ libft/ft_strncmp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_strncmp.c.s
 .PHONY : libft/ft_strncmp.c.s
 
-main.o: main.c.o
+src/cd.o: src/cd.c.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.s
-.PHONY : main.c.s
-
-put_variable.o: put_variable.c.o
-
-.PHONY : put_variable.o
+.PHONY : src/cd.o
 
 # target to build an object file
-put_variable.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/put_variable.c.o
-.PHONY : put_variable.c.o
+src/cd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/cd.c.o
+.PHONY : src/cd.c.o
 
-put_variable.i: put_variable.c.i
+src/cd.i: src/cd.c.i
 
-.PHONY : put_variable.i
+.PHONY : src/cd.i
 
 # target to preprocess a source file
-put_variable.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/put_variable.c.i
-.PHONY : put_variable.c.i
+src/cd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/cd.c.i
+.PHONY : src/cd.c.i
 
-put_variable.s: put_variable.c.s
+src/cd.s: src/cd.c.s
 
-.PHONY : put_variable.s
+.PHONY : src/cd.s
 
 # target to generate assembly for a file
-put_variable.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/put_variable.c.s
-.PHONY : put_variable.c.s
+src/cd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/cd.c.s
+.PHONY : src/cd.c.s
 
-pwd.o: pwd.c.o
+src/check_valid.o: src/check_valid.c.o
 
-.PHONY : pwd.o
+.PHONY : src/check_valid.o
 
 # target to build an object file
-pwd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.o
-.PHONY : pwd.c.o
+src/check_valid.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/check_valid.c.o
+.PHONY : src/check_valid.c.o
 
-pwd.i: pwd.c.i
+src/check_valid.i: src/check_valid.c.i
 
-.PHONY : pwd.i
+.PHONY : src/check_valid.i
 
 # target to preprocess a source file
-pwd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.i
-.PHONY : pwd.c.i
+src/check_valid.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/check_valid.c.i
+.PHONY : src/check_valid.c.i
 
-pwd.s: pwd.c.s
+src/check_valid.s: src/check_valid.c.s
 
-.PHONY : pwd.s
+.PHONY : src/check_valid.s
 
 # target to generate assembly for a file
-pwd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.s
-.PHONY : pwd.c.s
+src/check_valid.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/check_valid.c.s
+.PHONY : src/check_valid.c.s
+
+src/export.o: src/export.c.o
+
+.PHONY : src/export.o
+
+# target to build an object file
+src/export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/export.c.o
+.PHONY : src/export.c.o
+
+src/export.i: src/export.c.i
+
+.PHONY : src/export.i
+
+# target to preprocess a source file
+src/export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/export.c.i
+.PHONY : src/export.c.i
+
+src/export.s: src/export.c.s
+
+.PHONY : src/export.s
+
+# target to generate assembly for a file
+src/export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/export.c.s
+.PHONY : src/export.c.s
+
+src/main.o: src/main.c.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/put_variable.o: src/put_variable.c.o
+
+.PHONY : src/put_variable.o
+
+# target to build an object file
+src/put_variable.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/put_variable.c.o
+.PHONY : src/put_variable.c.o
+
+src/put_variable.i: src/put_variable.c.i
+
+.PHONY : src/put_variable.i
+
+# target to preprocess a source file
+src/put_variable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/put_variable.c.i
+.PHONY : src/put_variable.c.i
+
+src/put_variable.s: src/put_variable.c.s
+
+.PHONY : src/put_variable.s
+
+# target to generate assembly for a file
+src/put_variable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/put_variable.c.s
+.PHONY : src/put_variable.c.s
+
+src/utils.o: src/utils.c.o
+
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils.c.o
+.PHONY : src/utils.c.o
+
+src/utils.i: src/utils.c.i
+
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils.c.i
+.PHONY : src/utils.c.i
+
+src/utils.s: src/utils.c.s
+
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils.c.s
+.PHONY : src/utils.c.s
 
 # Help Target
 help:
@@ -475,9 +529,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... minishell"
-	@echo "... cd.o"
-	@echo "... cd.i"
-	@echo "... cd.s"
 	@echo "... libft/ft_isalpha.o"
 	@echo "... libft/ft_isalpha.i"
 	@echo "... libft/ft_isalpha.s"
@@ -502,15 +553,24 @@ help:
 	@echo "... libft/ft_strncmp.o"
 	@echo "... libft/ft_strncmp.i"
 	@echo "... libft/ft_strncmp.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... put_variable.o"
-	@echo "... put_variable.i"
-	@echo "... put_variable.s"
-	@echo "... pwd.o"
-	@echo "... pwd.i"
-	@echo "... pwd.s"
+	@echo "... src/cd.o"
+	@echo "... src/cd.i"
+	@echo "... src/cd.s"
+	@echo "... src/check_valid.o"
+	@echo "... src/check_valid.i"
+	@echo "... src/check_valid.s"
+	@echo "... src/export.o"
+	@echo "... src/export.i"
+	@echo "... src/export.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/put_variable.o"
+	@echo "... src/put_variable.i"
+	@echo "... src/put_variable.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 
