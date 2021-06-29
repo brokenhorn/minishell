@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 19:07:40 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/10 18:06:44 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/11/07 17:47:57 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/07 18:09:19 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (fd != -1)
+		write(fd, &c, 1);
 }

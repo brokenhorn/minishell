@@ -81,6 +81,9 @@
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/cd.c">
 			<Option target="minishell_parse"/>
 		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/export.c">
+			<Option target="minishell_parse"/>
+		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/launch_command.c">
 			<Option target="minishell_parse"/>
 		</Unit>
@@ -127,6 +130,9 @@
 			<Option target="minishell_parse"/>
 		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/utils.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/utils_list.c">
 			<Option target="minishell_parse"/>
 		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/CMakeLists.txt">

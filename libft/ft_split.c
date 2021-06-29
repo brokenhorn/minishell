@@ -3,95 +3,75 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/08 14:41:44 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/14 18:48:54 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/11/07 20:55:22 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/20 17:40:25 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_counts(const char *strim, char c)
+static int			ft_split_count(const char *s, char c)
 {
-	int	j;
+	int		size;
 
-	j = 0;
-	while (*strim != c && *strim != '\0')
+	size = 0;
+	while (*s != '\0' && *s != c)
 	{
-		j++;
-		strim++;
+		size++;
+		s++;
 	}
-	return (j);
+	return (size);
 }
 
-int	ft_clear(char **a)
+static const char	*ft_split_skip(const char *s, char c)
 {
-	int	i;
+	while (*s == c && *s != '\0')
+		s++;
+	return (s);
+}
 
-	i = 0;
-	while (a[i])
-	{
-		free(a[i]);
-		i++;
-	}
-	free(a);
+static char			**ft_split_free(char **str, int n)
+{
+	while (n--)
+		free(str[n]);
+	free(str);
 	return (0);
 }
 
-int	ft_fitin(char **a, int i, char *strim, char c)
+static char			**ft_split_end(char **str, int n)
 {
-	int	j;
-	int	k;
-
-	k = 0;
-	while (*strim == c)
-		strim++;
-	while (i--)
-	{
-		j = ft_counts(strim, c);
-		a[k] = (char *)malloc((j + 1) * sizeof(char));
-		if (a[k] == 0)
-			return (ft_clear(a));
-		j = 0;
-		while (*strim != c && *strim != '\0')
-		{
-			a[k][j] = *strim;
-			j++;
-			strim++;
-		}
-		a[k][j] = '\0';
-		while (*strim == c && *strim != '\0')
-			strim++;
-		k++;
-	}
-	return (1);
+	if (str)
+		str[n] = 0;
+	return (str);
 }
 
-char	**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
-	char	**a;
-	char	*strim;
-	size_t	slen;
-	int		i;
+	char	**str;
+	int		size;
+	int		n;
 
-	if (s == 0)
+	if (!s)
 		return (0);
-	i = 0;
-	strim = (char *)s;
-	slen = ft_strlen(strim);
-	while (*strim != '\0')
+	n = 0;
+	size = 1;
+	while (s[n] != '\0')
+		if (s[n++] != c && (s[n] == '\0' || s[n] == c))
+			size++;
+	if (!(str = (char **)malloc(size * sizeof(char *))))
+		return (0);
+	n = 0;
+	s = ft_split_skip(s, c);
+	while (*s != '\0' && str)
 	{
-		if ((*(strim + 1) == c || *(strim + 1) == '\0') && *strim != c)
-			i++;
-		strim++;
+		size = ft_split_count(s, c);
+		if (!(str[n] = malloc(size + 1)))
+			str = ft_split_free(str, n);
+		else
+			ft_strlcpy(str[n++], s, size + 1);
+		s = ft_split_skip(s + size, c);
 	}
-	strim = strim - slen;
-	a = (char **)malloc((i + 1) * sizeof(char *));
-	if (a == 0)
-		return (0);
-	a[i] = NULL;
-	if (ft_fitin(a, i, strim, c) == 0)
-		return (NULL);
-	return (a);
+	return (ft_split_end(str, n));
 }

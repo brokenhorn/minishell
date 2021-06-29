@@ -14,14 +14,12 @@ void free_2arr(char **arr)
 			i++;
 		}
 		free(arr);
+		arr = NULL;
 	}
 }
 
-void	error(t_info *info, char *str)
+void free_info(t_info *info)
 {
-	if (str == NULL)
-		str = strerror(errno);
-	printf("%s\n", str);
 	if (info)
 	{
 		if (info->command)
@@ -29,8 +27,15 @@ void	error(t_info *info, char *str)
 			if (info->command->argv)
 				free_2arr(info->command->argv);
 			if (info->command->file)
+			{
 				free(info->command->file);
+				info->command->file = NULL;
+			}
 			free(info->command);
+		}
+		if (info->parse)
+		{
+			free(info->parse);
 		}
 		if (info->text)
 			free(info->text);
@@ -38,8 +43,36 @@ void	error(t_info *info, char *str)
 	}
 }
 
+void	error(t_info *info, char *str, char *help)//ВОЗМОЖНО УТЕЧКА
+{
+	if (str == NULL)
+		str = strerror(errno);
+	if (help == NULL)
+		printf("%s\n", str);
+	else
+		printf("%s: %s\n", str, help);
+	free_info(info);
+}
+
 void	my_exit(t_info *info)
 {
-	error(info, "exit");
+	error(info, "exit", NULL);
 	exit(0);
+}
+
+int	ft_check_space(char *str)
+{
+	int i;
+
+	i = 0;
+	if (str == NULL)
+		return (0);
+	while (str[i] != '\0')
+	{
+		if (str[i] == ' '  || str[i] == '\t')
+			i++;
+		else
+			return (1);
+	}
+	return (0);
 }

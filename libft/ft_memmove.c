@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 17:09:36 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/10 17:43:09 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/11/01 16:49:46 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/02 20:59:25 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*wdst;
-	unsigned char	*wsrc;
+	unsigned char *d;
+	unsigned char *s;
 
-	if (src == 0 && dst == 0)
+	if (dst == 0 && src == 0)
 		return (dst);
-	wdst = (unsigned char *)dst;
-	wsrc = (unsigned char *)src;
-	if (wdst <= wsrc || wdst >= wsrc + len)
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (d <= s || d >= s + len)
 		while (len--)
-			*wdst++ = *wsrc++;
+			*d++ = *s++;
 	else
 	{
-		wdst = wdst + (len - 1);
-		wsrc = wsrc + (len - 1);
+		d = d + len - 1;
+		s = s + len - 1;
 		while (len--)
-			*wdst-- = *wsrc--;
+			*d-- = *s--;
 	}
 	return (dst);
 }

@@ -9,7 +9,7 @@ void	cd(t_info *info, char **envp)
 
 	j = chdir(info->command->argv[1]);
 	if (j == -1)
-		error(info, NULL);
+		error(info, NULL, NULL);
 	j = 0;
 	new = malloc(400);
 	while (envp[j] != NULL)
@@ -19,7 +19,7 @@ void	cd(t_info *info, char **envp)
 			old = ft_strdup(envp[j] + 4);
 			err = getcwd(new, 300);
 			if (err == NULL)
-				error(info, NULL);
+				error(info, NULL, NULL);
 			envp[j] = ft_strjoin("PWD=", new);
 			break;
 		}

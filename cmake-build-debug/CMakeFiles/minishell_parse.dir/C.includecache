@@ -6,17 +6,27 @@
 
 #IncludeRegexTransform: 
 
+/Users/vmaricru/Desktop/minishell_parse/libft/libft.h
+stdlib.h
+/Users/vmaricru/Desktop/minishell_parse/libft/stdlib.h
+unistd.h
+/Users/vmaricru/Desktop/minishell_parse/libft/unistd.h
+
+/Users/vmaricru/Desktop/minishell_parse/main.c
+minishell.h
 /Users/vmaricru/Desktop/minishell_parse/minishell.h
-../mngit/libft/libft.h
-/Users/vmaricru/Desktop/mngit/libft/libft.h
+
+/Users/vmaricru/Desktop/minishell_parse/minishell.h
+libft/libft.h
+/Users/vmaricru/Desktop/minishell_parse/libft/libft.h
 stdlib.h
 /Users/vmaricru/Desktop/minishell_parse/stdlib.h
 stdint.h
 /Users/vmaricru/Desktop/minishell_parse/stdint.h
-unistd.h
-/Users/vmaricru/Desktop/minishell_parse/unistd.h
 string.h
 /Users/vmaricru/Desktop/minishell_parse/string.h
+unistd.h
+/Users/vmaricru/Desktop/minishell_parse/unistd.h
 stdio.h
 /Users/vmaricru/Desktop/minishell_parse/stdio.h
 limits.h
@@ -37,14 +47,4 @@ dirent.h
 /Users/vmaricru/Desktop/minishell_parse/dirent.h
 errno.h
 /Users/vmaricru/Desktop/minishell_parse/errno.h
-
-/Users/vmaricru/Desktop/minishell_parse/parse_tokens.c
-minishell.h
-/Users/vmaricru/Desktop/minishell_parse/minishell.h
-
-/Users/vmaricru/Desktop/mngit/libft/libft.h
-stdlib.h
-/Users/vmaricru/Desktop/mngit/libft/stdlib.h
-unistd.h
-/Users/vmaricru/Desktop/mngit/libft/unistd.h
 

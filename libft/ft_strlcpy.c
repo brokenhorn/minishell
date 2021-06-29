@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 18:50:32 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/10 17:35:06 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/07/18 22:34:54 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/12 22:13:18 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,19 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	int		n;
+	size_t	size_copy;
 
-	i = 0;
-	if (dst == 0 || src == 0)
+	if (!(dst) || !(src))
 		return (0);
-	while (*(src + i) != '\0')
-		i++;
-	if (size == 0)
-		return (i);
-	while (*src != '\0' && size - 1 > 0)
+	size_copy = size;
+	n = 0;
+	while (src[n] != '\0' && size-- > 1)
 	{
-		*dst = *src;
-		dst++;
-		src++;
-		size--;
+		dst[n] = src[n];
+		n++;
 	}
-	*dst = '\0';
-	return (i);
+	if (size_copy > 0)
+		dst[n] = '\0';
+	return ((size_t)ft_strlen(src));
 }

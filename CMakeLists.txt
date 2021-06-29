@@ -16,4 +16,5 @@ add_executable(minishell_parse main.c  parse_tokens.c
         libft/ft_isalpha.c
         put_variable.c
         cd.c
-        parse_search_bin.c utils.c launch_command.c)
+        export.c
+        parse_search_bin.c utils.c launch_command.c utils_list.c)

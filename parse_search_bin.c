@@ -37,7 +37,7 @@ void search_readdir(DIR *dir_fd, t_info *info, char *path_dir)
 	{
 		if (ft_strncmp(rd->d_name, info->command->argv[0], ft_strlen(info->command->argv[0])) == 0)
 		{
-			join_path_com(path_dir, info); //исправить джоин
+			join_path_com(path_dir, info);
 			break;
 		}
 		rd = readdir(dir_fd);

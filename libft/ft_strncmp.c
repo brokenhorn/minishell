@@ -3,33 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/14 17:54:40 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/14 18:31:08 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/07/19 13:37:34 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/02 21:27:11 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t				i;
-	unsigned const char	*a1;
-	unsigned const char	*a2;
+	int answer;
 
-	a1 = (unsigned const char *)s1;
-	a2 = (unsigned const char *)s2;
-	i = 0;
-	while (i < n)
+	answer = 0;
+	if (n > 0)
 	{
-		if (a1[i] == '\0')
-			return (-a2[i]);
-		if (a2[i] == '\0')
-			return (a1[i]);
-		if (a1[i] > a2[i] || a2[i] > a1[i])
-			return (a1[i] - a2[i]);
-		i++;
+		while (*s1 == *s2 && *s2 != '\0' && *s1 != '\0' && n > 1)
+		{
+			s1++;
+			s2++;
+			n--;
+		}
+		answer = (unsigned char)*s1 - (unsigned char)*s2;
 	}
-	return (0);
+	return (answer);
 }

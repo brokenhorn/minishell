@@ -3,48 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 20:46:54 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/14 17:38:53 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/07/21 14:19:49 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/08 16:54:46 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_checkborder(long s)
+int				ft_atoi(const char *str)
 {
-	if (s == 1)
-		return (-1);
-	else
-		return (0);
-}
+	int			sign;
+	long int	answer;
 
-int	ft_atoi(const char *str)
-{
-	long	r;
-	long	s;
-	int		i;
-
-	i = 0;
-	r = 0;
-	s = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-')
+	sign = 1;
+	answer = 0;
+	while (ft_isspace(*str) == 1)
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		s = -1;
-		i++;
+		if (*str == '-')
+			sign = sign * (-1);
+		str++;
 	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		r = r * 10 + (str[i] - '0');
-		if (r == 999999999)
-			return (ft_checkborder(s));
-		i++;
+		answer = (answer * 10) + (*str++ - '0');
+		if (answer == 999999999)
+		{
+			if (sign == -1)
+				return (0);
+			return (-1);
+		}
 	}
-	return (s * r);
+	return (answer * sign);
 }

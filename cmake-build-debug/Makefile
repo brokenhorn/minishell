@@ -169,6 +169,33 @@ cd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/cd.c.s
 .PHONY : cd.c.s
 
+export.o: export.c.o
+
+.PHONY : export.o
+
+# target to build an object file
+export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/export.c.o
+.PHONY : export.c.o
+
+export.i: export.c.i
+
+.PHONY : export.i
+
+# target to preprocess a source file
+export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/export.c.i
+.PHONY : export.c.i
+
+export.s: export.c.s
+
+.PHONY : export.s
+
+# target to generate assembly for a file
+export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/export.c.s
+.PHONY : export.c.s
+
 launch_command.o: launch_command.c.o
 
 .PHONY : launch_command.o
@@ -601,6 +628,33 @@ utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils.c.s
 .PHONY : utils.c.s
 
+utils_list.o: utils_list.c.o
+
+.PHONY : utils_list.o
+
+# target to build an object file
+utils_list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils_list.c.o
+.PHONY : utils_list.c.o
+
+utils_list.i: utils_list.c.i
+
+.PHONY : utils_list.i
+
+# target to preprocess a source file
+utils_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils_list.c.i
+.PHONY : utils_list.c.i
+
+utils_list.s: utils_list.c.s
+
+.PHONY : utils_list.s
+
+# target to generate assembly for a file
+utils_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils_list.c.s
+.PHONY : utils_list.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -613,6 +667,9 @@ help:
 	@echo "... cd.o"
 	@echo "... cd.i"
 	@echo "... cd.s"
+	@echo "... export.o"
+	@echo "... export.i"
+	@echo "... export.s"
 	@echo "... launch_command.o"
 	@echo "... launch_command.i"
 	@echo "... launch_command.s"
@@ -661,6 +718,9 @@ help:
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
+	@echo "... utils_list.o"
+	@echo "... utils_list.i"
+	@echo "... utils_list.s"
 .PHONY : help
 
 

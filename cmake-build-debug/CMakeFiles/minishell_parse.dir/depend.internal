@@ -3,12 +3,16 @@
 
 CMakeFiles/minishell_parse.dir/cd.c.o
  /Users/vmaricru/Desktop/minishell_parse/cd.c
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/minishell.h
- /Users/vmaricru/Desktop/mngit/libft/libft.h
+CMakeFiles/minishell_parse.dir/export.c.o
+ /Users/vmaricru/Desktop/minishell_parse/export.c
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
+ /Users/vmaricru/Desktop/minishell_parse/minishell.h
 CMakeFiles/minishell_parse.dir/launch_command.c.o
  /Users/vmaricru/Desktop/minishell_parse/launch_command.c
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/minishell.h
- /Users/vmaricru/Desktop/mngit/libft/libft.h
 CMakeFiles/minishell_parse.dir/libft/ft_isalpha.c.o
  /Users/vmaricru/Desktop/minishell_parse/libft/ft_isalpha.c
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
@@ -40,22 +44,22 @@ CMakeFiles/minishell_parse.dir/libft/ft_strtrim.c.o
  /Users/vmaricru/Desktop/minishell_parse/libft/ft_strtrim.c
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
 CMakeFiles/minishell_parse.dir/main.c.o
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/main.c
  /Users/vmaricru/Desktop/minishell_parse/minishell.h
- /Users/vmaricru/Desktop/mngit/libft/libft.h
 CMakeFiles/minishell_parse.dir/parse_search_bin.c.o
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/parse_search_bin.c
- /Users/vmaricru/Desktop/mngit/libft/libft.h
 CMakeFiles/minishell_parse.dir/parse_tokens.c.o
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/parse_tokens.c
- /Users/vmaricru/Desktop/mngit/libft/libft.h
 CMakeFiles/minishell_parse.dir/put_variable.c.o
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/put_variable.c
- /Users/vmaricru/Desktop/mngit/libft/libft.h
 CMakeFiles/minishell_parse.dir/utils.c.o
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/utils.c
- /Users/vmaricru/Desktop/mngit/libft/libft.h

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 18:14:30 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/10 17:45:14 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/10/29 18:47:49 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/02 19:31:31 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	ch;
-
-	ch = c;
 	while (*s != '\0')
 	{
-		if (*s == ch)
+		if (*s == c)
 			return ((char *)s);
 		s++;
 	}
-	if (ch == '\0')
+	if (*s == c)
 		return ((char *)s);
 	return (0);
 }

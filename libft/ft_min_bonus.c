@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 20:47:42 by tjohnnie          #+#    #+#             */
-/*   Updated: 2020/10/30 20:47:45 by tjohnnie         ###   ########.fr       */
+/*   Created: 2020/11/01 17:37:58 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/11/01 17:38:00 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src,
-		int c, size_t n)
+int		ft_min(int a, int b)
 {
-	unsigned char *d;
-	unsigned char *s;
-	unsigned char value;
-
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-	value = (unsigned char)c;
-	while (n--)
-	{
-		*d = *s++;
-		if (*d == value)
-			return (d + 1);
-		d++;
-	}
-	return (0);
+	if (a >= b)
+		return (b);
+	return (a);
 }

@@ -10,7 +10,13 @@ int launch_command_bin(t_info *info)
 	{
 		execve(info->command->file, info->command->argv, info->envp);
 	}
-	waitpid(pid, &status, WUNTRACED);
+	else if (pid > 0)
+		waitpid(pid, &status, WUNTRACED);
+	else if (pid < 0)
+	{
+		error(info, NULL, NULL);
+		my_exit(info);
+	}
 	return(1);
 }
 
@@ -35,25 +41,38 @@ int launch_command_pipe(t_info *info)//запонмить вывод-ввод  �
 		close(pipe1[0]);
 		waitpid(pid, &status, WUNTRACED);
 	}
+	else if (pid < 0)
+	{
+		error(info, NULL, NULL);
+		my_exit(info);
+	}
 	return (1);
 }
 
 int launch_command_redirect(t_info *info)
 {}
 
-void launch_command(t_info *info) //ЗАНУЛИТЬ в структуре после 1 отработки значения
+int launch_command(t_info *info) //ЕСЛИ НЕТ КОМАНДЫ ТО ОШИБКА НАДО ИСПРАВИТЬ LS??
 {
 	if (ft_strncmp(info->command->argv[0], "cd", 2) == 0)
 		cd(info, info->envp);
-//	else if (ft_strncmp(info->command->argv[0], "export", 6) == 0)
-//		export();
-	else if (info->command->flag == PIPE)
+	else if (ft_strncmp(info->command->argv[0], "export", 6) == 0)
+		export(info->envp);
+	else if (ft_strncmp(info->command->argv[0], "exit", 4) == 0)
+		my_exit(info);
+	else if (info->command->flag == PIPE && info->command->file != NULL)
 		launch_command_pipe(info);
-	else if (info->command->flag == B1 || info->command->flag == B2 || // поочериди пробует аргументы записать
-			info->command->flag == S1 || info->command->flag == S2)
-		launch_command_redirect(info);
-	else
+//	else if (info->command->flag == B1 || info->command->flag == B2 ||
+//			info->command->flag == S1 || info->command->flag == S2 &&
+//			info->command->file != NULL)
+//		launch_command_redirect(info);
+	else if (info->command->file != NULL)
 		launch_command_bin(info);
+	else
+	{
+		error(info,"Command not found",info->command->argv[0]);
+		return(1);
+	}
 	//launch_command_bin(info);
 	info->command->flag = 0;
 	if(info->command->file)
@@ -62,5 +81,7 @@ void launch_command(t_info *info) //ЗАНУЛИТЬ в структуре по�
 		info->command->file = NULL;
 	}
 	free_2arr(info->command->argv);
+	info->command->argv = NULL;
+	return (0);
 }
 

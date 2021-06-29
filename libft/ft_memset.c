@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmaricru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tjohnnie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 22:25:12 by vmaricru          #+#    #+#             */
-/*   Updated: 2020/11/01 19:10:14 by vmaricru         ###   ########.fr       */
+/*   Created: 2020/10/30 20:06:52 by tjohnnie          #+#    #+#             */
+/*   Updated: 2020/10/30 20:06:54 by tjohnnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*b1;
-	unsigned char	c1;
+	unsigned char *copy;
+	unsigned char value;
 
-	b1 = (unsigned char *)b;
-	c1 = (unsigned char)c;
-	while (len != 0)
+	copy = (unsigned char *)b;
+	value = (unsigned char)c;
+	while (len--)
 	{
-		*b1 = c1;
-		b1++;
-		len--;
+		*copy = value;
+		copy++;
 	}
 	return (b);
 }

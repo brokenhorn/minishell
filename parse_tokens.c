@@ -1,15 +1,6 @@
 #include "minishell.h"
 
-t_parse *init_parse(t_info *info)
-{
-	t_parse *parse;
 
-	parse = (t_parse *)malloc(sizeof(t_parse));
-	parse->qu = 0;
-	parse->opn = 0;
-	parse->line_cp = NULL;
-	return (parse);
-}
 
 char *allocate_str(char *line_cp, int count, t_info *info, char delim)
 {
@@ -85,6 +76,9 @@ char *ft_strtok(char **line_cp, t_info *info, char *delim)
 
 void	get_token_argv_bin(char **token, t_info *info)
 {
+	t_command com;
+
+	com = malloc(size)
 	*token =  ft_strtok(&info->parse->line_cp,info, "|<>");
 	*token = put_variable(*token, info->envp);
 	if (*token != NULL)
@@ -99,19 +93,28 @@ void parse(t_info *info) //ОБРАБОАТЬ ЕСЛИ НЕ НАШЕЛ КОМА�
 	char *line;
 	char *token;
 
-	info->parse = init_parse(info);
-	//check_line_error(info->history->text);
 	line = ft_strtrim(info->text, " ");
 	info->parse->line_cp = line;
 	get_token_argv_bin(&token, info);
-	launch_command(info);
+	if(launch_command(info) == 1)
+	{
+		free(line);
+		free(token);
+		return;
+	}
 	while (token != NULL)
 	{
 		free(token);
 		//free_2arr(info->command->argv); // защитить
 		get_token_argv_bin(&token, info);
 		if (token != NULL)
-			launch_command(info);
+			if(launch_command(info) == 1)
+			{
+				free(line);
+				free(token);
+				return;
+			}
 	}
 	free(line);
+	free_info(info);
 }

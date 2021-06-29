@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/vmaricru/Desktop/minishell_parse/cd.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/cd.c.o"
+  "/Users/vmaricru/Desktop/minishell_parse/export.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/export.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/launch_command.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/launch_command.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/libft/ft_isalpha.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/libft/ft_isalpha.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/libft/ft_split.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/libft/ft_split.c.o"
@@ -21,6 +22,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vmaricru/Desktop/minishell_parse/parse_tokens.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/parse_tokens.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/put_variable.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/put_variable.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/utils.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/utils.c.o"
+  "/Users/vmaricru/Desktop/minishell_parse/utils_list.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/utils_list.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
