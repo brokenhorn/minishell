@@ -19,15 +19,23 @@ int		main(__unused int argc,__unused char **argv, char **envp)
 	com = new_com();
 	info = (t_info *)malloc(sizeof(t_info));
 	info->command = com;
+	info->envp = malloc_envp(envp);
 
-	export(envp);
-//	char* const args1[] = {"/bin/pwd", NULL};
-//	execv("/bin/pwd", args1);
-//
-//	char* const args[] = {"/bin/cd", "Testing"};
-//	execv("/bin/cd", args);
-//	char* const args2[] = {"/bin/pwd", NULL};
-//	execv("/bin/pwd", args1);
+//	EXPORT
+	char **a = ft_split("p=123 12r r PWD=", ' ');
+	export(info, a);
+	export(info, NULL);
+	free_2arr(a);
+
+// PUT_VARIABLE
+//	char *sstr = (char *)malloc(sizeof(char) * 50);
+//	ft_strlcpy(sstr, "hello $PWD\nhaha $r\n'$PATH'\n\"'$PATH'\"\n\'$\'PWD", 50);
+//	sstr = put_variable(sstr, info->envp);
+//	printf("%s\n", sstr);
+//	free(sstr);
+
+
+
 //	while (1)
 //	{
 //		list->text = readline("BulochkaBao% ");

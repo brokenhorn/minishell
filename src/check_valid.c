@@ -44,4 +44,6 @@ void	check_valid(t_info *info, char *str)
 			check_redirect(info, str);
 		str++;
 	}
+	if (qu != 0)
+		error(info, "unclosed quotes", NULL);
 }

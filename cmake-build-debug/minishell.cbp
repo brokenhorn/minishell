@@ -84,6 +84,9 @@
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_min_bonus.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_split.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_strdup.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -121,6 +124,12 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/src/utils.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/src/utils_export.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/src/utils_put_variable.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/CMakeLists.txt">

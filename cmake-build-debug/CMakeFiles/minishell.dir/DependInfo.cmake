@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/tjohnnie/Desktop/minishell/libft/ft_isalpha.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_isalpha.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_min_bonus.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o"
+  "/Users/tjohnnie/Desktop/minishell/libft/ft_split.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_split.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strdup.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strdup.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strjoin.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strjoin.c.o"
   "/Users/tjohnnie/Desktop/minishell/libft/ft_strlcat.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/libft/ft_strlcat.c.o"
@@ -18,6 +19,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/tjohnnie/Desktop/minishell/src/main.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/main.c.o"
   "/Users/tjohnnie/Desktop/minishell/src/put_variable.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/put_variable.c.o"
   "/Users/tjohnnie/Desktop/minishell/src/utils.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/utils.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/utils_export.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/utils_export.c.o"
+  "/Users/tjohnnie/Desktop/minishell/src/utils_put_variable.c" "/Users/tjohnnie/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/utils_put_variable.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

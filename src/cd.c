@@ -1,5 +1,21 @@
 #include "../minishell.h"
 
+static void	old_pwd(char **envp, char *old)
+{
+	int		j;
+
+	j = 0;
+	while (envp[j] != NULL)
+	{
+		if (!ft_strncmp(envp[j], "OLDPWD=", 7))
+		{
+			envp[j] = ft_strjoin("OLDPWD=", old);
+			break ;
+		}
+		j++;
+	}
+}
+
 void	cd(t_info *info, char **envp)
 {
 	int		j;
@@ -21,18 +37,9 @@ void	cd(t_info *info, char **envp)
 			if (err == NULL)
 				error(info, NULL, NULL);
 			envp[j] = ft_strjoin("PWD=", new);
-			break;
+			break ;
 		}
 		j++;
 	}
-	j = 0;
-	while (envp[j] != NULL)
-	{
-		if (!ft_strncmp(envp[j], "OLDPWD=", 7))
-		{
-			envp[j] = ft_strjoin("OLDPWD=", old);
-			break;
-		}
-		j++;
-	}
+	old_pwd(envp, old);
 }

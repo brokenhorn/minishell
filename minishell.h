@@ -38,19 +38,22 @@ typedef struct	s_command
 	int 		flag;
 	char		**argv;
 	char		*file;
+	struct s_command *next;
 }				t_command;
 
 typedef struct	s_parse
 {
 	int		opn;
 	int		qu;
+	char 	*line_cp;
 }				t_parse;
 
 typedef struct	s_info
 {
 	char 		*text;
-	t_command	*command;
 	char		**envp;
+	t_command	*command;
+	t_parse		*parse;
 }				t_info;
 
 void	error(t_info *info, char *str, char *help);
@@ -59,9 +62,21 @@ void	cd(t_info *info, char **envp);
 void	parse(t_info *info);
 void  	search_bin(t_info *info);
 void	free_2arr(char **arr);
-void	launch_command(t_info *info);
+int		launch_command(t_info *info);
 void	my_exit(t_info *info);
 void	check_valid(t_info *info, char *str);
-void	export(char **envp);
+void	export(t_info *info, char **text);
+int		ft_check_space(char *str);
+void	free_info(t_info *info);
+void	start_point(char **envp);
+int		main(int argc, char **argv, char **envp);
+char	**sort_export(char **str, int n);
+char	**malloc_envp(char **envp);
+void	add_variable_new(t_info *info, char *name, char *value, int i);
+char	*new_variable(char *name, char *value);
+
+char	*no_quotes(char *str);
+char	*make_new_str(char *str, char *new_str, char *variable, char **ptr);
+int		len_str(char *str);
 
 #endif

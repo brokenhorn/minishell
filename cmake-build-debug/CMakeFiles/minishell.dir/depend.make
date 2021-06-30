@@ -7,6 +7,9 @@ CMakeFiles/minishell.dir/libft/ft_isalpha.c.o: ../libft/libft.h
 CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o: ../libft/ft_min_bonus.c
 CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o: ../libft/libft.h
 
+CMakeFiles/minishell.dir/libft/ft_split.c.o: ../libft/ft_split.c
+CMakeFiles/minishell.dir/libft/ft_split.c.o: ../libft/libft.h
+
 CMakeFiles/minishell.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c
 CMakeFiles/minishell.dir/libft/ft_strdup.c.o: ../libft/libft.h
 
@@ -48,4 +51,12 @@ CMakeFiles/minishell.dir/src/put_variable.c.o: ../src/put_variable.c
 CMakeFiles/minishell.dir/src/utils.c.o: ../libft/libft.h
 CMakeFiles/minishell.dir/src/utils.c.o: ../minishell.h
 CMakeFiles/minishell.dir/src/utils.c.o: ../src/utils.c
+
+CMakeFiles/minishell.dir/src/utils_export.c.o: ../libft/libft.h
+CMakeFiles/minishell.dir/src/utils_export.c.o: ../minishell.h
+CMakeFiles/minishell.dir/src/utils_export.c.o: ../src/utils_export.c
+
+CMakeFiles/minishell.dir/src/utils_put_variable.c.o: ../libft/libft.h
+CMakeFiles/minishell.dir/src/utils_put_variable.c.o: ../minishell.h
+CMakeFiles/minishell.dir/src/utils_put_variable.c.o: ../src/utils_put_variable.c
 

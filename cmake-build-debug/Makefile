@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/994A9086-0C64-4064-A38F-CE7050C33A1E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/994A9086-0C64-4064-A38F-CE7050C33A1E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/tjohnnie/Desktop/minishell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/994A9086-0C64-4064-A38F-CE7050C33A1E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/6233CDB0-6E12-4D0B-ADEA-9FC7CA345EAC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/994A9086-0C64-4064-A38F-CE7050C33A1E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -195,6 +195,33 @@ libft/ft_min_bonus.s: libft/ft_min_bonus.c.s
 libft/ft_min_bonus.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_min_bonus.c.s
 .PHONY : libft/ft_min_bonus.c.s
+
+libft/ft_split.o: libft/ft_split.c.o
+
+.PHONY : libft/ft_split.o
+
+# target to build an object file
+libft/ft_split.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_split.c.o
+.PHONY : libft/ft_split.c.o
+
+libft/ft_split.i: libft/ft_split.c.i
+
+.PHONY : libft/ft_split.i
+
+# target to preprocess a source file
+libft/ft_split.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_split.c.i
+.PHONY : libft/ft_split.c.i
+
+libft/ft_split.s: libft/ft_split.c.s
+
+.PHONY : libft/ft_split.s
+
+# target to generate assembly for a file
+libft/ft_split.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_split.c.s
+.PHONY : libft/ft_split.c.s
 
 libft/ft_strdup.o: libft/ft_strdup.c.o
 
@@ -520,6 +547,60 @@ src/utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils.c.s
 .PHONY : src/utils.c.s
 
+src/utils_export.o: src/utils_export.c.o
+
+.PHONY : src/utils_export.o
+
+# target to build an object file
+src/utils_export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils_export.c.o
+.PHONY : src/utils_export.c.o
+
+src/utils_export.i: src/utils_export.c.i
+
+.PHONY : src/utils_export.i
+
+# target to preprocess a source file
+src/utils_export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils_export.c.i
+.PHONY : src/utils_export.c.i
+
+src/utils_export.s: src/utils_export.c.s
+
+.PHONY : src/utils_export.s
+
+# target to generate assembly for a file
+src/utils_export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils_export.c.s
+.PHONY : src/utils_export.c.s
+
+src/utils_put_variable.o: src/utils_put_variable.c.o
+
+.PHONY : src/utils_put_variable.o
+
+# target to build an object file
+src/utils_put_variable.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils_put_variable.c.o
+.PHONY : src/utils_put_variable.c.o
+
+src/utils_put_variable.i: src/utils_put_variable.c.i
+
+.PHONY : src/utils_put_variable.i
+
+# target to preprocess a source file
+src/utils_put_variable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils_put_variable.c.i
+.PHONY : src/utils_put_variable.c.i
+
+src/utils_put_variable.s: src/utils_put_variable.c.s
+
+.PHONY : src/utils_put_variable.s
+
+# target to generate assembly for a file
+src/utils_put_variable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils_put_variable.c.s
+.PHONY : src/utils_put_variable.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -535,6 +616,9 @@ help:
 	@echo "... libft/ft_min_bonus.o"
 	@echo "... libft/ft_min_bonus.i"
 	@echo "... libft/ft_min_bonus.s"
+	@echo "... libft/ft_split.o"
+	@echo "... libft/ft_split.i"
+	@echo "... libft/ft_split.s"
 	@echo "... libft/ft_strdup.o"
 	@echo "... libft/ft_strdup.i"
 	@echo "... libft/ft_strdup.s"
@@ -571,6 +655,12 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
+	@echo "... src/utils_export.o"
+	@echo "... src/utils_export.i"
+	@echo "... src/utils_export.s"
+	@echo "... src/utils_put_variable.o"
+	@echo "... src/utils_put_variable.i"
+	@echo "... src/utils_put_variable.s"
 .PHONY : help
 
 

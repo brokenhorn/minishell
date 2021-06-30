@@ -7,6 +7,9 @@ CMakeFiles/minishell.dir/libft/ft_isalpha.c.o
 CMakeFiles/minishell.dir/libft/ft_min_bonus.c.o
  /Users/tjohnnie/Desktop/minishell/libft/ft_min_bonus.c
  /Users/tjohnnie/Desktop/minishell/libft/libft.h
+CMakeFiles/minishell.dir/libft/ft_split.c.o
+ /Users/tjohnnie/Desktop/minishell/libft/ft_split.c
+ /Users/tjohnnie/Desktop/minishell/libft/libft.h
 CMakeFiles/minishell.dir/libft/ft_strdup.c.o
  /Users/tjohnnie/Desktop/minishell/libft/ft_strdup.c
  /Users/tjohnnie/Desktop/minishell/libft/libft.h
@@ -49,3 +52,11 @@ CMakeFiles/minishell.dir/src/utils.c.o
  /Users/tjohnnie/Desktop/minishell/libft/libft.h
  /Users/tjohnnie/Desktop/minishell/minishell.h
  /Users/tjohnnie/Desktop/minishell/src/utils.c
+CMakeFiles/minishell.dir/src/utils_export.c.o
+ /Users/tjohnnie/Desktop/minishell/libft/libft.h
+ /Users/tjohnnie/Desktop/minishell/minishell.h
+ /Users/tjohnnie/Desktop/minishell/src/utils_export.c
+CMakeFiles/minishell.dir/src/utils_put_variable.c.o
+ /Users/tjohnnie/Desktop/minishell/libft/libft.h
+ /Users/tjohnnie/Desktop/minishell/minishell.h
+ /Users/tjohnnie/Desktop/minishell/src/utils_put_variable.c
