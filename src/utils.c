@@ -1,8 +1,8 @@
 #include "../minishell.h"
 
-void free_2arr(char **arr)
+void	free_2arr(char **arr)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	if (arr)
@@ -18,11 +18,13 @@ void free_2arr(char **arr)
 	}
 }
 
-void free_info(t_info *info)
+void	free_info(t_info *info)
 {
+	t_command	*tmp;
+
 	if (info)
 	{
-		if (info->command)
+		while (info->command)
 		{
 			if (info->command->argv)
 				free_2arr(info->command->argv);
@@ -31,7 +33,9 @@ void free_info(t_info *info)
 				free(info->command->file);
 				info->command->file = NULL;
 			}
+			tmp = info->command->next;
 			free(info->command);
+			info->command = tmp;
 		}
 		if (info->parse)
 		{
@@ -62,7 +66,7 @@ void	my_exit(t_info *info)
 
 int	ft_check_space(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str == NULL)
