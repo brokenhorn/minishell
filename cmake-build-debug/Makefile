@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/8DAC1DA0-5859-48AF-BEC7-EA7DCE0998D6/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/0F2248E2-C204-4292-94C0-B4679AE5397C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/8DAC1DA0-5859-48AF-BEC7-EA7DCE0998D6/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/0F2248E2-C204-4292-94C0-B4679AE5397C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/tjohnnie/Desktop/minishell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/8DAC1DA0-5859-48AF-BEC7-EA7DCE0998D6/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/0F2248E2-C204-4292-94C0-B4679AE5397C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/8DAC1DA0-5859-48AF-BEC7-EA7DCE0998D6/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001n_h000d_m/T/AppTranslocation/0F2248E2-C204-4292-94C0-B4679AE5397C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -142,6 +142,33 @@ minishell/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
 .PHONY : minishell/fast
 
+libft/ft_isalnum.o: libft/ft_isalnum.c.o
+
+.PHONY : libft/ft_isalnum.o
+
+# target to build an object file
+libft/ft_isalnum.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_isalnum.c.o
+.PHONY : libft/ft_isalnum.c.o
+
+libft/ft_isalnum.i: libft/ft_isalnum.c.i
+
+.PHONY : libft/ft_isalnum.i
+
+# target to preprocess a source file
+libft/ft_isalnum.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_isalnum.c.i
+.PHONY : libft/ft_isalnum.c.i
+
+libft/ft_isalnum.s: libft/ft_isalnum.c.s
+
+.PHONY : libft/ft_isalnum.s
+
+# target to generate assembly for a file
+libft/ft_isalnum.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_isalnum.c.s
+.PHONY : libft/ft_isalnum.c.s
+
 libft/ft_isalpha.o: libft/ft_isalpha.c.o
 
 .PHONY : libft/ft_isalpha.o
@@ -169,6 +196,60 @@ libft/ft_isalpha.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_isalpha.c.s
 .PHONY : libft/ft_isalpha.c.s
 
+libft/ft_isdigit.o: libft/ft_isdigit.c.o
+
+.PHONY : libft/ft_isdigit.o
+
+# target to build an object file
+libft/ft_isdigit.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_isdigit.c.o
+.PHONY : libft/ft_isdigit.c.o
+
+libft/ft_isdigit.i: libft/ft_isdigit.c.i
+
+.PHONY : libft/ft_isdigit.i
+
+# target to preprocess a source file
+libft/ft_isdigit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_isdigit.c.i
+.PHONY : libft/ft_isdigit.c.i
+
+libft/ft_isdigit.s: libft/ft_isdigit.c.s
+
+.PHONY : libft/ft_isdigit.s
+
+# target to generate assembly for a file
+libft/ft_isdigit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_isdigit.c.s
+.PHONY : libft/ft_isdigit.c.s
+
+libft/ft_itoa.o: libft/ft_itoa.c.o
+
+.PHONY : libft/ft_itoa.o
+
+# target to build an object file
+libft/ft_itoa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_itoa.c.o
+.PHONY : libft/ft_itoa.c.o
+
+libft/ft_itoa.i: libft/ft_itoa.c.i
+
+.PHONY : libft/ft_itoa.i
+
+# target to preprocess a source file
+libft/ft_itoa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_itoa.c.i
+.PHONY : libft/ft_itoa.c.i
+
+libft/ft_itoa.s: libft/ft_itoa.c.s
+
+.PHONY : libft/ft_itoa.s
+
+# target to generate assembly for a file
+libft/ft_itoa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_itoa.c.s
+.PHONY : libft/ft_itoa.c.s
+
 libft/ft_min_bonus.o: libft/ft_min_bonus.c.o
 
 .PHONY : libft/ft_min_bonus.o
@@ -195,6 +276,33 @@ libft/ft_min_bonus.s: libft/ft_min_bonus.c.s
 libft/ft_min_bonus.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_min_bonus.c.s
 .PHONY : libft/ft_min_bonus.c.s
+
+libft/ft_nbrlen_bonus.o: libft/ft_nbrlen_bonus.c.o
+
+.PHONY : libft/ft_nbrlen_bonus.o
+
+# target to build an object file
+libft/ft_nbrlen_bonus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_nbrlen_bonus.c.o
+.PHONY : libft/ft_nbrlen_bonus.c.o
+
+libft/ft_nbrlen_bonus.i: libft/ft_nbrlen_bonus.c.i
+
+.PHONY : libft/ft_nbrlen_bonus.i
+
+# target to preprocess a source file
+libft/ft_nbrlen_bonus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_nbrlen_bonus.c.i
+.PHONY : libft/ft_nbrlen_bonus.c.i
+
+libft/ft_nbrlen_bonus.s: libft/ft_nbrlen_bonus.c.s
+
+.PHONY : libft/ft_nbrlen_bonus.s
+
+# target to generate assembly for a file
+libft/ft_nbrlen_bonus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/libft/ft_nbrlen_bonus.c.s
+.PHONY : libft/ft_nbrlen_bonus.c.s
 
 libft/ft_split.o: libft/ft_split.c.o
 
@@ -547,6 +655,33 @@ src/utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils.c.s
 .PHONY : src/utils.c.s
 
+src/utils2.o: src/utils2.c.o
+
+.PHONY : src/utils2.o
+
+# target to build an object file
+src/utils2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils2.c.o
+.PHONY : src/utils2.c.o
+
+src/utils2.i: src/utils2.c.i
+
+.PHONY : src/utils2.i
+
+# target to preprocess a source file
+src/utils2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils2.c.i
+.PHONY : src/utils2.c.i
+
+src/utils2.s: src/utils2.c.s
+
+.PHONY : src/utils2.s
+
+# target to generate assembly for a file
+src/utils2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/utils2.c.s
+.PHONY : src/utils2.c.s
+
 src/utils_export.o: src/utils_export.c.o
 
 .PHONY : src/utils_export.o
@@ -610,12 +745,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... minishell"
+	@echo "... libft/ft_isalnum.o"
+	@echo "... libft/ft_isalnum.i"
+	@echo "... libft/ft_isalnum.s"
 	@echo "... libft/ft_isalpha.o"
 	@echo "... libft/ft_isalpha.i"
 	@echo "... libft/ft_isalpha.s"
+	@echo "... libft/ft_isdigit.o"
+	@echo "... libft/ft_isdigit.i"
+	@echo "... libft/ft_isdigit.s"
+	@echo "... libft/ft_itoa.o"
+	@echo "... libft/ft_itoa.i"
+	@echo "... libft/ft_itoa.s"
 	@echo "... libft/ft_min_bonus.o"
 	@echo "... libft/ft_min_bonus.i"
 	@echo "... libft/ft_min_bonus.s"
+	@echo "... libft/ft_nbrlen_bonus.o"
+	@echo "... libft/ft_nbrlen_bonus.i"
+	@echo "... libft/ft_nbrlen_bonus.s"
 	@echo "... libft/ft_split.o"
 	@echo "... libft/ft_split.i"
 	@echo "... libft/ft_split.s"
@@ -655,6 +802,9 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
+	@echo "... src/utils2.o"
+	@echo "... src/utils2.i"
+	@echo "... src/utils2.s"
 	@echo "... src/utils_export.o"
 	@echo "... src/utils_export.i"
 	@echo "... src/utils_export.s"

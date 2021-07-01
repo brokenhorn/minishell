@@ -1,4 +1,4 @@
-#include "../minishell.h"
+#include "minishell.h"
 
 void	free_2arr(char **arr)
 {
@@ -37,13 +37,15 @@ void	free_info(t_info *info)
 			free(info->command);
 			info->command = tmp;
 		}
-		if (info->parse)
-		{
-			free(info->parse);
-		}
-		if (info->text)
-			free(info->text);
-		free(info);
+		info->command = NULL;
+//		if (info->parse)
+//		{
+//			free(info->parse);
+//		}
+//		if (info->text)
+//			free(info->text);
+//		free(info);
+
 	}
 }
 
@@ -58,11 +60,10 @@ void	error(t_info *info, char *str, char *help)
 	free_info(info);
 }
 
-void	my_exit(t_info *info)
+void    my_exit(t_info *info)
 {
-	int		check;
-	char	*str;
-
+	int       check;
+	char   *str;
 	str = info->command->argv[1];
 	check = 1;
 	if (str)

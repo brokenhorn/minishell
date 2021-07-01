@@ -21,11 +21,10 @@ static int	util(char **envp, char **str, int i, int j)
 	return (check);
 }
 
-static char	*search_variable(char *str, char **envp)
+static char	*search_variable(t_info *info, char *str, char **envp)
 {
 	int		i;
 	int		j;
-	int		len;
 	int		check;
 
 	check = 0;
@@ -39,13 +38,18 @@ static char	*search_variable(char *str, char **envp)
 	}
 	if (!check)
 	{
-		free(str);
-		str = NULL;
+		if (*str == '?')
+			str = exit_status_variable(info, str);
+		else
+		{
+			free(str);
+			str = NULL;
+		}
 	}
 	return (str);
 }
 
-static char	*define_variable(char *ptr, char **envp)
+static char	*define_variable(t_info *info, char *ptr, char **envp)
 {
 	int		len;
 	char	*variable;
@@ -53,24 +57,31 @@ static char	*define_variable(char *ptr, char **envp)
 	len = 0;
 	while (ft_isalpha(ptr[len]))
 		len++;
+	if (*ptr == '?')
+		len = 1;
 	variable = (char *)malloc(sizeof(char) * (len + 1));
 	variable[len] = '\0';
 	len = 0;
-	while (ft_isalpha(*ptr))
-		variable[len++] = *ptr++;
+	if (*ptr == '?')
+		variable[len++] = '?';
+	else
+	{
+		while (ft_isalpha(*ptr))
+			variable[len++] = *ptr++;
+	}
 	if (!len)
 		return (NULL);
-	return (search_variable(variable, envp));
+	return (search_variable(info, variable, envp));
 }
 
-char	*variable_in_str(char *str, char **ptr, char **envp)
+char	*variable_in_str(t_info *info, char *str, char **ptr, char **envp)
 {
 	char	*variable;
 	int		len;
 	char	*new_str;
 
 	(*ptr)++;
-	variable = define_variable(*ptr, envp);
+	variable = define_variable(info, *ptr, envp);
 	len = len_str(str);
 	new_str = (char *)malloc(sizeof(char) * (ft_strlen(variable) + len + 1));
 	new_str[ft_strlen(variable) + len] = '\0';
@@ -80,7 +91,7 @@ char	*variable_in_str(char *str, char **ptr, char **envp)
 	return (new_str);
 }
 
-char	*put_variable(char *str, char **envp)
+char	*put_variable(t_info *info, char *str, char **envp)
 {
 	char	*ptr;
 	char	qu;
@@ -102,7 +113,7 @@ char	*put_variable(char *str, char **envp)
 			qu = 0;
 		if (*ptr == '$' && qu != '\''
 			&& !(*(ptr - 1) == '\"' && *(ptr + 1) == '\"'))
-			str = variable_in_str(str, &ptr, envp);
+			str = variable_in_str(info, str, &ptr, envp);
 		else
 			ptr++;
 	}

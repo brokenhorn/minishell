@@ -35,7 +35,7 @@ char	**malloc_envp(char **envp)
 	while (envp[i])
 		i++;
 	copy = (char **)malloc(sizeof(char *) * (i + 1));
-	copy[i + 1] = NULL;
+	copy[i] = NULL;
 	i = 0;
 	while (envp[i] != NULL)
 	{

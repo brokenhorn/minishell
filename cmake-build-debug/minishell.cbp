@@ -78,10 +78,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_isalnum.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_isalpha.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_isdigit.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_itoa.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_min_bonus.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_nbrlen_bonus.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/libft/ft_split.c">
@@ -124,6 +136,9 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/src/utils.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/tjohnnie/Desktop/minishell/src/utils2.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/tjohnnie/Desktop/minishell/src/utils_export.c">

@@ -48,8 +48,10 @@ char	*make_new_str(char *str, char *new_str, char *variable, char **ptr)
 			str++;
 			util(variable, &new_str, &i, &len);
 			*ptr = new_str + i;
-			while (ft_isalpha(*str))
+			if (*str == '?')
 				str++;
+			else
+				str = skip_alpha(str);
 		}
 		else
 		{

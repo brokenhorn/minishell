@@ -54,10 +54,11 @@ typedef struct	s_info
 	char		**envp;
 	t_command	*command;
 	t_parse		*parse;
+	int			exit_status;
 }				t_info;
 
 void	error(t_info *info, char *str, char *help);
-char	*put_variable(char *str, char **envp);
+char	*put_variable(t_info *info, char *str, char **envp);
 void	cd(t_info *info, char **envp);
 void	parse(t_info *info);
 void  	search_bin(t_info *info);
@@ -79,5 +80,7 @@ char   *new_variable(char *name, char *value);
 char	*no_quotes(char *str);
 char	*make_new_str(char *str, char *new_str, char *variable, char **ptr);
 int		len_str(char *str);
+char	*exit_status_variable(t_info *info, char *str);
+char	*skip_alpha(char *str);
 
 #endif

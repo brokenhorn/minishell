@@ -1,6 +1,6 @@
 #include "../minishell.h"
 
-static int	check_redirect(t_info *info, char *str)
+static void	check_redirect(t_info *info, char *str)
 {
 	if (*str == '>')
 	{
