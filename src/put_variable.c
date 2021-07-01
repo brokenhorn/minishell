@@ -55,7 +55,7 @@ static char	*define_variable(t_info *info, char *ptr, char **envp)
 	char	*variable;
 
 	len = 0;
-	while (ft_isalpha(ptr[len]))
+	while (ft_isalnum(ptr[len]) || ptr[len] == '_')
 		len++;
 	if (*ptr == '?')
 		len = 1;
@@ -66,7 +66,7 @@ static char	*define_variable(t_info *info, char *ptr, char **envp)
 		variable[len++] = '?';
 	else
 	{
-		while (ft_isalpha(*ptr))
+		while (ft_isalnum(*ptr) || *ptr == '_')
 			variable[len++] = *ptr++;
 	}
 	if (!len)
@@ -82,7 +82,7 @@ char	*variable_in_str(t_info *info, char *str, char **ptr, char **envp)
 
 	(*ptr)++;
 	variable = define_variable(info, *ptr, envp);
-	len = len_str(str);
+	len = len_str(str, *ptr);
 	new_str = (char *)malloc(sizeof(char) * (ft_strlen(variable) + len + 1));
 	new_str[ft_strlen(variable) + len] = '\0';
 	new_str = make_new_str(str, new_str, variable, ptr);

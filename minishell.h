@@ -79,7 +79,7 @@ void    add_variable_new(t_info *info, char *name, char *value, int i);
 char   *new_variable(char *name, char *value);
 char	*no_quotes(char *str);
 char	*make_new_str(char *str, char *new_str, char *variable, char **ptr);
-int		len_str(char *str);
+int		len_str(char *str, char *ptr);
 char	*exit_status_variable(t_info *info, char *str);
 char	*skip_alpha(char *str);
 

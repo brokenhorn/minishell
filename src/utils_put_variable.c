@@ -1,24 +1,29 @@
 #include "../minishell.h"
 
-int	len_str(char *str)
+int	len_str(char *str, char *ptr)
 {
 	int		len;
-	int		check;
 
 	len = 0;
-	check = 0;
 	while (*str != '\0')
 	{
-		if (*str == '$' && check == 0)
+		if (str == ptr)
 		{
-			while (ft_isalpha(*str))
+			if (*str == '?')
 				str++;
-			check = 1;
+			else
+			{
+				while (ft_isalnum(*str) || *str == '_')
+					str++;
+			}
 		}
-		len++;
-		str++;
+		else
+		{
+			len++;
+			str++;
+		}
 	}
-	return (len);
+	return (len - 1);
 }
 
 static void	util(char *variable, char **new_str, int *i, int *len)
@@ -38,7 +43,7 @@ char	*make_new_str(char *str, char *new_str, char *variable, char **ptr)
 	int		len;
 	int		i;
 
-	len = ft_strlen(variable) + len_str(str) + 1;
+	len = ft_strlen(variable) + len_str(str, *ptr) + 1;
 	*ptr -= 1;
 	i = 0 ;
 	while (len > 0)
@@ -72,7 +77,7 @@ static char	*delet_quot(char *str, char **ptr)
 	len = ft_strlen(str);
 	tmp = str;
 	temp = str;
-	str = (char *)malloc(sizeof(char) * len);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	str[len] = '\0';
 	i = 0;
 	while (len)

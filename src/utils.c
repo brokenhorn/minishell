@@ -38,9 +38,7 @@ void	free_info(t_info *info)
 			info->command = tmp;
 		}
 		if (info->parse)
-		{
 			free(info->parse);
-		}
 		if (info->text)
 			free(info->text);
 		free(info);
