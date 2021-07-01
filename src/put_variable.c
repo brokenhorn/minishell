@@ -100,11 +100,11 @@ char	*put_variable(char *str, char **envp)
 		}
 		else if (*ptr == qu)
 			qu = 0;
-		if (*ptr == '$' && qu != '\'')
+		if (*ptr == '$' && qu != '\''
+			&& !(*(ptr - 1) == '\"' && *(ptr + 1) == '\"'))
 			str = variable_in_str(str, &ptr, envp);
 		else
 			ptr++;
 	}
-	str = no_quotes(str);
-	return (str);
+	return (no_quotes(str));
 }

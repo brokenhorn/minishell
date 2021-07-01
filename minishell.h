@@ -40,14 +40,14 @@ typedef struct	s_command
 	char		*file;
 	struct s_command *next;
 }				t_command;
-​
+
 typedef struct	s_parse
 {
 	int		opn;
 	int		qu;
 	char 	*line_cp;
 }				t_parse;
-​
+
 typedef struct	s_info
 {
 	char 		*text;
