@@ -1,4 +1,4 @@
-#include "minishell.h"
+#include "../includes/minishell.h"
 
 
 
@@ -76,16 +76,41 @@ char *ft_strtok(char **line_cp, t_info *info, char *delim)
 
 void	get_token_argv_bin(char **token, t_info *info)
 {
-	t_command com;
+	t_command *f_com;
+	char *tmp;
 
-	com = malloc(size)
+	f_com = ft_new_com();
+	info->command = f_com;
 	*token =  ft_strtok(&info->parse->line_cp,info, "|<>");
-	*token = put_variable(*token, info->envp);
+	tmp = *token;
+	*token = put_variable(info, *token, info->envp);
 	if (*token != NULL)
 	{
 		info->command->argv = ft_split(*token, ' ');
 		search_bin(info);
+		if (info->parse->line_cp != NULL && *(info->parse->line_cp) != '\0')
+		{
+			info->command->next = ft_new_com();
+			info->command = info->command->next;
+		}
 	}
+	while (*token != NULL)
+	{
+		free(*token);
+		*token =  ft_strtok(&info->parse->line_cp,info, "|<>");
+		*token = put_variable(info, *token, info->envp);
+		if (*token != NULL)
+		{
+			info->command->argv = ft_split(*token, ' ');
+			search_bin(info);
+			if (info->parse->line_cp != NULL && *(info->parse->line_cp) != '\0')
+			{
+				info->command->next = ft_new_com();
+				info->command = info->command->next;
+			}
+		}
+	}
+	info->command = f_com;
 }
 
 void parse(t_info *info) //ОБРАБОАТЬ ЕСЛИ НЕ НАШЕЛ КОМАНДУ
@@ -93,28 +118,18 @@ void parse(t_info *info) //ОБРАБОАТЬ ЕСЛИ НЕ НАШЕЛ КОМА�
 	char *line;
 	char *token;
 
+
+	token = NULL;
 	line = ft_strtrim(info->text, " ");
-	info->parse->line_cp = line;
-	get_token_argv_bin(&token, info);
-	if(launch_command(info) == 1)
+	check_valid(info, line);
+	if (info->err_check == 1)
 	{
 		free(line);
-		free(token);
 		return;
 	}
-	while (token != NULL)
-	{
-		free(token);
-		//free_2arr(info->command->argv); // защитить
-		get_token_argv_bin(&token, info);
-		if (token != NULL)
-			if(launch_command(info) == 1)
-			{
-				free(line);
-				free(token);
-				return;
-			}
-	}
+	info->parse->line_cp = line;
+	check_valid(info, line);
+	get_token_argv_bin(&token, info);
+	launch_command(info);
 	free(line);
-	free_info(info);
 }

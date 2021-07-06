@@ -78,16 +78,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/cd.c">
-			<Option target="minishell_parse"/>
-		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/export.c">
-			<Option target="minishell_parse"/>
-		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/launch_command.c">
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_isalnum.c">
 			<Option target="minishell_parse"/>
 		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_isalpha.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_isdigit.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_itoa.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_nbrlen_bonus.c">
 			<Option target="minishell_parse"/>
 		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_split.c">
@@ -117,22 +120,52 @@
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_strtrim.c">
 			<Option target="minishell_parse"/>
 		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/main.c">
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/cd.c">
 			<Option target="minishell_parse"/>
 		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/parse_search_bin.c">
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/check_valid.c">
 			<Option target="minishell_parse"/>
 		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/parse_tokens.c">
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/export.c">
 			<Option target="minishell_parse"/>
 		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/put_variable.c">
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/launch_command.c">
 			<Option target="minishell_parse"/>
 		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/utils.c">
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/main.c">
 			<Option target="minishell_parse"/>
 		</Unit>
-		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/utils_list.c">
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/parse_search_bin.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/parse_tokens.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/parse_utils.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/path_search_bin_utils.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/put_variable.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/sig_utils.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils2.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils_export.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils_list.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils_put_variable.c">
 			<Option target="minishell_parse"/>
 		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/CMakeLists.txt">

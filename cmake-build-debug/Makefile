@@ -142,86 +142,32 @@ minishell_parse/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/build
 .PHONY : minishell_parse/fast
 
-cd.o: cd.c.o
+libft/ft_isalnum.o: libft/ft_isalnum.c.o
 
-.PHONY : cd.o
-
-# target to build an object file
-cd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/cd.c.o
-.PHONY : cd.c.o
-
-cd.i: cd.c.i
-
-.PHONY : cd.i
-
-# target to preprocess a source file
-cd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/cd.c.i
-.PHONY : cd.c.i
-
-cd.s: cd.c.s
-
-.PHONY : cd.s
-
-# target to generate assembly for a file
-cd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/cd.c.s
-.PHONY : cd.c.s
-
-export.o: export.c.o
-
-.PHONY : export.o
+.PHONY : libft/ft_isalnum.o
 
 # target to build an object file
-export.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/export.c.o
-.PHONY : export.c.o
+libft/ft_isalnum.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_isalnum.c.o
+.PHONY : libft/ft_isalnum.c.o
 
-export.i: export.c.i
+libft/ft_isalnum.i: libft/ft_isalnum.c.i
 
-.PHONY : export.i
-
-# target to preprocess a source file
-export.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/export.c.i
-.PHONY : export.c.i
-
-export.s: export.c.s
-
-.PHONY : export.s
-
-# target to generate assembly for a file
-export.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/export.c.s
-.PHONY : export.c.s
-
-launch_command.o: launch_command.c.o
-
-.PHONY : launch_command.o
-
-# target to build an object file
-launch_command.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/launch_command.c.o
-.PHONY : launch_command.c.o
-
-launch_command.i: launch_command.c.i
-
-.PHONY : launch_command.i
+.PHONY : libft/ft_isalnum.i
 
 # target to preprocess a source file
-launch_command.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/launch_command.c.i
-.PHONY : launch_command.c.i
+libft/ft_isalnum.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_isalnum.c.i
+.PHONY : libft/ft_isalnum.c.i
 
-launch_command.s: launch_command.c.s
+libft/ft_isalnum.s: libft/ft_isalnum.c.s
 
-.PHONY : launch_command.s
+.PHONY : libft/ft_isalnum.s
 
 # target to generate assembly for a file
-launch_command.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/launch_command.c.s
-.PHONY : launch_command.c.s
+libft/ft_isalnum.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_isalnum.c.s
+.PHONY : libft/ft_isalnum.c.s
 
 libft/ft_isalpha.o: libft/ft_isalpha.c.o
 
@@ -249,6 +195,87 @@ libft/ft_isalpha.s: libft/ft_isalpha.c.s
 libft/ft_isalpha.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_isalpha.c.s
 .PHONY : libft/ft_isalpha.c.s
+
+libft/ft_isdigit.o: libft/ft_isdigit.c.o
+
+.PHONY : libft/ft_isdigit.o
+
+# target to build an object file
+libft/ft_isdigit.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_isdigit.c.o
+.PHONY : libft/ft_isdigit.c.o
+
+libft/ft_isdigit.i: libft/ft_isdigit.c.i
+
+.PHONY : libft/ft_isdigit.i
+
+# target to preprocess a source file
+libft/ft_isdigit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_isdigit.c.i
+.PHONY : libft/ft_isdigit.c.i
+
+libft/ft_isdigit.s: libft/ft_isdigit.c.s
+
+.PHONY : libft/ft_isdigit.s
+
+# target to generate assembly for a file
+libft/ft_isdigit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_isdigit.c.s
+.PHONY : libft/ft_isdigit.c.s
+
+libft/ft_itoa.o: libft/ft_itoa.c.o
+
+.PHONY : libft/ft_itoa.o
+
+# target to build an object file
+libft/ft_itoa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_itoa.c.o
+.PHONY : libft/ft_itoa.c.o
+
+libft/ft_itoa.i: libft/ft_itoa.c.i
+
+.PHONY : libft/ft_itoa.i
+
+# target to preprocess a source file
+libft/ft_itoa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_itoa.c.i
+.PHONY : libft/ft_itoa.c.i
+
+libft/ft_itoa.s: libft/ft_itoa.c.s
+
+.PHONY : libft/ft_itoa.s
+
+# target to generate assembly for a file
+libft/ft_itoa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_itoa.c.s
+.PHONY : libft/ft_itoa.c.s
+
+libft/ft_nbrlen_bonus.o: libft/ft_nbrlen_bonus.c.o
+
+.PHONY : libft/ft_nbrlen_bonus.o
+
+# target to build an object file
+libft/ft_nbrlen_bonus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_nbrlen_bonus.c.o
+.PHONY : libft/ft_nbrlen_bonus.c.o
+
+libft/ft_nbrlen_bonus.i: libft/ft_nbrlen_bonus.c.i
+
+.PHONY : libft/ft_nbrlen_bonus.i
+
+# target to preprocess a source file
+libft/ft_nbrlen_bonus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_nbrlen_bonus.c.i
+.PHONY : libft/ft_nbrlen_bonus.c.i
+
+libft/ft_nbrlen_bonus.s: libft/ft_nbrlen_bonus.c.s
+
+.PHONY : libft/ft_nbrlen_bonus.s
+
+# target to generate assembly for a file
+libft/ft_nbrlen_bonus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_nbrlen_bonus.c.s
+.PHONY : libft/ft_nbrlen_bonus.c.s
 
 libft/ft_split.o: libft/ft_split.c.o
 
@@ -493,167 +520,437 @@ libft/ft_strtrim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_strtrim.c.s
 .PHONY : libft/ft_strtrim.c.s
 
-main.o: main.c.o
+src/cd.o: src/cd.c.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/main.c.s
-.PHONY : main.c.s
-
-parse_search_bin.o: parse_search_bin.c.o
-
-.PHONY : parse_search_bin.o
+.PHONY : src/cd.o
 
 # target to build an object file
-parse_search_bin.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/parse_search_bin.c.o
-.PHONY : parse_search_bin.c.o
+src/cd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/cd.c.o
+.PHONY : src/cd.c.o
 
-parse_search_bin.i: parse_search_bin.c.i
+src/cd.i: src/cd.c.i
 
-.PHONY : parse_search_bin.i
+.PHONY : src/cd.i
 
 # target to preprocess a source file
-parse_search_bin.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/parse_search_bin.c.i
-.PHONY : parse_search_bin.c.i
+src/cd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/cd.c.i
+.PHONY : src/cd.c.i
 
-parse_search_bin.s: parse_search_bin.c.s
+src/cd.s: src/cd.c.s
 
-.PHONY : parse_search_bin.s
+.PHONY : src/cd.s
 
 # target to generate assembly for a file
-parse_search_bin.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/parse_search_bin.c.s
-.PHONY : parse_search_bin.c.s
+src/cd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/cd.c.s
+.PHONY : src/cd.c.s
 
-parse_tokens.o: parse_tokens.c.o
+src/check_valid.o: src/check_valid.c.o
 
-.PHONY : parse_tokens.o
+.PHONY : src/check_valid.o
 
 # target to build an object file
-parse_tokens.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/parse_tokens.c.o
-.PHONY : parse_tokens.c.o
+src/check_valid.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/check_valid.c.o
+.PHONY : src/check_valid.c.o
 
-parse_tokens.i: parse_tokens.c.i
+src/check_valid.i: src/check_valid.c.i
 
-.PHONY : parse_tokens.i
+.PHONY : src/check_valid.i
 
 # target to preprocess a source file
-parse_tokens.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/parse_tokens.c.i
-.PHONY : parse_tokens.c.i
+src/check_valid.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/check_valid.c.i
+.PHONY : src/check_valid.c.i
 
-parse_tokens.s: parse_tokens.c.s
+src/check_valid.s: src/check_valid.c.s
 
-.PHONY : parse_tokens.s
+.PHONY : src/check_valid.s
 
 # target to generate assembly for a file
-parse_tokens.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/parse_tokens.c.s
-.PHONY : parse_tokens.c.s
+src/check_valid.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/check_valid.c.s
+.PHONY : src/check_valid.c.s
 
-put_variable.o: put_variable.c.o
+src/export.o: src/export.c.o
 
-.PHONY : put_variable.o
+.PHONY : src/export.o
 
 # target to build an object file
-put_variable.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/put_variable.c.o
-.PHONY : put_variable.c.o
+src/export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/export.c.o
+.PHONY : src/export.c.o
 
-put_variable.i: put_variable.c.i
+src/export.i: src/export.c.i
 
-.PHONY : put_variable.i
+.PHONY : src/export.i
 
 # target to preprocess a source file
-put_variable.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/put_variable.c.i
-.PHONY : put_variable.c.i
+src/export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/export.c.i
+.PHONY : src/export.c.i
 
-put_variable.s: put_variable.c.s
+src/export.s: src/export.c.s
 
-.PHONY : put_variable.s
+.PHONY : src/export.s
 
 # target to generate assembly for a file
-put_variable.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/put_variable.c.s
-.PHONY : put_variable.c.s
+src/export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/export.c.s
+.PHONY : src/export.c.s
 
-utils.o: utils.c.o
+src/launch_command.o: src/launch_command.c.o
 
-.PHONY : utils.o
+.PHONY : src/launch_command.o
 
 # target to build an object file
-utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils.c.o
-.PHONY : utils.c.o
+src/launch_command.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/launch_command.c.o
+.PHONY : src/launch_command.c.o
 
-utils.i: utils.c.i
+src/launch_command.i: src/launch_command.c.i
 
-.PHONY : utils.i
+.PHONY : src/launch_command.i
 
 # target to preprocess a source file
-utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils.c.i
-.PHONY : utils.c.i
+src/launch_command.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/launch_command.c.i
+.PHONY : src/launch_command.c.i
 
-utils.s: utils.c.s
+src/launch_command.s: src/launch_command.c.s
 
-.PHONY : utils.s
+.PHONY : src/launch_command.s
 
 # target to generate assembly for a file
-utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils.c.s
-.PHONY : utils.c.s
+src/launch_command.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/launch_command.c.s
+.PHONY : src/launch_command.c.s
 
-utils_list.o: utils_list.c.o
+src/main.o: src/main.c.o
 
-.PHONY : utils_list.o
+.PHONY : src/main.o
 
 # target to build an object file
-utils_list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils_list.c.o
-.PHONY : utils_list.c.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-utils_list.i: utils_list.c.i
+src/main.i: src/main.c.i
 
-.PHONY : utils_list.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-utils_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils_list.c.i
-.PHONY : utils_list.c.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-utils_list.s: utils_list.c.s
+src/main.s: src/main.c.s
 
-.PHONY : utils_list.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-utils_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/utils_list.c.s
-.PHONY : utils_list.c.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/parse_search_bin.o: src/parse_search_bin.c.o
+
+.PHONY : src/parse_search_bin.o
+
+# target to build an object file
+src/parse_search_bin.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.o
+.PHONY : src/parse_search_bin.c.o
+
+src/parse_search_bin.i: src/parse_search_bin.c.i
+
+.PHONY : src/parse_search_bin.i
+
+# target to preprocess a source file
+src/parse_search_bin.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.i
+.PHONY : src/parse_search_bin.c.i
+
+src/parse_search_bin.s: src/parse_search_bin.c.s
+
+.PHONY : src/parse_search_bin.s
+
+# target to generate assembly for a file
+src/parse_search_bin.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.s
+.PHONY : src/parse_search_bin.c.s
+
+src/parse_tokens.o: src/parse_tokens.c.o
+
+.PHONY : src/parse_tokens.o
+
+# target to build an object file
+src/parse_tokens.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_tokens.c.o
+.PHONY : src/parse_tokens.c.o
+
+src/parse_tokens.i: src/parse_tokens.c.i
+
+.PHONY : src/parse_tokens.i
+
+# target to preprocess a source file
+src/parse_tokens.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_tokens.c.i
+.PHONY : src/parse_tokens.c.i
+
+src/parse_tokens.s: src/parse_tokens.c.s
+
+.PHONY : src/parse_tokens.s
+
+# target to generate assembly for a file
+src/parse_tokens.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_tokens.c.s
+.PHONY : src/parse_tokens.c.s
+
+src/parse_utils.o: src/parse_utils.c.o
+
+.PHONY : src/parse_utils.o
+
+# target to build an object file
+src/parse_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_utils.c.o
+.PHONY : src/parse_utils.c.o
+
+src/parse_utils.i: src/parse_utils.c.i
+
+.PHONY : src/parse_utils.i
+
+# target to preprocess a source file
+src/parse_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_utils.c.i
+.PHONY : src/parse_utils.c.i
+
+src/parse_utils.s: src/parse_utils.c.s
+
+.PHONY : src/parse_utils.s
+
+# target to generate assembly for a file
+src/parse_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_utils.c.s
+.PHONY : src/parse_utils.c.s
+
+src/path_search_bin_utils.o: src/path_search_bin_utils.c.o
+
+.PHONY : src/path_search_bin_utils.o
+
+# target to build an object file
+src/path_search_bin_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/path_search_bin_utils.c.o
+.PHONY : src/path_search_bin_utils.c.o
+
+src/path_search_bin_utils.i: src/path_search_bin_utils.c.i
+
+.PHONY : src/path_search_bin_utils.i
+
+# target to preprocess a source file
+src/path_search_bin_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/path_search_bin_utils.c.i
+.PHONY : src/path_search_bin_utils.c.i
+
+src/path_search_bin_utils.s: src/path_search_bin_utils.c.s
+
+.PHONY : src/path_search_bin_utils.s
+
+# target to generate assembly for a file
+src/path_search_bin_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/path_search_bin_utils.c.s
+.PHONY : src/path_search_bin_utils.c.s
+
+src/put_variable.o: src/put_variable.c.o
+
+.PHONY : src/put_variable.o
+
+# target to build an object file
+src/put_variable.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/put_variable.c.o
+.PHONY : src/put_variable.c.o
+
+src/put_variable.i: src/put_variable.c.i
+
+.PHONY : src/put_variable.i
+
+# target to preprocess a source file
+src/put_variable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/put_variable.c.i
+.PHONY : src/put_variable.c.i
+
+src/put_variable.s: src/put_variable.c.s
+
+.PHONY : src/put_variable.s
+
+# target to generate assembly for a file
+src/put_variable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/put_variable.c.s
+.PHONY : src/put_variable.c.s
+
+src/sig_utils.o: src/sig_utils.c.o
+
+.PHONY : src/sig_utils.o
+
+# target to build an object file
+src/sig_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/sig_utils.c.o
+.PHONY : src/sig_utils.c.o
+
+src/sig_utils.i: src/sig_utils.c.i
+
+.PHONY : src/sig_utils.i
+
+# target to preprocess a source file
+src/sig_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/sig_utils.c.i
+.PHONY : src/sig_utils.c.i
+
+src/sig_utils.s: src/sig_utils.c.s
+
+.PHONY : src/sig_utils.s
+
+# target to generate assembly for a file
+src/sig_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/sig_utils.c.s
+.PHONY : src/sig_utils.c.s
+
+src/utils.o: src/utils.c.o
+
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils.c.o
+.PHONY : src/utils.c.o
+
+src/utils.i: src/utils.c.i
+
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils.c.i
+.PHONY : src/utils.c.i
+
+src/utils.s: src/utils.c.s
+
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils.c.s
+.PHONY : src/utils.c.s
+
+src/utils2.o: src/utils2.c.o
+
+.PHONY : src/utils2.o
+
+# target to build an object file
+src/utils2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils2.c.o
+.PHONY : src/utils2.c.o
+
+src/utils2.i: src/utils2.c.i
+
+.PHONY : src/utils2.i
+
+# target to preprocess a source file
+src/utils2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils2.c.i
+.PHONY : src/utils2.c.i
+
+src/utils2.s: src/utils2.c.s
+
+.PHONY : src/utils2.s
+
+# target to generate assembly for a file
+src/utils2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils2.c.s
+.PHONY : src/utils2.c.s
+
+src/utils_export.o: src/utils_export.c.o
+
+.PHONY : src/utils_export.o
+
+# target to build an object file
+src/utils_export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_export.c.o
+.PHONY : src/utils_export.c.o
+
+src/utils_export.i: src/utils_export.c.i
+
+.PHONY : src/utils_export.i
+
+# target to preprocess a source file
+src/utils_export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_export.c.i
+.PHONY : src/utils_export.c.i
+
+src/utils_export.s: src/utils_export.c.s
+
+.PHONY : src/utils_export.s
+
+# target to generate assembly for a file
+src/utils_export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_export.c.s
+.PHONY : src/utils_export.c.s
+
+src/utils_list.o: src/utils_list.c.o
+
+.PHONY : src/utils_list.o
+
+# target to build an object file
+src/utils_list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_list.c.o
+.PHONY : src/utils_list.c.o
+
+src/utils_list.i: src/utils_list.c.i
+
+.PHONY : src/utils_list.i
+
+# target to preprocess a source file
+src/utils_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_list.c.i
+.PHONY : src/utils_list.c.i
+
+src/utils_list.s: src/utils_list.c.s
+
+.PHONY : src/utils_list.s
+
+# target to generate assembly for a file
+src/utils_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_list.c.s
+.PHONY : src/utils_list.c.s
+
+src/utils_put_variable.o: src/utils_put_variable.c.o
+
+.PHONY : src/utils_put_variable.o
+
+# target to build an object file
+src/utils_put_variable.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.o
+.PHONY : src/utils_put_variable.c.o
+
+src/utils_put_variable.i: src/utils_put_variable.c.i
+
+.PHONY : src/utils_put_variable.i
+
+# target to preprocess a source file
+src/utils_put_variable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.i
+.PHONY : src/utils_put_variable.c.i
+
+src/utils_put_variable.s: src/utils_put_variable.c.s
+
+.PHONY : src/utils_put_variable.s
+
+# target to generate assembly for a file
+src/utils_put_variable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.s
+.PHONY : src/utils_put_variable.c.s
 
 # Help Target
 help:
@@ -664,18 +961,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... minishell_parse"
-	@echo "... cd.o"
-	@echo "... cd.i"
-	@echo "... cd.s"
-	@echo "... export.o"
-	@echo "... export.i"
-	@echo "... export.s"
-	@echo "... launch_command.o"
-	@echo "... launch_command.i"
-	@echo "... launch_command.s"
+	@echo "... libft/ft_isalnum.o"
+	@echo "... libft/ft_isalnum.i"
+	@echo "... libft/ft_isalnum.s"
 	@echo "... libft/ft_isalpha.o"
 	@echo "... libft/ft_isalpha.i"
 	@echo "... libft/ft_isalpha.s"
+	@echo "... libft/ft_isdigit.o"
+	@echo "... libft/ft_isdigit.i"
+	@echo "... libft/ft_isdigit.s"
+	@echo "... libft/ft_itoa.o"
+	@echo "... libft/ft_itoa.i"
+	@echo "... libft/ft_itoa.s"
+	@echo "... libft/ft_nbrlen_bonus.o"
+	@echo "... libft/ft_nbrlen_bonus.i"
+	@echo "... libft/ft_nbrlen_bonus.s"
 	@echo "... libft/ft_split.o"
 	@echo "... libft/ft_split.i"
 	@echo "... libft/ft_split.s"
@@ -703,24 +1003,54 @@ help:
 	@echo "... libft/ft_strtrim.o"
 	@echo "... libft/ft_strtrim.i"
 	@echo "... libft/ft_strtrim.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... parse_search_bin.o"
-	@echo "... parse_search_bin.i"
-	@echo "... parse_search_bin.s"
-	@echo "... parse_tokens.o"
-	@echo "... parse_tokens.i"
-	@echo "... parse_tokens.s"
-	@echo "... put_variable.o"
-	@echo "... put_variable.i"
-	@echo "... put_variable.s"
-	@echo "... utils.o"
-	@echo "... utils.i"
-	@echo "... utils.s"
-	@echo "... utils_list.o"
-	@echo "... utils_list.i"
-	@echo "... utils_list.s"
+	@echo "... src/cd.o"
+	@echo "... src/cd.i"
+	@echo "... src/cd.s"
+	@echo "... src/check_valid.o"
+	@echo "... src/check_valid.i"
+	@echo "... src/check_valid.s"
+	@echo "... src/export.o"
+	@echo "... src/export.i"
+	@echo "... src/export.s"
+	@echo "... src/launch_command.o"
+	@echo "... src/launch_command.i"
+	@echo "... src/launch_command.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/parse_search_bin.o"
+	@echo "... src/parse_search_bin.i"
+	@echo "... src/parse_search_bin.s"
+	@echo "... src/parse_tokens.o"
+	@echo "... src/parse_tokens.i"
+	@echo "... src/parse_tokens.s"
+	@echo "... src/parse_utils.o"
+	@echo "... src/parse_utils.i"
+	@echo "... src/parse_utils.s"
+	@echo "... src/path_search_bin_utils.o"
+	@echo "... src/path_search_bin_utils.i"
+	@echo "... src/path_search_bin_utils.s"
+	@echo "... src/put_variable.o"
+	@echo "... src/put_variable.i"
+	@echo "... src/put_variable.s"
+	@echo "... src/sig_utils.o"
+	@echo "... src/sig_utils.i"
+	@echo "... src/sig_utils.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
+	@echo "... src/utils2.o"
+	@echo "... src/utils2.i"
+	@echo "... src/utils2.s"
+	@echo "... src/utils_export.o"
+	@echo "... src/utils_export.i"
+	@echo "... src/utils_export.s"
+	@echo "... src/utils_list.o"
+	@echo "... src/utils_list.i"
+	@echo "... src/utils_list.s"
+	@echo "... src/utils_put_variable.o"
+	@echo "... src/utils_put_variable.i"
+	@echo "... src/utils_put_variable.s"
 .PHONY : help
 
 

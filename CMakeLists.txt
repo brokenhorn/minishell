@@ -3,8 +3,8 @@ project(minishell_parse C)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "-lreadline")
-add_executable(minishell_parse main.c  parse_tokens.c
-        libft/ft_split.c
+add_executable(minishell_parse
+        src/main.c  src/parse_tokens.c
         libft/ft_strlen.c
         libft/ft_strtrim.c
         libft/ft_strchr.c
@@ -14,7 +14,22 @@ add_executable(minishell_parse main.c  parse_tokens.c
         libft/ft_strdup.c
         libft/ft_strlcpy.c
         libft/ft_isalpha.c
-        put_variable.c
-        cd.c
-        export.c
-        parse_search_bin.c utils.c launch_command.c utils_list.c)
+        libft/ft_split.c
+        libft/ft_isdigit.c
+        libft/ft_itoa.c
+        libft/ft_nbrlen_bonus.c
+        src/utils2.c
+        libft/ft_isalnum.c
+        src/check_valid.c
+        src/put_variable.c
+        src/cd.c
+        src/export.c
+        src/utils_put_variable.c
+        src/utils_export.c
+        src/parse_search_bin.c
+        src/utils.c
+        src/launch_command.c
+        src/utils_list.c
+        src/path_search_bin_utils.c
+        src/parse_utils.c
+        src/sig_utils.c)
