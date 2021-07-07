@@ -90,6 +90,15 @@
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_itoa.c">
 			<Option target="minishell_parse"/>
 		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_lstadd_back.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_lstclear.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_lstnew.c">
+			<Option target="minishell_parse"/>
+		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/libft/ft_nbrlen_bonus.c">
 			<Option target="minishell_parse"/>
 		</Unit>

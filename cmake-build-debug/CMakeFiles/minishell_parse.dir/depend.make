@@ -13,6 +13,15 @@ CMakeFiles/minishell_parse.dir/libft/ft_isdigit.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
 CMakeFiles/minishell_parse.dir/libft/ft_itoa.c.o: ../libft/libft.h
 
+CMakeFiles/minishell_parse.dir/libft/ft_lstadd_back.c.o: ../libft/ft_lstadd_back.c
+CMakeFiles/minishell_parse.dir/libft/ft_lstadd_back.c.o: ../libft/libft.h
+
+CMakeFiles/minishell_parse.dir/libft/ft_lstclear.c.o: ../libft/ft_lstclear.c
+CMakeFiles/minishell_parse.dir/libft/ft_lstclear.c.o: ../libft/libft.h
+
+CMakeFiles/minishell_parse.dir/libft/ft_lstnew.c.o: ../libft/ft_lstnew.c
+CMakeFiles/minishell_parse.dir/libft/ft_lstnew.c.o: ../libft/libft.h
+
 CMakeFiles/minishell_parse.dir/libft/ft_nbrlen_bonus.c.o: ../libft/ft_nbrlen_bonus.c
 CMakeFiles/minishell_parse.dir/libft/ft_nbrlen_bonus.c.o: ../libft/libft.h
 

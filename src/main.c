@@ -38,6 +38,8 @@ int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK
 	info->text = NULL;
 	info->err_msg = NULL;
 	info->err_check = 0;
+	info->wait_count = 0;
+	info->pipe_list = NULL;
 	info->parse = init_parse(info);
 //	sig_check = 0;
 	while (1)

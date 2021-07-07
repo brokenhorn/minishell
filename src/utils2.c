@@ -13,3 +13,9 @@ char	*skip_alpha(char *str)
 		str++;
 	return (str);
 }
+
+void ft_delpipe(int *pipe)
+{
+	close(pipe[0]);
+	close(pipe[1]);
+}

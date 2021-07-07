@@ -57,6 +57,8 @@ typedef struct	s_info
 	int			exit_status;
 	char 		*err_msg;
 	int			err_check;
+	int			wait_count;
+	t_list 		*pipe_list;
 }				t_info;
 
 void	error(t_info *info, char *str, char *help);
@@ -87,4 +89,5 @@ char    *exit_status_variable(t_info *info, char *str);
 char   *skip_alpha(char *str);
 void sig_exit(int signal);
 void sig_init(int *signal);
+void ft_delpipe(int *pipe);
 #endif

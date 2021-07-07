@@ -18,6 +18,9 @@ add_executable(minishell_parse
         libft/ft_isdigit.c
         libft/ft_itoa.c
         libft/ft_nbrlen_bonus.c
+        libft/ft_lstadd_back.c
+        libft/ft_lstclear.c
+        libft/ft_lstnew.c
         src/utils2.c
         libft/ft_isalnum.c
         src/check_valid.c
@@ -32,4 +35,4 @@ add_executable(minishell_parse
         src/utils_list.c
         src/path_search_bin_utils.c
         src/parse_utils.c
-        src/sig_utils.c)
+        src/sig_utils.c )

@@ -250,6 +250,87 @@ libft/ft_itoa.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_itoa.c.s
 .PHONY : libft/ft_itoa.c.s
 
+libft/ft_lstadd_back.o: libft/ft_lstadd_back.c.o
+
+.PHONY : libft/ft_lstadd_back.o
+
+# target to build an object file
+libft/ft_lstadd_back.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstadd_back.c.o
+.PHONY : libft/ft_lstadd_back.c.o
+
+libft/ft_lstadd_back.i: libft/ft_lstadd_back.c.i
+
+.PHONY : libft/ft_lstadd_back.i
+
+# target to preprocess a source file
+libft/ft_lstadd_back.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstadd_back.c.i
+.PHONY : libft/ft_lstadd_back.c.i
+
+libft/ft_lstadd_back.s: libft/ft_lstadd_back.c.s
+
+.PHONY : libft/ft_lstadd_back.s
+
+# target to generate assembly for a file
+libft/ft_lstadd_back.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstadd_back.c.s
+.PHONY : libft/ft_lstadd_back.c.s
+
+libft/ft_lstclear.o: libft/ft_lstclear.c.o
+
+.PHONY : libft/ft_lstclear.o
+
+# target to build an object file
+libft/ft_lstclear.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstclear.c.o
+.PHONY : libft/ft_lstclear.c.o
+
+libft/ft_lstclear.i: libft/ft_lstclear.c.i
+
+.PHONY : libft/ft_lstclear.i
+
+# target to preprocess a source file
+libft/ft_lstclear.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstclear.c.i
+.PHONY : libft/ft_lstclear.c.i
+
+libft/ft_lstclear.s: libft/ft_lstclear.c.s
+
+.PHONY : libft/ft_lstclear.s
+
+# target to generate assembly for a file
+libft/ft_lstclear.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstclear.c.s
+.PHONY : libft/ft_lstclear.c.s
+
+libft/ft_lstnew.o: libft/ft_lstnew.c.o
+
+.PHONY : libft/ft_lstnew.o
+
+# target to build an object file
+libft/ft_lstnew.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstnew.c.o
+.PHONY : libft/ft_lstnew.c.o
+
+libft/ft_lstnew.i: libft/ft_lstnew.c.i
+
+.PHONY : libft/ft_lstnew.i
+
+# target to preprocess a source file
+libft/ft_lstnew.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstnew.c.i
+.PHONY : libft/ft_lstnew.c.i
+
+libft/ft_lstnew.s: libft/ft_lstnew.c.s
+
+.PHONY : libft/ft_lstnew.s
+
+# target to generate assembly for a file
+libft/ft_lstnew.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/libft/ft_lstnew.c.s
+.PHONY : libft/ft_lstnew.c.s
+
 libft/ft_nbrlen_bonus.o: libft/ft_nbrlen_bonus.c.o
 
 .PHONY : libft/ft_nbrlen_bonus.o
@@ -973,6 +1054,15 @@ help:
 	@echo "... libft/ft_itoa.o"
 	@echo "... libft/ft_itoa.i"
 	@echo "... libft/ft_itoa.s"
+	@echo "... libft/ft_lstadd_back.o"
+	@echo "... libft/ft_lstadd_back.i"
+	@echo "... libft/ft_lstadd_back.s"
+	@echo "... libft/ft_lstclear.o"
+	@echo "... libft/ft_lstclear.i"
+	@echo "... libft/ft_lstclear.s"
+	@echo "... libft/ft_lstnew.o"
+	@echo "... libft/ft_lstnew.i"
+	@echo "... libft/ft_lstnew.s"
 	@echo "... libft/ft_nbrlen_bonus.o"
 	@echo "... libft/ft_nbrlen_bonus.i"
 	@echo "... libft/ft_nbrlen_bonus.s"

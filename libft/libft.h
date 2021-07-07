@@ -33,7 +33,7 @@ char				*ft_strchr(const char *s, int c);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putchar_fd(char c, int fd);
 t_list				*ft_lstnew(void *content);
-void				ft_lstclear(t_list **lst, void (*del)(void *));
+void				ft_lstclear(t_list **lst, void (*del)(int *));
 int					ft_isspace(char ch);
 int					ft_max(int a, int b);
 long int			ft_power(int a, int b);
