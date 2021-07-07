@@ -104,7 +104,8 @@ void	export(t_info *info, char **text)
 	char	*name;
 	char	*value;
 
-	if (!text)
+	text++;
+	if (!(*text))
 		export_empty(info->envp);
 	else
 	{

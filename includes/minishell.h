@@ -17,6 +17,7 @@
 #include "signal.h"
 #include "dirent.h"
 #include "errno.h"
+#include <fcntl.h>
 
 #define CD 1
 #define EXPORT 2
@@ -58,6 +59,9 @@ typedef struct	s_info
 	char 		*err_msg;
 	int			err_check;
 	int			wait_count;
+	int			dup_in;
+	int 		dup_out;
+	int			fd_redirect;
 	t_list 		*pipe_list;
 }				t_info;
 
@@ -88,6 +92,9 @@ char *take_dir(char* str, char **end_path);
 char    *exit_status_variable(t_info *info, char *str);
 char   *skip_alpha(char *str);
 void sig_exit(int signal);
-void sig_init(int *signal);
+void sig_init(int signal);
 void ft_delpipe(int *pipe);
+int		check_builtin(t_info *info);
+void	launch_dowait(t_info *info);
+void	redirect(t_info *info);
 #endif

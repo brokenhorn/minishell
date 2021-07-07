@@ -16,6 +16,34 @@ static void	old_pwd(char **envp, char *old)
 	}
 }
 
+int		directory(t_info *info, char **envp)
+{
+	int		j;
+	char	*home;
+
+	j = 0;
+	home = info->command->argv[1];
+	if (!home)
+	{
+		while (envp[j] != NULL)
+		{
+			if (!ft_strncmp(envp[j], "HOME=", 5))
+			{
+				home = ft_strdup(envp[j] + 5);
+				break ;
+			}
+			j++;
+		}
+	}
+	j = chdir(home);
+	if (j == -1)
+	{
+		error(info, NULL, NULL);
+		return (0);
+	}
+	return (1);
+}
+
 void	cd(t_info *info, char **envp)
 {
 	int		j;
@@ -24,9 +52,8 @@ void	cd(t_info *info, char **envp)
 	char	*err;
 
 	old = NULL;
-	j = chdir(info->command->argv[1]);
-	if (j == -1)
-		error(info, NULL, NULL);
+	if (!directory(info, envp))
+		return ;
 	j = 0;
 	new = malloc(400);
 	while (envp[j] != NULL)

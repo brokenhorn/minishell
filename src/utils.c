@@ -57,7 +57,7 @@ void	error(t_info *info, char *str, char *help)
 		printf("%s\n", str);
 	else
 		printf("%s: %s\n", str, help);
-	free_info(info);
+//	free_info(info);
 	info->err_check = 1;
 }
 

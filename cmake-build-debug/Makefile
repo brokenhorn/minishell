@@ -871,6 +871,33 @@ src/put_variable.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/put_variable.c.s
 .PHONY : src/put_variable.c.s
 
+src/redirect.o: src/redirect.c.o
+
+.PHONY : src/redirect.o
+
+# target to build an object file
+src/redirect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/redirect.c.o
+.PHONY : src/redirect.c.o
+
+src/redirect.i: src/redirect.c.i
+
+.PHONY : src/redirect.i
+
+# target to preprocess a source file
+src/redirect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/redirect.c.i
+.PHONY : src/redirect.c.i
+
+src/redirect.s: src/redirect.c.s
+
+.PHONY : src/redirect.s
+
+# target to generate assembly for a file
+src/redirect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/redirect.c.s
+.PHONY : src/redirect.c.s
+
 src/sig_utils.o: src/sig_utils.c.o
 
 .PHONY : src/sig_utils.o
@@ -978,6 +1005,33 @@ src/utils_export.s: src/utils_export.c.s
 src/utils_export.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_export.c.s
 .PHONY : src/utils_export.c.s
+
+src/utils_launch.o: src/utils_launch.c.o
+
+.PHONY : src/utils_launch.o
+
+# target to build an object file
+src/utils_launch.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_launch.c.o
+.PHONY : src/utils_launch.c.o
+
+src/utils_launch.i: src/utils_launch.c.i
+
+.PHONY : src/utils_launch.i
+
+# target to preprocess a source file
+src/utils_launch.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_launch.c.i
+.PHONY : src/utils_launch.c.i
+
+src/utils_launch.s: src/utils_launch.c.s
+
+.PHONY : src/utils_launch.s
+
+# target to generate assembly for a file
+src/utils_launch.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_launch.c.s
+.PHONY : src/utils_launch.c.s
 
 src/utils_list.o: src/utils_list.c.o
 
@@ -1123,6 +1177,9 @@ help:
 	@echo "... src/put_variable.o"
 	@echo "... src/put_variable.i"
 	@echo "... src/put_variable.s"
+	@echo "... src/redirect.o"
+	@echo "... src/redirect.i"
+	@echo "... src/redirect.s"
 	@echo "... src/sig_utils.o"
 	@echo "... src/sig_utils.i"
 	@echo "... src/sig_utils.s"
@@ -1135,6 +1192,9 @@ help:
 	@echo "... src/utils_export.o"
 	@echo "... src/utils_export.i"
 	@echo "... src/utils_export.s"
+	@echo "... src/utils_launch.o"
+	@echo "... src/utils_launch.i"
+	@echo "... src/utils_launch.s"
 	@echo "... src/utils_list.o"
 	@echo "... src/utils_list.i"
 	@echo "... src/utils_list.s"

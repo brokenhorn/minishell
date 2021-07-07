@@ -2,29 +2,38 @@
 
 
 
-char *allocate_str(char *line_cp, int count, t_info *info, char delim)
+char *allocate_str(char **line_cp, int count, t_info *info, char delim)
 {
 	int j;
+	int step;
 	char *str;
 
+	step = 0;
 	str = (char *) malloc(sizeof(char) * count);
 	j = 0;
 	if (delim == '|')
-		info->command->flag = PIPE; // ПРОВЕРКА НА ОШИБКУ ВИДА <<< <<> и тд
-	else if (delim == '<' && line_cp[count] != delim)
+		info->command->flag = PIPE;
+	else if (delim == '<' && (*line_cp)[count] != delim)
 		info->command->flag = S1;
-	else if (delim == '>' && line_cp[count] != delim)
+	else if (delim == '>' && (*line_cp)[count] != delim)
 		info->command->flag = B1;
-	else if (delim == '<' && line_cp[count] == delim)
-		info->command->flag = S2;
-	else if (delim == '>' && line_cp[count] == delim)
-		info->command->flag = B2;
-	while (line_cp[j] != delim)
+	else if (delim == '<' && (*line_cp)[count] == delim)
 	{
-		str[j] = line_cp[j];
+		info->command->flag = S2;
+		step++;
+	}
+	else if (delim == '>' && (*line_cp)[count] == delim)
+	{
+		info->command->flag = B2;
+		step++;
+	}
+	while ((*line_cp)[j] != delim)
+	{
+		str[j] = (*line_cp)[j];
 		j++;
 	}
 	str[j] = '\0';
+	*line_cp = *line_cp + step;
 	return (str);
 }
 
@@ -56,7 +65,7 @@ char *ft_strtok(char **line_cp, t_info *info, char *delim)
 		{
 			if ((*line_cp)[i] == delim[j] && info->parse->opn == 0)
 			{
-				token =	allocate_str(*line_cp, i + 1, info, delim[j]);
+				token =	allocate_str(line_cp, i + 1, info, delim[j]);
 				*line_cp = *line_cp + i + 1;
 				return (token);
 			}

@@ -37,6 +37,8 @@ dirent.h
 /Users/vmaricru/Desktop/minishell_parse/includes/dirent.h
 errno.h
 /Users/vmaricru/Desktop/minishell_parse/includes/errno.h
+fcntl.h
+-
 
 /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
 stdlib.h
@@ -44,7 +46,7 @@ stdlib.h
 unistd.h
 /Users/vmaricru/Desktop/minishell_parse/libft/unistd.h
 
-/Users/vmaricru/Desktop/minishell_parse/src/launch_command.c
+/Users/vmaricru/Desktop/minishell_parse/src/redirect.c
 ../includes/minishell.h
 /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
 

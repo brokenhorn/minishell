@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-static t_list	*ft_lstmap_clear(t_list *begin, void (*del)(void *))
+static t_list	*ft_lstmap_clear(t_list *begin, void (*del)(int *))
 {
 	ft_lstclear(&begin, del);
 	return (0);
 }
 
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(int *))
 {
 	t_list		*begin;
 	t_list		*a;

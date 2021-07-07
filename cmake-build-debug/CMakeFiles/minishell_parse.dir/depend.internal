@@ -92,6 +92,10 @@ CMakeFiles/minishell_parse.dir/src/put_variable.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/src/put_variable.c
+CMakeFiles/minishell_parse.dir/src/redirect.c.o
+ /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
+ /Users/vmaricru/Desktop/minishell_parse/src/redirect.c
 CMakeFiles/minishell_parse.dir/src/sig_utils.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
@@ -108,6 +112,10 @@ CMakeFiles/minishell_parse.dir/src/utils_export.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/src/utils_export.c
+CMakeFiles/minishell_parse.dir/src/utils_launch.c.o
+ /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
+ /Users/vmaricru/Desktop/minishell_parse/src/utils_launch.c
 CMakeFiles/minishell_parse.dir/src/utils_list.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h

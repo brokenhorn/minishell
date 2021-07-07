@@ -5,7 +5,7 @@ void sig_exit()
 	exit(0);
 }
 
-void sig_init(int *signal)
+void sig_init()
 {
-	*signal = 1;
+	exit(0);
 }

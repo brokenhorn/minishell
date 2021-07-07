@@ -41,10 +41,15 @@ int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK
 	info->wait_count = 0;
 	info->pipe_list = NULL;
 	info->parse = init_parse(info);
+	info->dup_in = dup(0);
+	info->dup_out = dup(1);
+	info->fd_redirect = NULL;
 //	sig_check = 0;
 	while (1)
 	{
+		info->err_check = 0;
 		signal(SIGQUIT, &sig_exit); //ctrl-d = exit ПЕРЕДЕЛАТЬ ВНУТРИ СИГНАЛ
+		signal(SIGINT,&sig_init);
 		//sig_check =	signal(SIGINT, sig_init(sig_check));// ctrl-c = \n
 		info->text = readline("BulochkaBao% ");
 		if (info->text && info->text[0] && ft_check_space(info->text) == 1)

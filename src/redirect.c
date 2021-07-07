@@ -1,68 +1,44 @@
 #include "../includes/minishell.h"
 
-void    redirect(t_main *main)
+static void	redirect_S2(char *stop)
 {
-	int fd;
-	t_token *token;
-	token = main->token;
-	while (token->type != TRUNC && token->type != APPEND && token->next && token->type != INPUT)
+	char	*str;
+
+	str = NULL;
+	int a = ft_strlen(str);
+	int b = ft_strlen(stop);
+	int x = ft_strncmp(stop, str, ft_strlen(str));
+	int y = ft_strlen(str);
+	while (!(ft_strlen(str) == ft_strlen(stop) && (ft_strncmp(stop, str, ft_strlen(str)) + 1) == ft_strlen(str)))
 	{
-		token = token->next;
+		if (str)
+			free(str);
+		str = readline("> ");
 	}
-	if(token->type == TRUNC)
-	{
-		fd = open(token->next->str, O_WRONLY|O_CREAT|O_TRUNC, 0664);
-		dup2(fd, 1);
-	}
-	else if(token->type == APPEND)
-	{
-		fd = open(token->next->str, O_WRONLY|O_CREAT|O_APPEND, 0664);
-		dup2(fd, 1);
-	}
-	else if(token->type == INPUT)
-	{
-		fd = open(token->next->str, O_RDONLY|O_CREAT, 0664);
-		dup2(fd, 0);
-	}
-}
-void    pipe_redirect(t_main *main, int fd_write, int fd_read)
-{
-	int fd;
-	t_token *token;
-	token = main->token;
-	while (token->type != TRUNC && token->type != APPEND && token->next && token->type != INPUT)
-	{
-		token = token->next;
-	}
-	if(token->type == TRUNC)
-	{
-		if(!fork())
-		{
-			fd = open(token->next->str, O_WRONLY|O_CREAT|O_TRUNC, 0664);
-			dup2(fd, fd_write);
-		}
-		else
-			wait(0);
-	}
-	else if(token->type == APPEND)
-	{
-		if(!fork())
-		{
-			fd = open(token->next->str, O_WRONLY|O_CREAT|O_APPEND, 0664);
-			dup2(fd, fd_write);
-		}
-		else
-			wait(0);
-	}
-	else if(token->type == INPUT)
-	{
-		if(!fork())
-		{
-			fd = open(token->next->str, O_RDONLY|O_CREAT, 0664);
-			dup2(fd, fd_read);
-		}
-		else
-			wait(0);
-	}
+	if (str)
+		free(str);
 }
 
+void	redirect(t_info *info)
+{
+	char	*file;
+
+	file = info->command->next->argv[0];
+	if (info->command->flag == B1)
+	{
+		info->fd_redirect = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+		dup2(info->fd_redirect, 1);
+	}
+	else if (info->command->flag == B2)
+	{
+		info->fd_redirect = open(file, O_WRONLY | O_CREAT | O_APPEND, 0664);
+		dup2(info->fd_redirect, 1);
+	}
+	else if (info->command->flag == S1)
+	{
+		info->fd_redirect = open(file, O_RDONLY | O_CREAT, 0664);
+		dup2(info->fd_redirect, 0);
+	}
+	else if (info->command->flag == S2)
+		redirect_S2(file);
+}

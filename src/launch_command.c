@@ -1,27 +1,52 @@
 #include "../includes/minishell.h"
 
+int launch_builtin(t_info *info)
+{
+	if (ft_strncmp(info->command->argv[0], "cd", 2) == 0)
+	{
+		cd(info, info->envp);
+		return (1);
+	}
+	else if (ft_strncmp(info->command->argv[0], "export", 6) == 0)
+	{
+		export(info, info->command->argv);
+		return (1);
+	}
+	else if (ft_strncmp(info->command->argv[0], "exit", 4) == 0)
+	{
+		my_exit(info);
+		return (1);
+	}
+	return (0);
+}
+
 int launch_command_bin(t_info *info, int *pipe_p)
 {
-//	pid_t pid;
-	int status;
-
-
-	//pid = fork();
+	if (info->command->flag == B1 || info->command->flag == B2 ||
+				info->command->flag == S1 || info->command->flag == S2)
+		redirect(info);
 	if (pipe_p == NULL)
 	{
-		info->wait_count++;
-		if (!fork())
-			execve(info->command->file, info->command->argv, info->envp);
+		if (launch_builtin(info) != 1)
+		{
+			info->wait_count++;
+			if (!fork())
+				execve(info->command->file, info->command->argv, info->envp);
+		}
 	}
 	else if (pipe_p != NULL)
 	{
-		info->wait_count++;
-		if (!fork())
-		{
-			dup2(pipe_p[0], 0);
-			ft_lstclear(&info->pipe_list, &ft_delpipe);
-			execve(info->command->file, info->command->argv, info->envp);
-		}
+			info->wait_count++;
+			if (!fork())
+			{
+
+				dup2(pipe_p[0], 0);
+				ft_lstclear(&info->pipe_list, &ft_delpipe);
+				if(launch_builtin(info) == 1)
+					exit(0);
+				else
+					execve(info->command->file, info->command->argv, info->envp);
+			}
 	}
 	return(1);
 }
@@ -30,7 +55,6 @@ int launch_command_pipe(t_info *info,__unused  int *pipe_p)
 {
 	int *pipe_n;
 	t_list *node;
-	int status;
 
 	pipe_n = (int*)malloc(sizeof(int) * 2);
 	pipe(pipe_n);
@@ -44,7 +68,10 @@ int launch_command_pipe(t_info *info,__unused  int *pipe_p)
 			dup2(pipe_n[1], 1);
 			dup2(pipe_p[0], 0);
 			ft_lstclear(&info->pipe_list, &ft_delpipe);
-			execve(info->command->file, info->command->argv, info->envp);
+			if(launch_builtin(info) == 1)
+				exit(0);
+			else
+				execve(info->command->file, info->command->argv, info->envp);
 		}
 	}
 	else if (pipe_p == NULL)
@@ -54,7 +81,10 @@ int launch_command_pipe(t_info *info,__unused  int *pipe_p)
 		{
 			dup2(pipe_n[1], 1);
 			ft_lstclear(&info->pipe_list, &ft_delpipe);
-			execve(info->command->file, info->command->argv, info->envp);
+			if(launch_builtin(info) == 1)
+				exit(0);
+			else
+				execve(info->command->file, info->command->argv, info->envp);
 		}
 	}
 	info->command = info->command->next;
@@ -62,8 +92,6 @@ int launch_command_pipe(t_info *info,__unused  int *pipe_p)
 		launch_command_pipe(info, pipe_n);
 	else if (info->command && info->command->flag != PIPE)
 		launch_command_bin(info, pipe_n);
-//	close(pipe_n[0]);
-//	close(pipe_n[1]);
 	return (1);
 }
 
@@ -124,22 +152,16 @@ int launch_command_pipe(t_info *info,__unused  int *pipe_p)
 //int launch_command_redirect(t_info *info)
 //{}
 
-int launch_command(t_info *info) //пайпы для билдынов
+int launch_command(t_info *info)
 {
 	t_command *tmp;
 
 	tmp = info->command;
 	while (info->command != NULL)
 	{
-		if (ft_strncmp(info->command->argv[0], "cd", 2) == 0)
-			cd(info, info->envp);
-		else if (ft_strncmp(info->command->argv[0], "export", 6) == 0)
-			export(info ,info->command->argv);
-		else if (ft_strncmp(info->command->argv[0], "exit", 4) == 0)
-			my_exit(info);
-		else if (info->command->flag == PIPE && info->command->file != NULL)
+		if (info->command->flag == PIPE && (info->command->file != NULL || check_builtin(info) == 1))
 			launch_command_pipe(info, NULL);
-		else if (info->command->file != NULL)
+		else if (info->command->file != NULL || check_builtin(info) == 1)
 			launch_command_bin(info, NULL);
 			////	else if (info->command->flag == B1 || info->command->flag == B2 ||
 ////			info->command->flag == S1 || info->command->flag == S2 &&
@@ -151,18 +173,21 @@ int launch_command(t_info *info) //пайпы для билдынов
 				error(info,"Command not found",info->command->argv[0]);
 			else
 				error(info,info->err_msg,info->command->argv[0]);
+			free_info(info);
 			return(1);
 		}
+		if (info->command->flag == B1 || info->command->flag == B2 ||
+			info->command->flag == S1 || info->command->flag == S2)
+			info->command = info->command->next;
 		ft_lstclear(&info->pipe_list, &ft_delpipe);
-		while (info->wait_count != 0)
-		{
-			wait(&info->exit_status);
-			info->wait_count--;
-		}
-
+		launch_dowait(info);
 		if (info->command)
 			info->command = info->command->next;
 	}
+	if (info->fd_redirect)
+		dup2(info->dup_out, 1);
+	if (info->fd_redirect)
+		close(info->fd_redirect);
 	info->command = tmp;
 	free_info(info);
 	info->wait_count = 0;
