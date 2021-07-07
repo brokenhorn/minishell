@@ -10,11 +10,19 @@ INCLUDES =	-I libft/ -I
 
 SRC_DIR =	src/
 SRC_LIST =	main.c \
-			parse_search_bin.c \
-			put_variable.c \
-			pwd.c \
 			cd.c \
-			utils.c
+			check_valid.c \
+			export.c \
+			launch_command.c \
+			parse.c \
+			parse_search_bin.c \
+			parse_tokens.c \
+			put_variable.c \
+			utils.c \
+			utils2.c \
+			utils_list.c \
+			utils_export.c \
+			utils_put_variable.c \
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))
 OBJ = $(SRC:.c=.o)

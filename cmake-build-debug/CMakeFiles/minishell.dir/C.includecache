@@ -44,7 +44,7 @@ dirent.h
 errno.h
 /Users/tjohnnie/Desktop/minishell/errno.h
 
-/Users/tjohnnie/Desktop/minishell/src/utils_put_variable.c
+/Users/tjohnnie/Desktop/minishell/src/utils.c
 ../minishell.h
 /Users/tjohnnie/Desktop/minishell/minishell.h
 

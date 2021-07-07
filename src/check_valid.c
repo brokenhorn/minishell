@@ -1,25 +1,39 @@
 #include "../minishell.h"
 
-static void	check_redirect(t_info *info, char *str)
+static int	check_error(t_info *info, char *str)
+{
+	error(info, str, NULL);
+	info->exit_status = 258;
+	return (0);
+}
+
+static int	check_redirect(t_info *info, char *str)
 {
 	if (*str == '>')
 	{
 		if (*(str + 1) == '\0')
-			error(info, "syntax error near unexpected token `newline'", NULL);
+			return (check_error(info,
+					   "syntax error near unexpected token `newline'"));
 		if (*(str + 1) == '>' && *(str - 1) == '>')
-			error(info, "syntax error near unexpected token `>'", NULL);
+			return (check_error(info,
+					   "syntax error near unexpected token `>'"));
 		if (*(str + 1) == '<')
-			error(info, "syntax error near unexpected token `<'", NULL);
+			return (check_error(info,
+					   "syntax error near unexpected token `<'"));
 	}
 	if (*str == '<')
 	{
 		if (*(str + 1) == '\0')
-			error(info, "syntax error near unexpected token `newline'", NULL);
+			return (check_error(info,
+					   "syntax error near unexpected token `newline'"));
 		if (*(str + 1) == '<' && *(str - 1) == '<')
-			error(info, "syntax error near unexpected token `<'", NULL);
+			return (check_error(info,
+					   "syntax error near unexpected token `<'"));
 		if (*(str + 1) == '>')
-			error(info, "syntax error near unexpected token `>'", NULL);
+			return (check_error(info,
+					   "syntax error near unexpected token `>'"));
 	}
+	return (1);
 }
 
 void	check_valid(t_info *info, char *str)
@@ -28,7 +42,7 @@ void	check_valid(t_info *info, char *str)
 
 	qu = 0;
 	if (*str == '|')
-		error(info, "syntax error near unexpected token `|'", NULL);
+		return (error(info, "syntax error near unexpected token `|'", NULL));
 	while (*str != '\0')
 	{
 		if (qu == 0 && (*str == '\'' || *str == '\"'))
@@ -41,7 +55,8 @@ void	check_valid(t_info *info, char *str)
 		else if (*str == qu)
 			qu = 0;
 		if (qu == 0)
-			check_redirect(info, str);
+			if (!check_redirect(info, str))
+				return ;
 		str++;
 	}
 	if (qu != 0)

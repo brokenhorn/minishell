@@ -24,20 +24,19 @@ char *check_quotes(t_info *info, char *line, char **envp)
 		if (line[i] != ' ')
 		{
 			if (cmd == NULL)
-				cmd = ft_strjoin(cmd,cp);
-			if (line[i] !=)
+				cmd = ft_strjoin(cmd, cp);
+//			if (line[i] !=)
 		}
 		if (line[i] == '\'' && qu != 2)
 		{
 			qu = 1;
 			opn++;
-		}
-		else if(line[i] == '"' && qu != 1)
+		} else if (line[i] == '"' && qu != 1)
 		{
 			qu = 2;
 			opn++;
 		}
-		if(line[i] == '$')
+		if (line[i] == '$')
 		{
 			if (qu != 1)
 				find_envp(info, envp); // объединять строки
@@ -46,13 +45,12 @@ char *check_quotes(t_info *info, char *line, char **envp)
 			opn = 0;
 		i++;
 	}
-	if (opn == 1)
-		exit(-1); // error
+	return (NULL);
 }
 void parse(t_info *info, char **envp)
 {
 	char *line;
 
-	line = info->history->text;
+	line = info->envp;
 	line = check_quotes(info, line, envp);
 }

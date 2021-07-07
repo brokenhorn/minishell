@@ -60,7 +60,7 @@ typedef struct	s_info
 void	error(t_info *info, char *str, char *help);
 char	*put_variable(t_info *info, char *str, char **envp);
 void	cd(t_info *info, char **envp);
-void	parse(t_info *info);
+void	parse(t_info *info, char **envp);
 void  	search_bin(t_info *info);
 void	free_2arr(char **arr);
 int		launch_command(t_info *info);

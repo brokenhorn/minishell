@@ -79,15 +79,15 @@ char *allocate_str(char *line_cp, int count, t_info *info, char delim)
 	str = (char *) malloc(sizeof(char) * count);
 	j = 0;
 	if (delim == '|')
-		info->command->flag == PIPE; // ПРОВЕРКА НА ОШИБКУ ВИДА <<< <<> и тд
+		info->command->flag = PIPE; // ПРОВЕРКА НА ОШИБКУ ВИДА <<< <<> и тд
 	else if (delim == '<' && line_cp[count] != delim)
-		info->command->flag == S1;
+		info->command->flag = S1;
 	else if (delim == '>' && line_cp[count] != delim)
-		info->command->flag == B1;
+		info->command->flag = B1;
 	else if (delim == '<' && line_cp[count] == delim)
-		info->command->flag == S2;
+		info->command->flag = S2;
 	else if (delim == '>' && line_cp[count] == delim)
-		info->command->flag == B2;
+		info->command->flag = B2;
 	while (line_cp[j] != delim)
 	{
 		str[j] = line_cp[j];
@@ -143,7 +143,7 @@ char *ft_strtok(char *line_cp, t_info *info, char *delim)
 	return(line_cp);
 }
 
-void parse(t_info *info)
+void parse(t_info *info, char **envp)
 {
 	char *line;
 	char *line_cp;
@@ -151,7 +151,7 @@ void parse(t_info *info)
 
 	info->parse = init_parse(info);
 	//check_line_error(info->history->text);
-	line = ft_strtrim(info->history->text, " ");
+	line = ft_strtrim(info->envp, " ");
 	line_cp = line;
 	token = ft_strtok(line_cp,info, "|<>"); // РАЗОБРАТЬСЯ С МАЛЛОКАМИ
 	info->command->argv = ft_split(token, ' ');

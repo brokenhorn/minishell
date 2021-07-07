@@ -30,12 +30,14 @@ int		main(__unused int argc,__unused char **argv, char **envp)
 //	free_2arr(a);
 
 // PUT_VARIABLE
-	char *sstr = (char *)malloc(sizeof(char) * 60);
-	ft_strlcpy(sstr, "hello $PWD\nhaha $r\n'$PATH'\n\"'$PATH'\"\n\'$\'PWD\n\"$\"PWD\n$?", 60);
-	sstr = put_variable(info, sstr, info->envp);
-	printf("%s\n", sstr);
-	free(sstr);
+//	char *sstr = (char *)malloc(sizeof(char) * 60);
+//	ft_strlcpy(sstr, "hello $PWD\nhaha $r\n'$PATH'\n\"'$PATH'\"\n\'$\'PWD\n\"$\"PWD\n$?", 60);
+//	sstr = put_variable(info, sstr, info->envp);
+//	printf("%s\n", sstr);
+//	free(sstr);
 
+// CHECK_VALID
+//	check_valid(info, "| >>> <<<");
 
 //	EXIT
 //	my_exit(info);

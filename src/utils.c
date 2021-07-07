@@ -54,6 +54,7 @@ void	error(t_info *info, char *str, char *help)
 	else
 		printf("%s: %s\n", str, help);
 	free_info(info);
+	info->exit_status = 1;
 }
 
 void	my_exit(t_info *info)
