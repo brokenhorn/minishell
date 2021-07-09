@@ -1006,6 +1006,33 @@ src/utils2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils2.c.s
 .PHONY : src/utils2.c.s
 
+src/utils3.o: src/utils3.c.o
+
+.PHONY : src/utils3.o
+
+# target to build an object file
+src/utils3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils3.c.o
+.PHONY : src/utils3.c.o
+
+src/utils3.i: src/utils3.c.i
+
+.PHONY : src/utils3.i
+
+# target to preprocess a source file
+src/utils3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils3.c.i
+.PHONY : src/utils3.c.i
+
+src/utils3.s: src/utils3.c.s
+
+.PHONY : src/utils3.s
+
+# target to generate assembly for a file
+src/utils3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils3.c.s
+.PHONY : src/utils3.c.s
+
 src/utils_export.o: src/utils_export.c.o
 
 .PHONY : src/utils_export.o
@@ -1114,6 +1141,33 @@ src/utils_list.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_list.c.s
 .PHONY : src/utils_list.c.s
 
+src/utils_main.o: src/utils_main.c.o
+
+.PHONY : src/utils_main.o
+
+# target to build an object file
+src/utils_main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_main.c.o
+.PHONY : src/utils_main.c.o
+
+src/utils_main.i: src/utils_main.c.i
+
+.PHONY : src/utils_main.i
+
+# target to preprocess a source file
+src/utils_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_main.c.i
+.PHONY : src/utils_main.c.i
+
+src/utils_main.s: src/utils_main.c.s
+
+.PHONY : src/utils_main.s
+
+# target to generate assembly for a file
+src/utils_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_main.c.s
+.PHONY : src/utils_main.c.s
+
 src/utils_put_variable.o: src/utils_put_variable.c.o
 
 .PHONY : src/utils_put_variable.o
@@ -1140,6 +1194,33 @@ src/utils_put_variable.s: src/utils_put_variable.c.s
 src/utils_put_variable.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.s
 .PHONY : src/utils_put_variable.c.s
+
+src/utils_search_path.o: src/utils_search_path.c.o
+
+.PHONY : src/utils_search_path.o
+
+# target to build an object file
+src/utils_search_path.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_search_path.c.o
+.PHONY : src/utils_search_path.c.o
+
+src/utils_search_path.i: src/utils_search_path.c.i
+
+.PHONY : src/utils_search_path.i
+
+# target to preprocess a source file
+src/utils_search_path.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_search_path.c.i
+.PHONY : src/utils_search_path.c.i
+
+src/utils_search_path.s: src/utils_search_path.c.s
+
+.PHONY : src/utils_search_path.s
+
+# target to generate assembly for a file
+src/utils_search_path.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_search_path.c.s
+.PHONY : src/utils_search_path.c.s
 
 # Help Target
 help:
@@ -1246,6 +1327,9 @@ help:
 	@echo "... src/utils2.o"
 	@echo "... src/utils2.i"
 	@echo "... src/utils2.s"
+	@echo "... src/utils3.o"
+	@echo "... src/utils3.i"
+	@echo "... src/utils3.s"
 	@echo "... src/utils_export.o"
 	@echo "... src/utils_export.i"
 	@echo "... src/utils_export.s"
@@ -1258,9 +1342,15 @@ help:
 	@echo "... src/utils_list.o"
 	@echo "... src/utils_list.i"
 	@echo "... src/utils_list.s"
+	@echo "... src/utils_main.o"
+	@echo "... src/utils_main.i"
+	@echo "... src/utils_main.s"
 	@echo "... src/utils_put_variable.o"
 	@echo "... src/utils_put_variable.i"
 	@echo "... src/utils_put_variable.s"
+	@echo "... src/utils_search_path.o"
+	@echo "... src/utils_search_path.i"
+	@echo "... src/utils_search_path.s"
 .PHONY : help
 
 

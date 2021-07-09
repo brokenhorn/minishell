@@ -46,7 +46,7 @@ stdlib.h
 unistd.h
 /Users/vmaricru/Desktop/minishell_parse/libft/unistd.h
 
-/Users/vmaricru/Desktop/minishell_parse/src/launch_command.c
+/Users/vmaricru/Desktop/minishell_parse/src/sig_utils.c
 ../includes/minishell.h
 /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
 

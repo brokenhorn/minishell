@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(minishell_parse C)
 
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_FLAGS "-lreadline")
+set(CMAKE_C_FLAGS "-lreadline -L /Users/$(USER)/.brew/opt/readline/lib -I/Users/$(USER)/.brew/opt/readline/include")
 add_executable(minishell_parse
         src/main.c  src/parse_tokens.c
         libft/ft_strlen.c
@@ -36,4 +36,4 @@ add_executable(minishell_parse
         src/utils_list.c
         src/path_search_bin_utils.c
         src/parse_utils.c
-        src/sig_utils.c src/utils_launch.c src/parse_strtok_utils.c src/utils_launch_pipe.c)
+        src/sig_utils.c src/utils_launch.c src/parse_strtok_utils.c src/utils_launch_pipe.c src/utils_search_path.c src/utils_main.c src/utils3.c)

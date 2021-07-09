@@ -112,6 +112,10 @@ CMakeFiles/minishell_parse.dir/src/utils2.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/utils2.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/utils2.c.o: ../src/utils2.c
 
+CMakeFiles/minishell_parse.dir/src/utils3.c.o: ../includes/minishell.h
+CMakeFiles/minishell_parse.dir/src/utils3.c.o: ../libft/libft.h
+CMakeFiles/minishell_parse.dir/src/utils3.c.o: ../src/utils3.c
+
 CMakeFiles/minishell_parse.dir/src/utils_export.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/utils_export.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/utils_export.c.o: ../src/utils_export.c
@@ -128,7 +132,15 @@ CMakeFiles/minishell_parse.dir/src/utils_list.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/utils_list.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/utils_list.c.o: ../src/utils_list.c
 
+CMakeFiles/minishell_parse.dir/src/utils_main.c.o: ../includes/minishell.h
+CMakeFiles/minishell_parse.dir/src/utils_main.c.o: ../libft/libft.h
+CMakeFiles/minishell_parse.dir/src/utils_main.c.o: ../src/utils_main.c
+
 CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.o: ../src/utils_put_variable.c
+
+CMakeFiles/minishell_parse.dir/src/utils_search_path.c.o: ../includes/minishell.h
+CMakeFiles/minishell_parse.dir/src/utils_search_path.c.o: ../libft/libft.h
+CMakeFiles/minishell_parse.dir/src/utils_search_path.c.o: ../src/utils_search_path.c
 

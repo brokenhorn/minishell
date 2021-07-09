@@ -36,11 +36,14 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vmaricru/Desktop/minishell_parse/src/sig_utils.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/sig_utils.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils2.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils2.c.o"
+  "/Users/vmaricru/Desktop/minishell_parse/src/utils3.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils3.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_export.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_export.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_launch.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_launch.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_launch_pipe.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_list.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_list.c.o"
+  "/Users/vmaricru/Desktop/minishell_parse/src/utils_main.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_main.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_put_variable.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.o"
+  "/Users/vmaricru/Desktop/minishell_parse/src/utils_search_path.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_search_path.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

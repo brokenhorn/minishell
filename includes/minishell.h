@@ -111,4 +111,10 @@ int			launch_builtin(t_info *info);
 void		null_pipe(t_info *info, int *pipe_n);
 char		*allocate_str(char **line_cp, int count, t_info *info, char delim);
 int			cmp_delim(char *delim, char **line_cp, t_info *info, char **token);
+void		not_null_pipe(t_info *info, int *pipe_n, int *pipe_p);
+void		bin_pipe_not_null(t_info *info, int *pipe_p);
+void		close_free_dir(DIR *dir_fd, char *path, char *end_path);
+void		dup_path(struct dirent	*rd, char *end_path, t_info * info);
+void		cntrl_d(void);
+void		no_check(int check, t_info *info, char *str);
 #endif

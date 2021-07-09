@@ -4,7 +4,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -I includes/ -I libft/
 
-LIBFT = -L. -lft -lreadline
+LIBFT = -L. -lft -lreadline -L /Users/$(USER)/.brew/opt/readline/lib -I/Users/$(USER)/.brew/opt/readline/include
 
 SRC_DIR = src/
 
@@ -28,6 +28,9 @@ SRC_LIST =	main.c \
            	redirect.c\
            	parse_utils.c\
            	utils_launch_pipe.c\
+           	utils_search_path.c\
+           	utils_main.c\
+           	utils3.c\
 
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))
