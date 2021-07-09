@@ -62,6 +62,7 @@ typedef struct s_info
 	int			dup_out;
 	int			fd_redirect;
 	t_list		*pipe_list;
+	int			parse_i;
 }				t_info;
 
 void		error(t_info *info, char *str, char *help);
@@ -101,11 +102,13 @@ void		parse_get_token_util(t_info *info, char **token);
 void		close_opn(t_info *info);
 void		rise_one_q(t_info *info, char sym);
 void		rise_two_q(t_info *info, char sym);
-void		check_delim(t_info *info, char delim, char next_s);
+int		check_delim(t_info *info, char delim, char next_s);
 int     	check_tokens(t_info *info);
 int 		*push_pipe(t_info *info);
 void		last_step(t_info *info, t_command *tmp);
 void		print_empty_com(t_info *info);
 int			launch_builtin(t_info *info);
 void		null_pipe(t_info *info, int *pipe_n);
+char		*allocate_str(char **line_cp, int count, t_info *info, char delim);
+int			cmp_delim(char *delim, char **line_cp, t_info *info, char **token);
 #endif

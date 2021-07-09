@@ -90,6 +90,7 @@ void	parse(t_info *info)
 	get_token_argv_bin(&token, info);
 	if (check_tokens(info) == 0)
 	{
+		free_info(info);
 		free(line);
 		return ;
 	}
