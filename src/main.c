@@ -1,23 +1,10 @@
 #include "../includes/minishell.h"
 
-t_sig g_sig;
+t_sig	g_sig;
 
-t_command	*new_com()
+t_parse	*init_parse(__unused t_info *info)
 {
-	t_command *com;
-
-	com = (t_command *)malloc(sizeof(t_command));
-	com->command = 0;
-	com->file = 0;
-	com->flag = 0;
-	com->argv = NULL;
-	//com->next = NULL;
-	return (com);
-}
-
-t_parse *init_parse(__unused t_info *info)
-{
-	t_parse *parse;
+	t_parse	*parse;
 
 	parse = (t_parse *)malloc(sizeof(t_parse));
 	parse->qu = 0;
@@ -26,7 +13,7 @@ t_parse *init_parse(__unused t_info *info)
 	return (parse);
 }
 
-void init_info(t_info *info)
+void	init_info(t_info *info)
 {
 	info->command = NULL;
 	info->exit_status = 0;
@@ -42,10 +29,12 @@ void init_info(t_info *info)
 	g_sig.sigint = 0;
 }
 
-int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK VALID
+int	main(int argc, char **argv, char **envp)
 {
-	t_info		*info;
+	t_info	*info;
 
+	(void)argv;
+	(void)argc;
 	info = (t_info *)malloc(sizeof(t_info));
 	init_info(info);
 	info->envp = malloc_envp(envp);
@@ -53,18 +42,12 @@ int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK
 	{
 		g_sig.sigint = 0;
 		info->err_check = 0;
-		signal(SIGQUIT, &sig_slash); //ctrl-\ = exit ПЕРЕДЕЛАТЬ ВНУТРИ СИГНАЛ
+		signal(SIGQUIT, &sig_slash);
 		signal(SIGINT, &sig_init);
 		info->text = readline("BulochkaBao% ");
-		if (g_sig.sigint == 1)
-			continue;
 		if (info->text == NULL)
-		{
-			printf("\b\b");
-			printf("exit\n");
-			exit(0);
-		}
-		if (info->text && info->text[0] && ft_check_space(info->text) == 1 && g_sig.sigint != 1)
+			cntrl_d();
+		if (info->text && info->text[0] && ft_check_space(info->text) == 1)
 		{
 			add_history(info->text);
 			parse(info);

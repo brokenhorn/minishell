@@ -54,7 +54,7 @@ void	get_token_argv_bin(char **token, t_info *info)
 
 	f_com = ft_new_com();
 	info->command = f_com;
-	*token =  ft_strtok(&info->parse->line_cp,info, "|<>");
+	*token = ft_strtok(&info->parse->line_cp, info, "|<>");
 	tmp = *token;
 	*token = put_variable(info, *token, info->envp);
 	if (*token != NULL)
@@ -64,7 +64,7 @@ void	get_token_argv_bin(char **token, t_info *info)
 	while (*token != NULL)
 	{
 		free(*token);
-		*token =  ft_strtok(&info->parse->line_cp, info, "|<>");
+		*token = ft_strtok(&info->parse->line_cp, info, "|<>");
 		*token = put_variable(info, *token, info->envp);
 		if (*token != NULL)
 		{

@@ -36,16 +36,7 @@ int	launch_command_bin(t_info *info, int *pipe_p)
 	}
 	else if (pipe_p != NULL)
 	{
-		info->wait_count++;
-		if (!fork())
-		{
-			dup2(pipe_p[0], 0);
-			ft_lstclear(&info->pipe_list, &ft_delpipe);
-			if (launch_builtin(info) == 1)
-				exit (0);
-			else
-				execve(info->command->file, info->command->argv, info->envp);
-		}
+		bin_pipe_not_null(info, pipe_p);
 	}
 	return (1);
 }
@@ -56,23 +47,9 @@ int	launch_command_pipe(t_info *info, int *pipe_p)
 
 	pipe_n = push_pipe(info);
 	if (pipe_p != NULL)
-	{
-		info->wait_count++;
-		if (!fork())
-		{
-			dup2(pipe_n[1], 1);
-			dup2(pipe_p[0], 0);
-			ft_lstclear(&info->pipe_list, &ft_delpipe);
-			if (launch_builtin(info) == 1)
-				exit(0);
-			else
-				execve(info->command->file, info->command->argv, info->envp);
-		}
-	}
+		not_null_pipe(info, pipe_n, pipe_p);
 	else if (pipe_p == NULL)
-	{
 		null_pipe(info, pipe_n);
-	}
 	info->command = info->command->next;
 	if (info->command && info->command->flag == PIPE)
 		launch_command_pipe(info, pipe_n);

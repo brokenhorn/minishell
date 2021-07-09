@@ -40,10 +40,13 @@ char	*allocate_path(char *str, int count, char **end_path)
 	char	*path;
 	char	*end;
 
+	path = NULL;
+	end = NULL;
 	i = slash_count(count, str);
 	i_cp = i;
 	path = fulfill_path(str, i);
 	end = (char *)malloc(sizeof(char) * ft_strlen(str + i_cp) + 1);
+	i = 0;
 	while (str[i_cp] != '\0')
 	{
 		end[i] = str[i_cp];
