@@ -1,8 +1,8 @@
 #include "../includes/minishell.h"
 
-t_command *ft_new_com()
+t_command	*ft_new_com(void)
 {
-	t_command *node;
+	t_command	*node;
 
 	node = (t_command *)malloc(sizeof(t_command));
 	if (node == NULL)
@@ -17,7 +17,7 @@ t_command *ft_new_com()
 
 void	ft_com_add_back(t_command **lst, t_command *new)
 {
-	t_command 	*a;
+	t_command	*a;
 
 	if (lst && new)
 	{

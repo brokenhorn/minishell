@@ -38,8 +38,6 @@ void	free_info(t_info *info)
 			info->command = tmp;
 		}
 		info->command = NULL;
-//		if (info->parse)
-//			free(info->parse);
 		if (info->text)
 			free(info->text);
 	}
@@ -53,7 +51,6 @@ void	error(t_info *info, char *str, char *help)
 		printf("%s\n", str);
 	else
 		printf("%s: %s\n", str, help);
-//	free_info(info);
 	info->err_check = 1;
 }
 
@@ -61,6 +58,7 @@ void    my_exit(t_info *info)
 {
 	int       check;
 	char   *str;
+
 	str = info->command->argv[1];
 	check = 1;
 	if (str)

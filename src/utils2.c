@@ -14,14 +14,14 @@ char	*skip_alpha(char *str)
 	return (str);
 }
 
-void ft_delpipe(int *pipe)
+void	ft_delpipe(int *pipe)
 {
 	close(pipe[0]);
 	close(pipe[1]);
 	free(pipe);
 }
 
-int check_builtin(t_info *info)
+int	check_builtin(t_info *info)
 {
 	if (ft_strncmp(info->command->argv[0], "cd", 2) == 0)
 	{
@@ -38,9 +38,10 @@ int check_builtin(t_info *info)
 	return (0);
 }
 
-int     check_tokens(t_info *info)
+int	check_tokens(t_info *info)
 {
-	t_command  *tmp;
+	t_command	*tmp;
+
 	tmp = info->command;
 	if (tmp->flag == B1 || tmp->flag == B2)
 		tmp = tmp->next;
