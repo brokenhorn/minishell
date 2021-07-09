@@ -952,6 +952,33 @@ src/sig_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/sig_utils.c.s
 .PHONY : src/sig_utils.c.s
 
+src/unset.o: src/unset.c.o
+
+.PHONY : src/unset.o
+
+# target to build an object file
+src/unset.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/unset.c.o
+.PHONY : src/unset.c.o
+
+src/unset.i: src/unset.c.i
+
+.PHONY : src/unset.i
+
+# target to preprocess a source file
+src/unset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/unset.c.i
+.PHONY : src/unset.c.i
+
+src/unset.s: src/unset.c.s
+
+.PHONY : src/unset.s
+
+# target to generate assembly for a file
+src/unset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/unset.c.s
+.PHONY : src/unset.c.s
+
 src/utils.o: src/utils.c.o
 
 .PHONY : src/utils.o
@@ -1321,6 +1348,9 @@ help:
 	@echo "... src/sig_utils.o"
 	@echo "... src/sig_utils.i"
 	@echo "... src/sig_utils.s"
+	@echo "... src/unset.o"
+	@echo "... src/unset.i"
+	@echo "... src/unset.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

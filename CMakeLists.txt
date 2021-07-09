@@ -36,4 +36,6 @@ add_executable(minishell_parse
         src/utils_list.c
         src/path_search_bin_utils.c
         src/parse_utils.c
-        src/sig_utils.c src/utils_launch.c src/parse_strtok_utils.c src/utils_launch_pipe.c src/utils_search_path.c src/utils_main.c src/utils3.c)
+        src/sig_utils.c src/utils_launch.c src/parse_strtok_utils.c
+        src/utils_launch_pipe.c src/utils_search_path.c src/utils_main.c src/utils3.c
+        src/unset.c)

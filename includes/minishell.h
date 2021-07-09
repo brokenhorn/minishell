@@ -102,7 +102,7 @@ void		parse_get_token_util(t_info *info, char **token);
 void		close_opn(t_info *info);
 void		rise_one_q(t_info *info, char sym);
 void		rise_two_q(t_info *info, char sym);
-int		check_delim(t_info *info, char delim, char next_s);
+int			check_delim(t_info *info, char delim, char next_s);
 int     	check_tokens(t_info *info);
 int 		*push_pipe(t_info *info);
 void		last_step(t_info *info, t_command *tmp);
@@ -117,4 +117,5 @@ void		close_free_dir(DIR *dir_fd, char *path, char *end_path);
 void		dup_path(struct dirent	*rd, char *end_path, t_info * info);
 void		cntrl_d(void);
 void		no_check(int check, t_info *info, char *str);
+void		unset(t_info *info, char **text);
 #endif

@@ -10,6 +10,5 @@ void	sig_init(int code)
 {
 	(void)code;
 	//g_sig.sigint = 1;
-//	rl_redisplay();
-
+	rl_on_new_line();
 }

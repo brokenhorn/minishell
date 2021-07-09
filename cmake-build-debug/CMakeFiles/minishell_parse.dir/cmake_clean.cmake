@@ -29,6 +29,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell_parse.dir/src/put_variable.c.o"
   "CMakeFiles/minishell_parse.dir/src/redirect.c.o"
   "CMakeFiles/minishell_parse.dir/src/sig_utils.c.o"
+  "CMakeFiles/minishell_parse.dir/src/unset.c.o"
   "CMakeFiles/minishell_parse.dir/src/utils.c.o"
   "CMakeFiles/minishell_parse.dir/src/utils2.c.o"
   "CMakeFiles/minishell_parse.dir/src/utils3.c.o"

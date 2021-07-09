@@ -168,6 +168,9 @@
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/sig_utils.c">
 			<Option target="minishell_parse"/>
 		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/unset.c">
+			<Option target="minishell_parse"/>
+		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils.c">
 			<Option target="minishell_parse"/>
 		</Unit>

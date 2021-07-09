@@ -35,6 +35,8 @@ int	check_builtin(t_info *info)
 	{
 		return (1);
 	}
+	else if (ft_strncmp(info->command->argv[0], "unset", 5) == 0)
+		return (1);
 	return (0);
 }
 

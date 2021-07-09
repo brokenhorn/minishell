@@ -104,6 +104,10 @@ CMakeFiles/minishell_parse.dir/src/sig_utils.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/sig_utils.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/sig_utils.c.o: ../src/sig_utils.c
 
+CMakeFiles/minishell_parse.dir/src/unset.c.o: ../includes/minishell.h
+CMakeFiles/minishell_parse.dir/src/unset.c.o: ../libft/libft.h
+CMakeFiles/minishell_parse.dir/src/unset.c.o: ../src/unset.c
+
 CMakeFiles/minishell_parse.dir/src/utils.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/utils.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/utils.c.o: ../src/utils.c

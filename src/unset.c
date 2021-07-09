@@ -1,33 +1,5 @@
 #include "../includes/minishell.h"
 
-static void	export_empty(char **envp)
-{
-	int		n;
-	char	**copy;
-
-	n = 0;
-	while (envp[n])
-		n++;
-	copy = (char **)malloc(sizeof(char *) * (n + 1));
-	copy[n] = NULL;
-	n = 0;
-	while (*envp)
-	{
-		copy[n] = (char *)malloc(sizeof(char) * (ft_strlen(*envp) + 1));
-		ft_strlcpy(copy[n], *envp, ft_strlen(*envp) + 1);
-		n++;
-		envp++;
-	}
-	copy = sort_export(copy, n);
-	n = 0;
-	while (copy[n])
-	{
-		printf("declare -x ");
-		printf("%s\n", copy[n++]);
-	}
-	free_2arr(copy);
-}
-
 static int	check_variable(char *text, char **name, char **value)
 {
 	int		i;
@@ -55,27 +27,32 @@ static int	check_variable(char *text, char **name, char **value)
 	return (1);
 }
 
-char	*new_variable(char *name, char *value)
+static void	without_variable(t_info *info, int i)
 {
-	char	*str;
-	int		i;
+	char	**copy;
+	int		size;
 
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(name)
-				+ ft_strlen(value) + 2));
-	str[ft_strlen(name) + ft_strlen(value) + 1] = '\0';
-	while (*name != '\0')
-		str[i++] = *name++;
-	if (value)
+	size = 0;
+	while (info->envp[size] != NULL)
+		size++;
+	copy = (char **)malloc(sizeof(char *) * (size));
+	copy[size] = NULL;
+	size = 0;
+	while (info->envp[size] != NULL)
 	{
-		str[i++] = '=';
-		while (*value != '\0')
-			str[i++] = *value++;
+		if (size != i)
+		{
+			copy[i] = (char *) malloc(
+					sizeof(char) * (ft_strlen(info->envp[i]) + 1));
+			ft_strlcpy(copy[i], info->envp[i], ft_strlen(info->envp[i]) + 1);
+		}
+		i++;
 	}
-	return (str);
+	free_2arr(info->envp);
+	info->envp = copy;
 }
 
-static void	add_variable(t_info *info, char *name, char *value)
+static void	delet_variable(t_info *info, char *name, char *value)
 {
 	int		i;
 	int		check;
@@ -85,8 +62,8 @@ static void	add_variable(t_info *info, char *name, char *value)
 	while (info->envp[i] != NULL)
 	{
 		if (!ft_strncmp(info->envp[i], name, ft_strlen(name))
-			&& info->envp[i][ft_strlen(name)] == '='
-			|| info->envp[i][ft_strlen(name)] == '\0')
+			&& (info->envp[i][ft_strlen(name)] == '='
+			|| info->envp[i][ft_strlen(name)] == '\0'))
 		{
 			free(info->envp[i]);
 			if (value)
@@ -96,18 +73,18 @@ static void	add_variable(t_info *info, char *name, char *value)
 		}
 		i++;
 	}
-	if (!check)
-		add_variable_new(info, name, value, i);
+	if (check)
+		without_variable(info, i);
 }
 
-void	export(t_info *info, char **text)
+void	unset(t_info *info, char **text)
 {
 	char	*name;
 	char	*value;
 
 	text++;
 	if (!(*text))
-		export_empty(info->envp);
+		return ;
 	else
 	{
 		while (*text)
@@ -115,7 +92,7 @@ void	export(t_info *info, char **text)
 			name = NULL;
 			value = NULL;
 			if (check_variable(*text, &name, &value))
-				add_variable(info, name, value);
+				delet_variable(info, name, value);
 			else
 				printf("\'%s\': not a valid identifier\n", *text);
 			text++;

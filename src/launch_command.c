@@ -17,6 +17,11 @@ int	launch_builtin(t_info *info)
 		my_exit(info);
 		return (1);
 	}
+	else if (ft_strncmp(info->command->argv[0], "unset", 5) == 0)
+	{
+		unset(info, info->command->argv);
+		return (1);
+	}
 	return (0);
 }
 

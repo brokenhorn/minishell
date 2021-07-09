@@ -104,6 +104,10 @@ CMakeFiles/minishell_parse.dir/src/sig_utils.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/src/sig_utils.c
+CMakeFiles/minishell_parse.dir/src/unset.c.o
+ /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
+ /Users/vmaricru/Desktop/minishell_parse/src/unset.c
 CMakeFiles/minishell_parse.dir/src/utils.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
