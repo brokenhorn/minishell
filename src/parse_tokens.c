@@ -1,7 +1,5 @@
 #include "../includes/minishell.h"
 
-
-
 char *allocate_str(char **line_cp, int count, t_info *info, char delim)
 {
 	int j;
@@ -11,13 +9,8 @@ char *allocate_str(char **line_cp, int count, t_info *info, char delim)
 	step = 0;
 	str = (char *) malloc(sizeof(char) * count);
 	j = 0;
-	if (delim == '|')
-		info->command->flag = PIPE;
-	else if (delim == '<' && (*line_cp)[count] != delim)
-		info->command->flag = S1;
-	else if (delim == '>' && (*line_cp)[count] != delim)
-		info->command->flag = B1;
-	else if (delim == '<' && (*line_cp)[count] == delim)
+	check_delim(info, delim, (*line_cp)[count]);
+	if (delim == '<' && (*line_cp)[count] == delim)
 	{
 		info->command->flag = S2;
 		step++;
@@ -34,6 +27,7 @@ char *allocate_str(char **line_cp, int count, t_info *info, char delim)
 	}
 	str[j] = '\0';
 	*line_cp = *line_cp + step;
+	*line_cp = *line_cp + count;
 	return (str);
 }
 
@@ -51,31 +45,19 @@ char *ft_strtok(char **line_cp, t_info *info, char *delim)
 	while ((*line_cp)[i] != '\0')
 	{
 		j = 0;
-		if ((*line_cp)[i] == '\'' && info->parse->qu != 2)
-		{
-			info->parse->qu = 1;
-			info->parse->opn++;
-		}
-		if ((*line_cp)[i]== '"' && info->parse->qu != 1)
-		{
-			info->parse->qu = 2;
-			info->parse->opn++;
-		}
+		rise_one_q(info, (*line_cp)[i]);
+		rise_two_q(info, (*line_cp)[i]);
 		while (delim[j] != '\0')
 		{
 			if ((*line_cp)[i] == delim[j] && info->parse->opn == 0)
 			{
 				token =	allocate_str(line_cp, i + 1, info, delim[j]);
-				*line_cp = *line_cp + i + 1;
+			//	*line_cp = *line_cp + i + 1;
 				return (token);
 			}
 			j++;
 		}
-		if(info->parse->opn == 2)
-		{
-			info->parse->opn = 0;
-			info->parse->qu = 0;
-		}
+		close_opn(info);
 		i++;
 	}
 	tmp = ft_strdup(*line_cp);
@@ -95,13 +77,7 @@ void	get_token_argv_bin(char **token, t_info *info)
 	*token = put_variable(info, *token, info->envp);
 	if (*token != NULL)
 	{
-		info->command->argv = ft_split(*token, ' ');
-		search_bin(info);
-		if (info->parse->line_cp != NULL && *(info->parse->line_cp) != '\0')
-		{
-			info->command->next = ft_new_com();
-			info->command = info->command->next;
-		}
+		parse_get_token_util(info, token);
 	}
 	while (*token != NULL)
 	{
@@ -110,13 +86,7 @@ void	get_token_argv_bin(char **token, t_info *info)
 		*token = put_variable(info, *token, info->envp);
 		if (*token != NULL)
 		{
-			info->command->argv = ft_split(*token, ' ');
-			search_bin(info);
-			if (info->parse->line_cp != NULL && *(info->parse->line_cp) != '\0')
-			{
-				info->command->next = ft_new_com();
-				info->command = info->command->next;
-			}
+			parse_get_token_util(info, token);
 		}
 	}
 	info->command = f_com;
@@ -137,6 +107,12 @@ void parse(t_info *info) //ОБРАБОАТЬ ЕСЛИ НЕ НАШЕЛ КОМА�
 	}
 	info->parse->line_cp = line;
 	get_token_argv_bin(&token, info);
+	if (check_tokens(info) == 0)
+	{
+		free(line);
+		return;
+	}
+	parse_place_bin(info);
 	launch_command(info);
 	free(line);
 }

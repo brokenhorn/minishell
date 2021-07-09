@@ -1,5 +1,7 @@
 #include "../includes/minishell.h"
 
+t_sig g_sig;
+
 t_command	*new_com()
 {
 	t_command *com;
@@ -24,16 +26,9 @@ t_parse *init_parse(__unused t_info *info)
 	return (parse);
 }
 
-
-int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK VALID
+void init_info(t_info *info)
 {
-//	t_command	*com;
-	t_info		*info;
-//	int sig_check;
-
-	info = (t_info *)malloc(sizeof(t_info));
 	info->command = NULL;
-	info->envp = malloc_envp(envp);
 	info->exit_status = 0;
 	info->text = NULL;
 	info->err_msg = NULL;
@@ -44,20 +39,36 @@ int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK
 	info->dup_in = dup(0);
 	info->dup_out = dup(1);
 	info->fd_redirect = -1;
-//	sig_check = 0;
+	g_sig.sigint = 0;
+}
+
+int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK VALID
+{
+	t_info		*info;
+
+	info = (t_info *)malloc(sizeof(t_info));
+	init_info(info);
+	info->envp = malloc_envp(envp);
 	while (1)
 	{
+		g_sig.sigint = 0;
 		info->err_check = 0;
-		signal(SIGQUIT, &sig_exit); //ctrl-d = exit ПЕРЕДЕЛАТЬ ВНУТРИ СИГНАЛ
-		signal(SIGINT,&sig_init);
-		//sig_check =	signal(SIGINT, sig_init(sig_check));// ctrl-c = \n
+		signal(SIGQUIT, &sig_slash); //ctrl-\ = exit ПЕРЕДЕЛАТЬ ВНУТРИ СИГНАЛ
+		signal(SIGINT, &sig_init);
 		info->text = readline("BulochkaBao% ");
-		if (info->text && info->text[0] && ft_check_space(info->text) == 1)
+		if (g_sig.sigint == 1)
+			continue;
+		if (info->text == NULL)
+		{
+			printf("\b\b");
+			printf("exit\n");
+			exit(0);
+		}
+		if (info->text && info->text[0] && ft_check_space(info->text) == 1 && g_sig.sigint != 1)
 		{
 			add_history(info->text);
 			parse(info);
 		}
-		//sig_check = 0;
 	}
 	return (0);
 }

@@ -147,6 +147,9 @@
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/parse_search_bin.c">
 			<Option target="minishell_parse"/>
 		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/parse_strtok_utils.c">
+			<Option target="minishell_parse"/>
+		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/parse_tokens.c">
 			<Option target="minishell_parse"/>
 		</Unit>
@@ -175,6 +178,9 @@
 			<Option target="minishell_parse"/>
 		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils_launch.c">
+			<Option target="minishell_parse"/>
+		</Unit>
+		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils_launch_pipe.c">
 			<Option target="minishell_parse"/>
 		</Unit>
 		<Unit filename="/Users/vmaricru/Desktop/minishell_parse/src/utils_list.c">

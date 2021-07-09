@@ -1,11 +1,11 @@
 #include "../includes/minishell.h"
 
-void sig_exit()
+void sig_slash()
 {
-	exit(0);
+	printf("\b\b");
 }
 
 void sig_init()
 {
-	exit(0);
+	g_sig.sigint = 1;
 }

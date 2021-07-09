@@ -23,7 +23,11 @@ SRC_LIST =	main.c \
            	utils_launch.c\
            	utils_put_variable.c \
            	sig_utils.c \
-           	path_search_bin_utils.c
+           	path_search_bin_utils.c\
+           	parse_strtok_utils.c\
+           	redirect.c\
+           	parse_utils.c\
+           	utils_launch_pipe.c\
 
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))

@@ -27,6 +27,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vmaricru/Desktop/minishell_parse/src/launch_command.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/launch_command.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/main.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/main.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/parse_search_bin.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.o"
+  "/Users/vmaricru/Desktop/minishell_parse/src/parse_strtok_utils.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/parse_tokens.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/parse_tokens.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/parse_utils.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/parse_utils.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/path_search_bin_utils.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/path_search_bin_utils.c.o"
@@ -37,6 +38,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vmaricru/Desktop/minishell_parse/src/utils2.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils2.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_export.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_export.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_launch.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_launch.c.o"
+  "/Users/vmaricru/Desktop/minishell_parse/src/utils_launch_pipe.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_list.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_list.c.o"
   "/Users/vmaricru/Desktop/minishell_parse/src/utils_put_variable.c" "/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles/minishell_parse.dir/src/utils_put_variable.c.o"
   )

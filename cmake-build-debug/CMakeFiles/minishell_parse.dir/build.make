@@ -531,6 +531,32 @@ CMakeFiles/minishell_parse.dir/src/utils_launch.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_parse.dir/src/utils_launch.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vmaricru/Desktop/minishell_parse/src/utils_launch.c -o CMakeFiles/minishell_parse.dir/src/utils_launch.c.s
 
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o: CMakeFiles/minishell_parse.dir/flags.make
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o: ../src/parse_strtok_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o -c /Users/vmaricru/Desktop/minishell_parse/src/parse_strtok_utils.c
+
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vmaricru/Desktop/minishell_parse/src/parse_strtok_utils.c > CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.i
+
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vmaricru/Desktop/minishell_parse/src/parse_strtok_utils.c -o CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.s
+
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o: CMakeFiles/minishell_parse.dir/flags.make
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o: ../src/utils_launch_pipe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o -c /Users/vmaricru/Desktop/minishell_parse/src/utils_launch_pipe.c
+
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vmaricru/Desktop/minishell_parse/src/utils_launch_pipe.c > CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.i
+
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vmaricru/Desktop/minishell_parse/src/utils_launch_pipe.c -o CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.s
+
 # Object files for target minishell_parse
 minishell_parse_OBJECTS = \
 "CMakeFiles/minishell_parse.dir/src/main.c.o" \
@@ -567,7 +593,9 @@ minishell_parse_OBJECTS = \
 "CMakeFiles/minishell_parse.dir/src/path_search_bin_utils.c.o" \
 "CMakeFiles/minishell_parse.dir/src/parse_utils.c.o" \
 "CMakeFiles/minishell_parse.dir/src/sig_utils.c.o" \
-"CMakeFiles/minishell_parse.dir/src/utils_launch.c.o"
+"CMakeFiles/minishell_parse.dir/src/utils_launch.c.o" \
+"CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o" \
+"CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o"
 
 # External object files for target minishell_parse
 minishell_parse_EXTERNAL_OBJECTS =
@@ -607,9 +635,11 @@ minishell_parse: CMakeFiles/minishell_parse.dir/src/path_search_bin_utils.c.o
 minishell_parse: CMakeFiles/minishell_parse.dir/src/parse_utils.c.o
 minishell_parse: CMakeFiles/minishell_parse.dir/src/sig_utils.c.o
 minishell_parse: CMakeFiles/minishell_parse.dir/src/utils_launch.c.o
+minishell_parse: CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o
+minishell_parse: CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o
 minishell_parse: CMakeFiles/minishell_parse.dir/build.make
 minishell_parse: CMakeFiles/minishell_parse.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking C executable minishell_parse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vmaricru/Desktop/minishell_parse/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking C executable minishell_parse"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell_parse.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

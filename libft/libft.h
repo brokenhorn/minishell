@@ -26,7 +26,7 @@ int					ft_min(int a, int b);
 void				ft_bzero(void *s, size_t n);
 int					ft_isspace(char ch);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
-size_t				ft_strlen(const char *s);
+int					ft_strlen(const char *s);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 char				*ft_strchr(const char *s, int c);

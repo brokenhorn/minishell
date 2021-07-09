@@ -1,22 +1,53 @@
 #include "../includes/minishell.h"
 
-static void	redirect_S2(char *stop)
+static char	*util(t_info *info, char *stop, char *str)
 {
-	char	*str;
+	char	*text;
+	char	*tmp;
 
-	str = NULL;
-	int a = ft_strlen(str);
-	int b = ft_strlen(stop);
-	int x = ft_strncmp(stop, str, ft_strlen(str));
-	int y = ft_strlen(str);
-	while (!(ft_strlen(str) == ft_strlen(stop) && (ft_strncmp(stop, str, ft_strlen(str)) + 1) == ft_strlen(str)))
+	text = (char *) malloc(sizeof(char) * 1);
+	text[0] = '\0';
+	while (!(ft_strlen(str) == ft_strlen(stop)
+			&& (ft_strncmp(stop, str, ft_strlen(str)) + 1) == ft_strlen(str)))
 	{
 		if (str)
+		{
+			tmp = text;
+			text = ft_strjoin(text, str);
+			free(tmp);
 			free(str);
+			tmp = text;
+			text = ft_strjoin(text, "\n");
+			free(tmp);
+		}
 		str = readline("> ");
 	}
 	if (str)
 		free(str);
+	text = put_variable(info, text, info->envp);
+	return (text);
+}
+
+static void	redirect_S2(t_info *info, char *stop)
+{
+	char	*text;
+	int		fd[2];
+
+	text = NULL;
+	text = util(info, stop, NULL);
+	pipe(fd);
+	if (!fork())
+	{
+		close(fd[0]);
+		write(fd[1], text, ft_strlen(text));
+		close(fd[1]);
+		exit(0);
+	}
+	wait(0);
+	dup2(fd[0], 0);
+	close(fd[1]);
+	close(fd[0]);
+	free(text);
 }
 
 void	redirect(t_info *info)
@@ -40,5 +71,5 @@ void	redirect(t_info *info)
 		dup2(info->fd_redirect, 0);
 	}
 	else if (info->command->flag == S2)
-		redirect_S2(file);
+		redirect_S2(info, file);
 }

@@ -42,10 +42,6 @@ void	free_info(t_info *info)
 //			free(info->parse);
 		if (info->text)
 			free(info->text);
-//		if (info->envp)
-//			free_2arr(info->envp);
-//		free(info);
-//
 	}
 }
 

@@ -76,6 +76,10 @@ CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/src/parse_search_bin.c
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o
+ /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
+ /Users/vmaricru/Desktop/minishell_parse/src/parse_strtok_utils.c
 CMakeFiles/minishell_parse.dir/src/parse_tokens.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
@@ -116,6 +120,10 @@ CMakeFiles/minishell_parse.dir/src/utils_launch.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
  /Users/vmaricru/Desktop/minishell_parse/src/utils_launch.c
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o
+ /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
+ /Users/vmaricru/Desktop/minishell_parse/libft/libft.h
+ /Users/vmaricru/Desktop/minishell_parse/src/utils_launch_pipe.c
 CMakeFiles/minishell_parse.dir/src/utils_list.c.o
  /Users/vmaricru/Desktop/minishell_parse/includes/minishell.h
  /Users/vmaricru/Desktop/minishell_parse/libft/libft.h

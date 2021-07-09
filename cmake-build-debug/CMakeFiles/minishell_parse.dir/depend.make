@@ -76,6 +76,10 @@ CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.o: ../src/parse_search_bin.c
 
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o: ../includes/minishell.h
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o: ../libft/libft.h
+CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o: ../src/parse_strtok_utils.c
+
 CMakeFiles/minishell_parse.dir/src/parse_tokens.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/parse_tokens.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/parse_tokens.c.o: ../src/parse_tokens.c
@@ -115,6 +119,10 @@ CMakeFiles/minishell_parse.dir/src/utils_export.c.o: ../src/utils_export.c
 CMakeFiles/minishell_parse.dir/src/utils_launch.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/utils_launch.c.o: ../libft/libft.h
 CMakeFiles/minishell_parse.dir/src/utils_launch.c.o: ../src/utils_launch.c
+
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o: ../includes/minishell.h
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o: ../libft/libft.h
+CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o: ../src/utils_launch_pipe.c
 
 CMakeFiles/minishell_parse.dir/src/utils_list.c.o: ../includes/minishell.h
 CMakeFiles/minishell_parse.dir/src/utils_list.c.o: ../libft/libft.h

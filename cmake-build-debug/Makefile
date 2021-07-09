@@ -763,6 +763,33 @@ src/parse_search_bin.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_search_bin.c.s
 .PHONY : src/parse_search_bin.c.s
 
+src/parse_strtok_utils.o: src/parse_strtok_utils.c.o
+
+.PHONY : src/parse_strtok_utils.o
+
+# target to build an object file
+src/parse_strtok_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.o
+.PHONY : src/parse_strtok_utils.c.o
+
+src/parse_strtok_utils.i: src/parse_strtok_utils.c.i
+
+.PHONY : src/parse_strtok_utils.i
+
+# target to preprocess a source file
+src/parse_strtok_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.i
+.PHONY : src/parse_strtok_utils.c.i
+
+src/parse_strtok_utils.s: src/parse_strtok_utils.c.s
+
+.PHONY : src/parse_strtok_utils.s
+
+# target to generate assembly for a file
+src/parse_strtok_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/parse_strtok_utils.c.s
+.PHONY : src/parse_strtok_utils.c.s
+
 src/parse_tokens.o: src/parse_tokens.c.o
 
 .PHONY : src/parse_tokens.o
@@ -1033,6 +1060,33 @@ src/utils_launch.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_launch.c.s
 .PHONY : src/utils_launch.c.s
 
+src/utils_launch_pipe.o: src/utils_launch_pipe.c.o
+
+.PHONY : src/utils_launch_pipe.o
+
+# target to build an object file
+src/utils_launch_pipe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.o
+.PHONY : src/utils_launch_pipe.c.o
+
+src/utils_launch_pipe.i: src/utils_launch_pipe.c.i
+
+.PHONY : src/utils_launch_pipe.i
+
+# target to preprocess a source file
+src/utils_launch_pipe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.i
+.PHONY : src/utils_launch_pipe.c.i
+
+src/utils_launch_pipe.s: src/utils_launch_pipe.c.s
+
+.PHONY : src/utils_launch_pipe.s
+
+# target to generate assembly for a file
+src/utils_launch_pipe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_parse.dir/build.make CMakeFiles/minishell_parse.dir/src/utils_launch_pipe.c.s
+.PHONY : src/utils_launch_pipe.c.s
+
 src/utils_list.o: src/utils_list.c.o
 
 .PHONY : src/utils_list.o
@@ -1165,6 +1219,9 @@ help:
 	@echo "... src/parse_search_bin.o"
 	@echo "... src/parse_search_bin.i"
 	@echo "... src/parse_search_bin.s"
+	@echo "... src/parse_strtok_utils.o"
+	@echo "... src/parse_strtok_utils.i"
+	@echo "... src/parse_strtok_utils.s"
 	@echo "... src/parse_tokens.o"
 	@echo "... src/parse_tokens.i"
 	@echo "... src/parse_tokens.s"
@@ -1195,6 +1252,9 @@ help:
 	@echo "... src/utils_launch.o"
 	@echo "... src/utils_launch.i"
 	@echo "... src/utils_launch.s"
+	@echo "... src/utils_launch_pipe.o"
+	@echo "... src/utils_launch_pipe.i"
+	@echo "... src/utils_launch_pipe.s"
 	@echo "... src/utils_list.o"
 	@echo "... src/utils_list.i"
 	@echo "... src/utils_list.s"

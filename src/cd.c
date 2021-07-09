@@ -16,7 +16,7 @@ static void	old_pwd(char **envp, char *old)
 	}
 }
 
-int		directory(t_info *info, char **envp)
+int	directory(t_info *info, char **envp)
 {
 	int		j;
 	char	*home;
