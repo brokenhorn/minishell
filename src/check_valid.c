@@ -36,13 +36,13 @@ static int	check_redirect(t_info *info, char *str)
 	return (1);
 }
 
-void	check_valid(t_info *info, char *str)
+int	check_valid(t_info *info, char *str)
 {
 	char	qu;
 
 	qu = 0;
 	if (*str == '|')
-		return(error(info, "syntax error near unexpected token `|'", NULL));
+		return (check_error(info, "syntax error near unexpected token `|'"));
 	while (*str != '\0')
 	{
 		if (qu == 0 && (*str == '\'' || *str == '\"'))
@@ -56,9 +56,10 @@ void	check_valid(t_info *info, char *str)
 			qu = 0;
 		if (qu == 0)
 			if (!check_redirect(info, str))
-				return ;
+				return (0);
 		str++;
 	}
 	if (qu != 0)
-		error(info, "unclosed quotes", NULL);
+		return (check_error(info, "unclosed quotes"));
+	return (1);
 }

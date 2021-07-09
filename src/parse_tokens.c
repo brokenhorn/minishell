@@ -130,14 +130,12 @@ void parse(t_info *info) //ОБРАБОАТЬ ЕСЛИ НЕ НАШЕЛ КОМА�
 
 	token = NULL;
 	line = ft_strtrim(info->text, " ");
-	check_valid(info, line);
-	if (info->err_check == 1)
+	if (check_valid(info, line) == 0)
 	{
 		free(line);
 		return;
 	}
 	info->parse->line_cp = line;
-	check_valid(info, line);
 	get_token_argv_bin(&token, info);
 	launch_command(info);
 	free(line);

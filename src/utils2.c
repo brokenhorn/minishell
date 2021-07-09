@@ -37,3 +37,21 @@ int check_builtin(t_info *info)
 	}
 	return (0);
 }
+
+int     check_tokens(t_info *info)
+{
+	t_command  *tmp;
+	tmp = info->command;
+	if (tmp->flag == B1 || tmp->flag == B2)
+		tmp = tmp->next;
+	while (tmp)
+	{
+		if (tmp->argv[0] == NULL)
+		{
+			error(info, "syntax error", NULL);
+			return (0);
+		}
+		tmp = tmp->next;
+	}
+	return (1);
+}

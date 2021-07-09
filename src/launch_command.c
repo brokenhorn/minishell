@@ -184,10 +184,11 @@ int launch_command(t_info *info)
 		if (info->command)
 			info->command = info->command->next;
 	}
-	if (info->fd_redirect)
+	if (info->fd_redirect == -1)
 		dup2(info->dup_out, 1);
 	if (info->fd_redirect)
 		close(info->fd_redirect);
+	info->fd_redirect = -1;
 	info->command = tmp;
 	free_info(info);
 	info->wait_count = 0;

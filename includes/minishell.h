@@ -73,7 +73,7 @@ void  	search_bin(t_info *info);
 void	free_2arr(char **arr);
 int		launch_command(t_info *info);
 void	my_exit(t_info *info);
-void	check_valid(t_info *info, char *str);
+int	check_valid(t_info *info, char *str);
 void	export(t_info *info, char **text);
 int		ft_check_space(char *str);
 void	free_info(t_info *info);

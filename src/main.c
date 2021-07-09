@@ -43,7 +43,7 @@ int		main(__unused  int argc, __unused  char **argv, char **envp) //EXPORT CHECK
 	info->parse = init_parse(info);
 	info->dup_in = dup(0);
 	info->dup_out = dup(1);
-	info->fd_redirect = NULL;
+	info->fd_redirect = -1;
 //	sig_check = 0;
 	while (1)
 	{
